@@ -1,14 +1,71 @@
-// DSA ********************************************************************
-function myFunc(x) {
-  var y = 1;
-  var z = 3;
-  while (y <= x) {
-    console.log(y);
-    y = y + z;
-    z += 2;
+function myFunc(n) {
+  while (n > 0) {
+    console.log(n % 10);
+    n = parseInt(n / 10);
   }
 }
-myFunc(49);
+// myFunc(153);
+
+// let a = 153;
+console.log(1 % 10);
+console.log(parseInt(153 / 10));
+
+// console.log(a / 10);
+// let a = "12345";
+// let b = a.split("");
+// console.log(b[3]);
+// let b = [...a];
+// console.log(b.split);
+// b.split(",");
+// function myFunc(n) {
+//   var y = 1;
+//   while (y <= n) {
+//     if (y % 5 === 0) {
+//       y++;
+//     } else {
+//       console.log(y);
+//       y++;
+//     }
+//   }
+// }
+// myFunc(100);
+
+// WHILE LOOP
+// Print the following series using while loop
+
+// 1 4 9 16 25 36 …. n
+
+// Input :-
+
+// 49
+
+// Output :-
+
+// 1
+
+// 4
+
+// 9
+
+// 16
+
+// 25
+
+// 36
+
+// 49
+
+// function myFunc(x) {
+//   var y = 1;
+//   var z = 3;
+//   while (y <= x) {
+//     console.log(y);
+//     y = y + z;
+//     z += 2;
+//   }
+// }
+// myFunc(49);
+
 // function mySwitch(n) {
 //   switch (n) {
 //     case 1:
