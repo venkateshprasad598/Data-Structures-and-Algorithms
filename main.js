@@ -1,13 +1,28 @@
+//PATTERNS
+
 function myFunc(n) {
-  for (let i = 2; i <= n; i += 2) {
-    if (i % 4 === 0) {
-      i;
-    } else {
-      console.log(i);
+  let string = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j <= i; j++) {
+      string += "*";
     }
+    string += "\n";
   }
+  console.log(string);
 }
-myFunc(10);
+myFunc(5);
+
+console.log("Helo\nDear");
+// function myFunc(n, m) {
+//   var m = m;
+//   for (let i = 1; i <= n; i++) {
+//     if (i === m) {
+//       break;
+//     }
+//     console.log(i);
+//   }
+// }
+// myFunc(20, 21);
 
 // console.log(125 ** 0.33333333333);
 //REVERSE THE NUMBER AND ARMSTRONG NUMBER
