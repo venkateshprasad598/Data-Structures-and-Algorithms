@@ -1,15 +1,34 @@
 function myFunc(n) {
-  while (n > 0) {
-    console.log(n % 10);
-    n = parseInt(n / 10);
+  for (let i = 2; i <= n; i += 2) {
+    if (i % 4 === 0) {
+      i;
+    } else {
+      console.log(i);
+    }
   }
 }
-// myFunc(153);
+myFunc(10);
 
-// let a = 153;
-console.log(1 % 10);
-console.log(parseInt(153 / 10));
+// console.log(125 ** 0.33333333333);
+//REVERSE THE NUMBER AND ARMSTRONG NUMBER
+// function myFunc(n) {
+//   var sum = "";
+//   while (n > 0) {
+//     var x = n % 10;
+//     console.log(x);
+//     sum += x;
+//     n = parseInt(n / 10);
+//   }
+//   console.log(sum);
+//   // if (y === sum) {
+//   //   console.log(true);
+//   // } else {
+//   //   console.log(false);
+//   // }
+// }
+// myFunc(283);
 
+// console.log(2 ** 3);
 // console.log(a / 10);
 // let a = "12345";
 // let b = a.split("");
