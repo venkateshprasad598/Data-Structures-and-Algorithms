@@ -1,32 +1,42 @@
 // DSA ********************************************************************
-function mySwitch(n) {
-  switch (n) {
-    case 1:
-      console.log("monday");
-      break;
-    case 2:
-      console.log("tuesday");
-      break;
-    case 3:
-      console.log("wednesday");
-      break;
-    case 4:
-      console.log("thurday");
-      break;
-    case 5:
-      console.log("friday");
-      break;
-    case 6:
-      console.log("saturday");
-      break;
-    case 6:
-      console.log("sunday");
-      break;
-    default:
-      console.log("invalid");
+function myFunc(x) {
+  var y = 1;
+  var z = 3;
+  while (y <= x) {
+    console.log(y);
+    y = y + z;
+    z += 2;
   }
 }
-mySwitch(8);
+myFunc(49);
+// function mySwitch(n) {
+//   switch (n) {
+//     case 1:
+//       console.log("monday");
+//       break;
+//     case 2:
+//       console.log("tuesday");
+//       break;
+//     case 3:
+//       console.log("wednesday");
+//       break;
+//     case 4:
+//       console.log("thurday");
+//       break;
+//     case 5:
+//       console.log("friday");
+//       break;
+//     case 6:
+//       console.log("saturday");
+//       break;
+//     case 6:
+//       console.log("sunday");
+//       break;
+//     default:
+//       console.log("invalid");
+//   }
+// }
+// mySwitch(8);
 
 // function myFunc(a, b, c) {
 //   var answer =
