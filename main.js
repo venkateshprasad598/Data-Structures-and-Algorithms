@@ -1,31 +1,105 @@
 //PATTERNS
 function myFunc(n) {
-  // var a = 0;
-  // var k = 1;
-  // while (k < n) {
-  //   var y = k;
-  //   console.log(y);
-  //   k = a + y;
-  //   a = y;
-  // }
-  // for loop 5 + 5
-  var sum = "";
-  for (let i = 5; i >= 0; i--) {
-    // if (i === 0) {
-    //   for (let i = 1; i <= 5; i++) {
-    //     for (let j = 1; j <= i; j++) {
-    //       sum += "*";
-    //     }
-    //     sum += "\n";
-    //   }
-    // }
-
-    for (let j = 1; j <= i; j++) {
-      sum += "*";
+  var a = "";
+  for (var i = 1; i <= 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      a = a + "*";
     }
-    sum += "\n";
+ = a + "*";
+    }
+    console.log(a);
+    a = "";
   }
-  console.log(sum);
+
+  // var a = "";
+  // var i = 1;
+  // while (i <= 5) {
+  //   var j = 1;
+  //   while (j <= i) {
+  //     a = a + "*";
+  //     j++;
+  //   }
+  //   console.log(a);
+  //   a = "";
+  //   i++;
+  // }
+  // While Loop
+
+  // sum = "";
+  // var i = 5;
+  // while (i >= 0) {
+  //   // if (i === 0) {
+  //   //   var i = 1;
+  //   //   while (i <= 5) {
+  //   //     var j = 1;
+  //   //     while (j <= i) {
+  //   //       sum += "*";
+  //   //       j++;
+  //   //     }
+  //   //     sum += "\n";
+  //   //     i++;
+  //   //   }
+  //   // }
+  //   var j = 1;
+  //   while (j <= i) {
+  //     sum += "*";
+  //     j++;
+  //   }
+  //   sum += "\n";
+  //   i--;
+  // }
+  // console.log(sum);
+
+  // *    *
+  // **   **
+  // ***  ***
+  // **** ****
+  // **********
+  //   var sum = "";
+  //   for (let i = 1; i <= 5; i++) {
+  //     for (let j = 1; j <= i; j++) {
+  //       sum += "*";
+  //     }
+  //     for (let k = 1; k <= 5 - i; k++) {
+  //       sum += " ";
+  //     }
+  //     for (let j = 1; j <= i; j++) {
+  //       sum += "*";
+  //     }
+  //     for (let k = 1; k <= 5 - i; k++) {
+  //       sum += " ";
+  //     }
+  //     sum += "\n";
+  //   }
+  //   console.log(sum);
+
+  // for loop 5 + 5
+  // var a = "";
+  // for (var i = 5; i > 0; i--) {
+  //   for (var j = 0; j < i; j++) {
+  //     a = a + "*";
+  //   }
+  //   console.log(a);
+  //   a = "";
+  // }
+  // var sum = "";
+  // for (let i = 5; i >= 0; i--) {
+  //   // if (i === 0) {
+  //   //   for (let i = 1; i <= 5; i++) {
+  //   //     for (let j = 1; j <= i; j++) {
+  //   //       sum += "*";
+  //   //     }
+  //   //     console.log(sum);
+  //   //     sum = "";
+  //   //   }
+  //   // }
+
+  //   for (let j = 1; j <= i; j++) {
+  //     sum = sum + "*";
+  //   }
+  //   console.log(sum);
+  //   sum = "";
+  // }
 
   // WHILE LOOP
   // var i = 5;
