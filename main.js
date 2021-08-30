@@ -1,18 +1,33 @@
 //PATTERNS
-
 function myFunc(n) {
-  let string = "";
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j <= i; j++) {
-      string += "*";
+  let star = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      star += "*";
     }
-    string += "\n";
+    star += "\n";
   }
-  console.log(string);
+  console.log(star);
 }
 myFunc(5);
 
-console.log("Helo\nDear");
+// *
+// **
+// ***
+// ****
+// *****
+// function myFunc(n) {
+//   let string = "";
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j <= i; j++) {
+//       string += "*";
+//     }
+//     string += "\n";
+//   }
+//   console.log(string);
+// }
+// myFunc(5);
+
 // function myFunc(n, m) {
 //   var m = m;
 //   for (let i = 1; i <= n; i++) {
