@@ -1,30 +1,67 @@
 //PATTERNS
-
-var a = "";
-var i = 5;
-while (i >= 0) {
-  if (i === 0) {
-    var k = 1;
-    while (k <= 5) {
-      var m = 1;
-      while (m <= k) {
-        a = a + "*";
-        m++;
-      }
-      console.log(a);
-      var a = "";
-      k++;
-    }
-  }
-  var j = 1;
-  while (j <= i) {
-    a = a + "*";
-    j++;
-  }
-  console.log(a);
-  var a = "";
-  i--;
+var n = 125;
+var a = Math.cbrt(11);
+console.log(a);
+for (var i = 0; i <= a; i++) {
+  console.log(i ** 3);
 }
+
+// var a = "";
+// var i = 5;
+// while (i >= 0) {
+//   if (i === 0) {
+//     var k = 1;
+//     while (k <= 5) {
+//       var m = 1;
+//       while (m <= k) {
+//         a = a + "*";
+//         m++;
+//       }
+//       console.log(a);
+//       a = "";
+//       k++;
+//     }
+//   }
+
+//   var j = 1;
+//   while (j <= i) {
+//     a = a + "*";
+//     j++;
+//   }
+//   console.log(a);
+//   a = "";
+//   i--;
+// }
+
+// var a = "";
+// var i = 5;
+// while (i >= 0) {
+//   // Second Set*********
+//   if (i === 0) {
+//     var k = 1;
+//     while (k <= 5) {
+//       var m = 1;
+//       while (m <= k) {
+//         a = a + "*";
+//         m++;
+//       }
+//       console.log(a);
+//       var a = "";
+//       k++;
+//     }
+//   }
+// // Second Set***********
+
+// // first Set*************
+//   var j = 1;
+//   while (j <= i) {
+//     a = a + "*";
+//     j++;
+//   }
+//   console.log(a);
+//   var a = "";
+//   i--;
+// }
 
 //  *****
 //  ****
