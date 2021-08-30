@@ -1,15 +1,47 @@
 //PATTERNS
 function myFunc(n) {
-  var a = 0;
-  var k = 1;
-  while (k < n) {
-    var y = k;
-    console.log(y);
-    k = a + y;
-    a = y;
+  // var a = 0;
+  // var k = 1;
+  // while (k < n) {
+  //   var y = k;
+  //   console.log(y);
+  //   k = a + y;
+  //   a = y;
+  // }
+  // for loop 5 + 5
+  var sum = "";
+  for (let i = 5; i >= 0; i--) {
+    // if (i === 0) {
+    //   for (let i = 1; i <= 5; i++) {
+    //     for (let j = 1; j <= i; j++) {
+    //       sum += "*";
+    //     }
+    //     sum += "\n";
+    //   }
+    // }
+
+    for (let j = 1; j <= i; j++) {
+      sum += "*";
+    }
+    sum += "\n";
   }
+  console.log(sum);
+
+  // WHILE LOOP
+  // var i = 5;
+  // sum = "";
+  // while (i >= 1) {
+  //   var j = 1;
+  //   while (j <= i) {
+  //     sum += "*";
+  //     j++;
+  //   }
+  //   sum += "\n";
+  //   ;
+  // }
+  // console.log(sum);
 }
-myFunc(10000);
+myFunc(5);
 
 // function myFunc(n) {
 //   let sum = "";
