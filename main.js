@@ -1,17 +1,35 @@
 //PATTERNS
 function myFunc(n) {
   let sum = "";
-  for (let i = 1; i < n; i++) {
-    for (let j = 1; j < n; j++) {
-      var k = i + j - 1;
-      if (k > 4) {
-        k = k - 4;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      k = 1;
+      // if ((i % 2 === 0 && j % 2 !== 0) || (j % 2 === 0 && i % 2 !== 0)) {
+      //   var k = 0;
+      // }
+      if ((i + j) % 2 === 0) {
+        k = 1;
+      } else {
+        k = 0;
       }
       sum += k;
     }
     sum += "\n";
   }
   console.log(sum);
+
+  // let sum = "";
+  // for (let i = 1; i < n; i++) {
+  //   for (let j = 1; j < n; j++) {
+  //     var k = i + j - 1;
+  //     if(k > 4){
+  //       k = k - 4
+  //     }
+  //     sum += k;
+  //   }
+  //   sum += "\n";
+  // }
+  // console.log(sum);
 }
 myFunc(5);
 
