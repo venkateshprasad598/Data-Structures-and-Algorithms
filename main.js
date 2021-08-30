@@ -1,13 +1,17 @@
 //PATTERNS
 function myFunc(n) {
-  let star = "";
-  for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= n; j++) {
-      star += "*";
+  let sum = "";
+  for (let i = 1; i < n; i++) {
+    for (let j = 1; j < n; j++) {
+      var k = i + j - 1;
+      if (k > 4) {
+        k = k - 4;
+      }
+      sum += k;
     }
-    star += "\n";
+    sum += "\n";
   }
-  console.log(star);
+  console.log(sum);
 }
 myFunc(5);
 
