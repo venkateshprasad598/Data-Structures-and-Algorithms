@@ -1,3 +1,24 @@
+let myArray = [1, 5, 6, 2, 4];
+let maxNumber = myArray.reduce((a, b) => {
+  console.log(a);
+  console.log(b);
+  console.log("--------");
+  return Math.max(a, b);
+}, 0);
+console.log(maxNumber);
+
+// let ok = new Array(1, 2, 3);
+// console.log(ok);
+
+// function array(n) {
+// let myArray = [];
+// for (i = 1; i <= n; i += 2) {
+//   myArray.push(i);
+// }
+// return myArray;
+// 1,5,6,2,4
+// }
+// console.log(array(20));
 //PATTERNS ********************************************************************
 // var a = "";
 // var i = 5;
