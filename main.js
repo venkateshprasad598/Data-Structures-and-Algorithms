@@ -1,11 +1,19 @@
-let myArray = [1, 5, 6, 2, 4];
-let maxNumber = myArray.reduce((a, b) => {
-  console.log(a);
-  console.log(b);
-  console.log("--------");
-  return Math.max(a, b);
-}, 0);
-console.log(maxNumber);
+function prime(n) {
+  if (n / n === 1 && n / 1 === n) {
+    console.log("It's is a prime number");
+  }
+}
+prime(10);
+// console.log(9 % 2);
+
+// let myArray = [1, 5, 6, 2, 4];
+// let maxNumber = myArray.reduce((a, b) => {
+//   console.log(a);
+//   console.log(b);
+//   console.log("--------");
+//   return Math.max(a, b);
+// }, 0);
+// console.log(maxNumber);
 
 // let ok = new Array(1, 2, 3);
 // console.log(ok);
