@@ -1,21 +1,31 @@
-function palindrome(string) {
-  let myString = string.split("");
-  let length = myString.length;
-  console.log(length);
-  let isPalindrome = true;
-  for (let i = 0; i < length; i++) {
-    if (myString[i] !== myString[length - i - 1]) {
-      isPalindrome = false;
-    }
-  }
-  if (isPalindrome === true) {
-    console.log("It is a Palindrome dear");
-  } else {
-    console.log("No it is not Palindrome");
-  }
-  console.log(myString);
+// let a = { 1: "", 2: "", 3: "", 4: "", 5: "" };
+// let b = new Set([1, 2, 3, 4, 5, 5]);
+// console.log(...b);
+// console.log([{ ...a }]);
+function spread(a, b, c, d, e) {
+  return a + b + c + d + e;
 }
-palindrome("MALAYALAM");
+me = [1, 2, 3, 4, 5];
+console.log(spread(...me));
+// ******************PALINDROME*********************
+// function palindrome(string) {
+//   let myString = string.split("");
+//   let length = myString.length;
+//   console.log(length);
+//   let isPalindrome = true;
+//   for (let i = 0; i < length; i++) {
+//     if (myString[i] !== myString[length - i - 1]) {
+//       isPalindrome = false;
+//     }
+//   }
+//   if (isPalindrome === true) {
+//     console.log("It is a Palindrome dear");
+//   } else {
+//     console.log("No it is not Palindrome");
+//   }
+//   console.log(myString);
+// }
+// palindrome("MALAYALAM");
 // ******************Store first 20 prime numbers*********************
 // function primeNum(n) {
 //   var newCounter = [];
