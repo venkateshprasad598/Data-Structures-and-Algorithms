@@ -1,18 +1,27 @@
-for (let counter = 2; counter <= 100; counter++) {
-  var isPrime = true;
-  // console.log(counter);
-  for (let i = 2; i <= counter; i++) {
-    // console.log(counter);
-    if (counter % i === 0 && i !== counter) {
-      isPrime = false;
+function primeNum(n) {
+  var newCounter = [];
+  var myArray = [];
+  for (let counter = 2; counter <= 1000; counter++) {
+    var isPrime = true;
+    for (let i = 2; i <= counter; i++) {
+      if (counter % i === 0 && i !== counter) {
+        isPrime = false;
+      }
+    }
+
+    if (isPrime === true) {
+      newCounter.push(counter);
     }
   }
-  // console.log(counter);
-
-  if (isPrime === true) {
-    console.log(counter);
+  for (let i = 0; i < n; i++) {
+    var neww = newCounter[i];
+    myArray.push(neww);
   }
+  console.log(newCounter);
+  console.log(myArray);
+  console.log(myArray.length);
 }
+primeNum(50);
 
 // function prime(n) {
 //   let isPrime = true;
