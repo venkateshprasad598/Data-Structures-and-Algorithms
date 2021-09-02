@@ -1,27 +1,47 @@
-function primeNum(n) {
-  var newCounter = [];
-  var myArray = [];
-  for (let counter = 2; counter <= 1000; counter++) {
-    var isPrime = true;
-    for (let i = 2; i <= counter; i++) {
-      if (counter % i === 0 && i !== counter) {
-        isPrime = false;
-      }
-    }
-
-    if (isPrime === true) {
-      newCounter.push(counter);
+function palindrome(string) {
+  let myString = string.split("");
+  let length = myString.length;
+  console.log(length);
+  let isPalindrome = true;
+  for (let i = 0; i < length; i++) {
+    if (myString[i] !== myString[length - i - 1]) {
+      isPalindrome = false;
     }
   }
-  for (let i = 0; i < n; i++) {
-    var neww = newCounter[i];
-    myArray.push(neww);
+  if (isPalindrome === true) {
+    console.log("It is a Palindrome dear");
+  } else {
+    console.log("No it is not Palindrome");
   }
-  console.log(newCounter);
-  console.log(myArray);
-  console.log(myArray.length);
+  console.log(myString);
 }
-primeNum(50);
+palindrome("MALAYALAM");
+// ******************Store first 20 prime numbers*********************
+// function primeNum(n) {
+//   var newCounter = [];
+//   var myArray = [];
+//   for (let counter = 2; counter <= 1000; counter++) {
+//     var isPrime = true;
+//     for (let i = 2; i <= counter; i++) {
+//       if (counter % i === 0 && i !== counter) {
+//         isPrime = false;
+//       }
+//     }
+
+//     if (isPrime === true) {
+//       newCounter.push(counter);
+//     }
+//   }
+//   for (let i = 0; i < n; i++) {
+//     var neww = newCounter[i];
+//     myArray.push(neww);
+//   }
+//   console.log(newCounter);
+//   console.log(myArray);
+//   console.log(myArray.length);
+// }
+// primeNum(20);
+// ******************Store first 20 prime numbers*********************
 
 // function prime(n) {
 //   let isPrime = true;
