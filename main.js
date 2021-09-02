@@ -1,18 +1,34 @@
-function prime(n) {
-  let isPrime = true;
-  for (let i = 2; i <= n; i++) {
-    if (n % i === 0 && i !== n) {
+for (let counter = 2; counter <= 100; counter++) {
+  var isPrime = true;
+  // console.log(counter);
+  for (let i = 2; i <= counter; i++) {
+    // console.log(counter);
+    if (counter % i === 0 && i !== counter) {
       isPrime = false;
     }
   }
+  // console.log(counter);
 
   if (isPrime === true) {
-    console.log("It is a prime number");
-  } else {
-    console.log("It is not a prime number");
+    console.log(counter);
   }
 }
-prime(499);
+
+// function prime(n) {
+//   let isPrime = true;
+//   for (let i = 2; i <= n; i++) {
+//     if (n % i === 0 && i !== n) {
+//       isPrime = false;
+//     }
+//   }
+
+//   if (isPrime === true) {
+//     console.log("It is a prime number");
+//   } else {
+//     console.log("It is not a prime number");
+//   }
+// }
+// prime(499);
 // console.log(9 % 2);
 
 // let myArray = [1, 5, 6, 2, 4];
