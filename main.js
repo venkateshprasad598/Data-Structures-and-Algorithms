@@ -1,9 +1,18 @@
 function prime(n) {
-  if (n / n === 1 && n / 1 === n) {
-    console.log("It's is a prime number");
+  let isPrime = true;
+  for (let i = 2; i <= n; i++) {
+    if (n % i === 0 && i !== n) {
+      isPrime = false;
+    }
+  }
+
+  if (isPrime === true) {
+    console.log("It is a prime number");
+  } else {
+    console.log("It is not a prime number");
   }
 }
-prime(10);
+prime(499);
 // console.log(9 % 2);
 
 // let myArray = [1, 5, 6, 2, 4];
