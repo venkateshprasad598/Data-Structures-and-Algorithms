@@ -12,18 +12,72 @@
 //   newArray = [];
 // }
 
-console.log("Hello");
-let obj = { ok: 50, hello: 20, hm: 30, oh: 100 };
-let object = Object.keys(obj);
-console.log(object);
-let sum = 0;
-for (i = 0; i < object.length; i++) {
-  let names = object[i];
-  // console.log(names);
-  let newNames = obj[names];
-  sum += newNames;
+// console.log("Hello");
+// let obj = { ok: 50, hello: 20, hm: 30, oh: 100 };
+// let object = Object.keys(obj);
+// console.log(object);
+// let sum = 0;
+// for (i = 0; i < object.length; i++) {
+//   let names = object[i];
+//   // console.log(names);
+//   let newNames = obj[names];
+//   sum += newNames;
+// }
+// console.log(sum);
+
+let obj = {
+  student_one: {
+    scores_one: { Math: 1, Social: 1, physics: 1, Kannada: 1, English: 1 },
+  },
+
+  student_two: {
+    scores_two: {
+      Science: 1,
+      Social: 1,
+      physics: 1,
+      Kannada: 1,
+      English: 1,
+    },
+  },
+  student_three: {
+    scores_two: { Mat: 1, Social: 1, physics: 1, Kannada: 1, English: 1 },
+  },
+};
+let keys = Object.keys(obj);
+// console.log(keys);
+sum = 0;
+for (i = 0; i < keys.length; i++) {
+  let objects = obj[keys[i]];
+  // console.log(objects);
+
+  let keysOne = Object.keys(objects);
+  // console.log(keysOne);
+
+  let keyKeys = objects[keysOne];
+  // console.log(keyKeys);
+
+  let scoreKeys = Object.keys(keyKeys);
+  // console.log(scoreKeys);
+
+  let sum = 0;
+  for (j = 0; j < scoreKeys.length; j++) {
+    let scoreObjects = objects[keysOne][scoreKeys[j]];
+    // console.log(scoreObjects);
+    sum += scoreObjects;
+  }
+  console.log(`${keys[i]} : ${sum}`);
 }
-console.log(sum);
+
+// let keys = Object.keys(obj.students.scores);
+// let sum = 0;
+// console.log(keys);
+// for (i = 0; i < keys.length; i++) {
+//   let name = keys[i];
+//   let ok = obj.students.scores[name];
+//   console.log(ok);
+//   sum += ok;
+// }
+// console.log(sum);
 
 // ******************PALINDROME*********************
 // .
