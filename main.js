@@ -1,13 +1,46 @@
-// let a = { 1: "", 2: "", 3: "", 4: "", 5: "" };
-// let b = new Set([1, 2, 3, 4, 5, 5]);
-// console.log(...b);
-// console.log([{ ...a }]);
-function spread(a, b, c, d, e) {
-  return a + b + c + d + e;
-}
-me = [1, 2, 3, 4, 5];
-console.log(spread(...me));
+// ******************SUBARRAY*********************
+// .
+// .
+// let array = [1, 3, 4, 5, 6];
+// let newArray = [];
+
+// for (i = 0; i < array.length; i++) {
+//   for (j = i; j < array.length; j++) {
+//     newArray.push(array[j]);
+//     console.log(...newArray);
+//   }
+//   newArray = [];
+// }
+
+// console.log("Hello");
+// let obj = { ok: "1", bye: 2, hey: 3 };
+// let object = Object.keys(obj);
+// console.log(object);
+// let sum = 0
+// for(i = 0; i < object.length; i++){
+//   sum +=
+// }
+// let foo = Object.create(
+//   {},
+//   {
+//     hey: 1,
+//   }
+// );
+
+// console.log(foo);
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      // hey: 1,
+    },
+  }
+);
+myObj.Hello = null;
+console.log(Object.keys(myObj));
 // ******************PALINDROME*********************
+// .
+// .
 // function palindrome(string) {
 //   let myString = string.split("");
 //   let length = myString.length;
@@ -26,7 +59,11 @@ console.log(spread(...me));
 //   console.log(myString);
 // }
 // palindrome("MALAYALAM");
+// .
+// .
 // ******************Store first 20 prime numbers*********************
+// .
+// .
 // function primeNum(n) {
 //   var newCounter = [];
 //   var myArray = [];
