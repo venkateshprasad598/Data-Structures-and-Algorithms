@@ -12,32 +12,19 @@
 //   newArray = [];
 // }
 
-// console.log("Hello");
-// let obj = { ok: "1", bye: 2, hey: 3 };
-// let object = Object.keys(obj);
-// console.log(object);
-// let sum = 0
-// for(i = 0; i < object.length; i++){
-//   sum +=
-// }
-// let foo = Object.create(
-//   {},
-//   {
-//     hey: 1,
-//   }
-// );
+console.log("Hello");
+let obj = { ok: 50, hello: 20, hm: 30, oh: 100 };
+let object = Object.keys(obj);
+console.log(object);
+let sum = 0;
+for (i = 0; i < object.length; i++) {
+  let names = object[i];
+  // console.log(names);
+  let newNames = obj[names];
+  sum += newNames;
+}
+console.log(sum);
 
-// console.log(foo);
-const myObj = Object.create(
-  {},
-  {
-    getFoo: {
-      // hey: 1,
-    },
-  }
-);
-myObj.Hello = null;
-console.log(Object.keys(myObj));
 // ******************PALINDROME*********************
 // .
 // .
