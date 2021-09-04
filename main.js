@@ -1,99 +1,112 @@
 // ******************SUBARRAY*********************
+// ***********************************Rotate the Array
+let array = [1, 2, 3, 4, 5, 6, 7];
+k = array.length;
+for (i = 0; i < k; i++) {
+  let pop = array.pop();
+  array.unshift(pop);
+}
+console.log(array);
+// let pop = array.pop();
+// array.unshift(pop);
+// let op = array.pop();
+// array.unshift(op);
+// console.log(array);
 // ***********************************Sum of odd length subArrays
-let array = [1, 4, 2, 5, 3];
+// let array = [1, 4, 2, 5, 3];
 
-function sumOfSubArray(arr) {
-  let newArr = [];
+// function sumOfSubArray(arr) {
+//   let newArr = [];
 
-  let sum = 0;
+//   let sum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i; j < arr.length; j++) {
-      newArr.push(arr[j]);
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i; j < arr.length; j++) {
+//       newArr.push(arr[j]);
 
-      if (newArr.length % 2 === 1) {
-        for (let k = 0; k < newArr.length; k++) {
-          sum += newArr[k];
-        }
+//       if (newArr.length % 2 === 1) {
+//         for (let k = 0; k < newArr.length; k++) {
+//           sum += newArr[k];
+//         }
 
-        // console.log(newArr)
+//         // console.log(newArr)
 
-        // console.log(sum)
-      }
-    }
+//         // console.log(sum)
+//       }
+//     }
 
-    // console.log("--------")
+//     // console.log("--------")
 
-    newArr = [];
-  }
+//     newArr = [];
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-let answer = sumOfSubArray(array);
+// let answer = sumOfSubArray(array);
 
-console.log(answer);
-// ************************Running sum of 2d Array
-//You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
-// A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
-// Example :
-// Input: accounts = [[1,5],[7,3],[3,5]]
-// Output: 10
-// Explanation:
-// 1st customer has wealth = 6
-// 2nd customer has wealth = 10
-// 3rd customer has wealth = 8
-// The 2nd customer is the richest with a wealth of 10.
-let Array = [
-  [2, 8, 7],
-  [7, 1, 3],
-  [1, 9, 5],
-];
+// console.log(answer);
+// // ************************Running sum of 2d Array
+// //You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+// // A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+// // Example :
+// // Input: accounts = [[1,5],[7,3],[3,5]]
+// // Output: 10
+// // Explanation:
+// // 1st customer has wealth = 6
+// // 2nd customer has wealth = 10
+// // 3rd customer has wealth = 8
+// // The 2nd customer is the richest with a wealth of 10.
+// let Array = [
+//   [2, 8, 7],
+//   [7, 1, 3],
+//   [1, 9, 5],
+// ];
 
-function runningSum(nums) {
-  let newArray = [];
+// function runningSum(nums) {
+//   let newArray = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    let sum = 0;
-    let nestedArray = nums[i];
-    for (let j = 0; j < nestedArray.length; j++) {
-      sum += nestedArray[j];
-    }
-    newArray.push(sum);
-  }
+//   for (let i = 0; i < nums.length; i++) {
+//     let sum = 0;
+//     let nestedArray = nums[i];
+//     for (let j = 0; j < nestedArray.length; j++) {
+//       sum += nestedArray[j];
+//     }
+//     newArray.push(sum);
+//   }
 
-  let max = Math.max(...newArray);
-  return max;
-}
-console.log(runningSum(Array));
-//********************Runninf sum of Array */
-let numbers = [3, 1, 2, 10, 1];
+//   let max = Math.max(...newArray);
+//   return max;
+// }
+// console.log(runningSum(Array));
+// //********************Runninf sum of Array */
+// let numbers = [3, 1, 2, 10, 1];
 
-function runningSum(nums) {
-  let newArray = [];
-  let sum = 0;
-  for (let i of nums) {
-    sum += i;
-    newArray.push(sum);
-  }
-  return newArray;
-}
+// function runningSum(nums) {
+//   let newArray = [];
+//   let sum = 0;
+//   for (let i of nums) {
+//     sum += i;
+//     newArray.push(sum);
+//   }
+//   return newArray;
+// }
 
-console.log(runningSum(numbers));
-// .// *****************Maximum SubArray
-let array = [1, 2, 3, 4, 5];
-let newArray = [];
-let n = 2;
-for (j = n; j < array.length; j++) {
-  for (i = j; i < array.length; i++) {
-    newArray.push(array[i]);
-    // console.log(newArray)
-  }
-  if (newArray.length === array.length - n) {
-    console.log(newArray);
-  }
-  newArray = [];
-}
+// console.log(runningSum(numbers));
+// // .// *****************Maximum SubArray
+// let array = [1, 2, 3, 4, 5];
+// let newArray = [];
+// let n = 2;
+// for (j = n; j < array.length; j++) {
+//   for (i = j; i < array.length; i++) {
+//     newArray.push(array[i]);
+//     // console.log(newArray)
+//   }
+//   if (newArray.length === array.length - n) {
+//     console.log(newArray);
+//   }
+//   newArray = [];
+// }
 
 // .
 // ******************SUBARRAY
