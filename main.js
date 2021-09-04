@@ -1,19 +1,15 @@
 // ******************SUBARRAY*********************
 // .// *****************Maximum SubArray
-console.log("Hello");
-
 let array = [1, 2, 3, 4, 5];
 let newArray = [];
-let n = 3;
-for (i = n; i < array.length; i++) {
-  for (j = i; j < array.length; j++) {
-    newArray.push(array[j]);
-    console.log(newArray);
-    // console.log(newArray.length);
+let n = 2;
+for (j = n; j < array.length; j++) {
+  for (i = j; i < array.length; i++) {
+    newArray.push(array[i]);
+    // console.log(newArray)
   }
-  console.log(newArray.length);
   if (newArray.length === array.length - n) {
-    console.log("Max");
+    console.log(newArray);
   }
   newArray = [];
 }
