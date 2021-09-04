@@ -1,4 +1,51 @@
 // ******************SUBARRAY*********************
+// ************************Running sum of 2d Array
+//You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+// A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+// Example :
+// Input: accounts = [[1,5],[7,3],[3,5]]
+// Output: 10
+// Explanation:
+// 1st customer has wealth = 6
+// 2nd customer has wealth = 10
+// 3rd customer has wealth = 8
+// The 2nd customer is the richest with a wealth of 10.
+let Array = [
+  [2, 8, 7],
+  [7, 1, 3],
+  [1, 9, 5],
+];
+
+function runningSum(nums) {
+  let newArray = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    let sum = 0;
+    let nestedArray = nums[i];
+    for (let j = 0; j < nestedArray.length; j++) {
+      sum += nestedArray[j];
+    }
+    newArray.push(sum);
+  }
+
+  let max = Math.max(...newArray);
+  return max;
+}
+console.log(runningSum(Array));
+//********************Runninf sum of Array */
+let numbers = [3, 1, 2, 10, 1];
+
+function runningSum(nums) {
+  let newArray = [];
+  let sum = 0;
+  for (let i of nums) {
+    sum += i;
+    newArray.push(sum);
+  }
+  return newArray;
+}
+
+console.log(runningSum(numbers));
 // .// *****************Maximum SubArray
 let array = [1, 2, 3, 4, 5];
 let newArray = [];
