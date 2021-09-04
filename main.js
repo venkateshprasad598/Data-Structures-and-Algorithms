@@ -1,4 +1,38 @@
 // ******************SUBARRAY*********************
+// ***********************************Sum of odd length subArrays
+let array = [1, 4, 2, 5, 3];
+
+function sumOfSubArray(arr) {
+  let newArr = [];
+
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      newArr.push(arr[j]);
+
+      if (newArr.length % 2 === 1) {
+        for (let k = 0; k < newArr.length; k++) {
+          sum += newArr[k];
+        }
+
+        // console.log(newArr)
+
+        // console.log(sum)
+      }
+    }
+
+    // console.log("--------")
+
+    newArr = [];
+  }
+
+  return sum;
+}
+
+let answer = sumOfSubArray(array);
+
+console.log(answer);
 // ************************Running sum of 2d Array
 //You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
 // A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
