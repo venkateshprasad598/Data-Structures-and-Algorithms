@@ -1,9 +1,57 @@
 // ******************EXPERIMENTING JS*********************
+let a = 30;
+switch (a) {
+  case 10:
+    console.log("is it working");
+    break;
+  case 20:
+    console.log("It is working");
+    break;
+  default:
+    console.log("Error");
+}
+
+if (a === 10) {
+  console.log("is it working");
+}
+
+// var a = 10;
+// let b = 10;
+// let c = 10;
+// {
+//   var a = 20;
+//   var a = 30;
+//   let b = 20;
+//   let c = 20;
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+//   console.log("-----------");
+// }
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// a = 10;
+// console.log(a);
+
+// let a = [1, 2, 3, 4, 5];
+// // let b = a.split("");
+// // let c = b.join("'");
+// // console.log(b);
+// console.log(a.push());
+// console.log(a);
+
+// var ok = "Hello";
+// var be = "Challo ";
+// be += ok;
+// console.log(be);
+
 // console.log(1 + "Hello");
-console.log("Hello sir\nHow are you\fHave a great sunday pal");
-let str = "Hello";
-let str2 = "Helllo" + str;
-console.log(str2);
+// console.log("Hello sir\nHow are you\fHave a great sunday pal");
+// let str = "Hello";
+// let str2 = "Helllo" + str;
+// console.log(str2);
 // var a = "hello ";
 // var str = a;
 // str.concat(a);
