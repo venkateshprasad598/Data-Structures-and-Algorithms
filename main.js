@@ -1,14 +1,38 @@
 // ******************EXPERIMENTING JS*********************
-console.log("Hello");
+// console.log(1 + "Hello");
+console.log("Hello sir\nHow are you\fHave a great sunday pal");
+let str = "Hello";
+let str2 = "Helllo" + str;
+console.log(str2);
+// var a = "hello ";
+// var str = a;
+// str.concat(a);
+// console.log(str);
+// console.log(a);
+// let l = [
+//   [1, 2],
+//   [1, 2, 3],
+// ];
+// console.log(typeof l);
+// const a = Symbol("Hello whst");
+// console.log(typeof a);
+// let b = console.log(Boolean);
+// // console.log(b);
+// let str1 = "Hello ";
+// let str2 = str1;
+// let str3 = str2;
 
-let obj = {
-  name: "Venktaehs"[(1, 2, 3)],
-};
+// console.log(str1.concat(str2, str3));
+// console.log("Hello");
 
-console.log(obj.name);
+// let obj = {
+//   name: "Venktaehs"[(1, 2, 3)],
+// };
 
-let ok = "Venkatesh";
-console.log(ok[3]);
+// console.log(obj.name);
+
+// let ok = "Venkatesh";
+// console.log(ok[3]);
 // ******************SUBARRAY*********************
 // ***********************************Rotate the Array
 // let array = [1, 2, 3, 4, 5, 6, 7];
