@@ -1,12 +1,23 @@
+// ******************EXPERIMENTING JS*********************
+console.log("Hello");
+
+let obj = {
+  name: "Venktaehs"[(1, 2, 3)],
+};
+
+console.log(obj.name);
+
+let ok = "Venkatesh";
+console.log(ok[3]);
 // ******************SUBARRAY*********************
 // ***********************************Rotate the Array
-let array = [1, 2, 3, 4, 5, 6, 7];
-k = array.length;
-for (i = 0; i < k; i++) {
-  let pop = array.pop();
-  array.unshift(pop);
-}
-console.log(array);
+// let array = [1, 2, 3, 4, 5, 6, 7];
+// k = array.length;
+// for (i = 0; i < k; i++) {
+//   let pop = array.pop();
+//   array.unshift(pop);
+// }
+// console.log(array);
 // let pop = array.pop();
 // array.unshift(pop);
 // let op = array.pop();
