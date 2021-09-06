@@ -1,19 +1,59 @@
 // ******************EXPERIMENTING JS*********************
-let a = 30;
-switch (a) {
-  case 10:
-    console.log("is it working");
-    break;
-  case 20:
-    console.log("It is working");
-    break;
-  default:
-    console.log("Error");
-}
 
-if (a === 10) {
-  console.log("is it working");
+// console.log("Hello");
+
+function spread(string) {
+  let strings = string.split(" ");
+  console.log(strings);
+
+  let sum = "";
+  let j = parseInt(strings.length / 8);
+  console.log(j);
+  if (strings.length >= 8) {
+    for (let i = 0; i < 8 * j; i++) {
+      if (strings[i] == "zero") {
+        sum += 0;
+      } else if (strings[i] == "one") {
+        sum += 1;
+      }
+    }
+  }
+  return sum;
 }
+spread("zero one zero one zero one zero one Zero one one one one one one");
+
+// function fac(n) {
+//   if (n === 1) {
+//     return 1;
+//   }
+//   return n * fac(n - 1);
+// }
+// console.log(fac(5));
+
+// let a = 30;
+// let answer;
+// a === 10
+//   ? (answer = "a")
+//   : a === 20
+//   ? (answer = "a 20")
+//   : a === 30
+//   ? (answer = "a 30")
+//   : null;
+// console.log(answer);
+
+// var array = [];
+// let a = 1;
+// // do {
+// //   array.push(a);
+// //   a++;
+// // } while (a < 10);
+// // console.log(array);
+
+// while (a < 10) {
+//   array.push(a);
+//   a++;
+// }
+// console.log(array);
 
 // var a = 10;
 // let b = 10;
