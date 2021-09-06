@@ -4,23 +4,36 @@
 
 function spread(string) {
   let strings = string.split(" ");
-  console.log(strings);
+  let newString = strings
+    .map((data) => (data == "zero" ? 0 : data == "one" ? 1 : null))
+    .filter((x) => x != null);
+  console.log(newString);
 
-  let sum = "";
-  let j = parseInt(strings.length / 8);
-  console.log(j);
-  if (strings.length >= 8) {
-    for (let i = 0; i < 8 * j; i++) {
-      if (strings[i] == "zero") {
-        sum += 0;
-      } else if (strings[i] == "one") {
-        sum += 1;
-      }
-    }
-  }
-  return sum;
+  let rem = newString.length % 8;
+  let answer = "";
+  rem === 0
+    ? (answer = newString.join(""))
+    : (answer = newString.splice(0, newString.length - rem).join(""));
+  console.log(answer);
+  //   console.log(strings);
+
+  //   let sum = "";
+  //   let j = parseInt(strings.length / 8);
+  //   console.log(j);
+  //   if (strings.length >= 8) {
+  //     for (let i = 0; i < 8 * j; i++) {
+  //       if (strings[i] == "zero") {
+  //         sum += 0;
+  //       } else if (strings[i] == "one") {
+  //         sum += 1;
+  //       }
+  //     }
+  //   }
+  //   return sum;
 }
-spread("zero one zero one zero one zero one Zero one one one one one one");
+spread(
+  "zero one zero one zero one zero one Zero one one one one one one one one one one one one"
+);
 
 // function fac(n) {
 //   if (n === 1) {
