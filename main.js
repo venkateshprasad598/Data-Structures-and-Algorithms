@@ -2,19 +2,27 @@
 
 // console.log("Hello");
 
+// function textToNumberBinary(str) {
+//   var arr = str.toLowerCase().split(" ");
+//   arr = arr.map( x => {
+//     if (x == "one") return "1";
+//     if (x == "zero") return "0";
+//     return "";
+//   }).filter( x => x.length > 0);
+
+//   var rem = arr.length % 8;
+//   if (rem === 0) return arr.join("");
+//   return arr.splice(0, arr.length - rem).join("");
+// }
+
 console.log(5 % 8);
 
 function spread(string) {
-  let strings = string.split(" ");
-  let newString = strings
-    .map((data) =>
-      data == "zero" || data == "Zero"
-        ? 0
-        : data == "one" || data == "One"
-        ? 1
-        : null
-    )
-    .filter((x) => x != null);
+  let strings = string.toLowerCase().split(" ");
+  let newString = strings.map((data) => {
+    if (data == "zero") return 0;
+    if (data == "one") return 1;
+  });
   console.log(newString);
 
   let rem = newString.length % 8;
@@ -22,9 +30,11 @@ function spread(string) {
   rem === 0
     ? (answer = newString.join(""))
     : (answer = newString.splice(0, newString.length - rem).join(""));
-  console.log(answer);
+  return answer;
 }
-spread("zero zero one one  zero Zero zero zero");
+spread(
+  "zero zero one one zero Zero zero zero zero zero one one zero Zero zero"
+);
 
 // function fac(n) {
 
