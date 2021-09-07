@@ -2,6 +2,15 @@
 
 // console.log("Hello");
 
+const array = [true, false, true, true];
+console.log(
+  array.reduce((a, b) => {
+    console.log(a);
+    console.log(b);
+    console.log("-------------");
+    return a && b;
+  })
+);
 // function textToNumberBinary(str) {
 //   var arr = str.toLowerCase().split(" ");
 //   arr = arr.map( x => {
@@ -15,26 +24,26 @@
 //   return arr.splice(0, arr.length - rem).join("");
 // }
 
-console.log(5 % 8);
+// console.log(5 % 8);
 
-function spread(string) {
-  let strings = string.toLowerCase().split(" ");
-  let newString = strings.map((data) => {
-    if (data == "zero") return 0;
-    if (data == "one") return 1;
-  });
-  console.log(newString);
+// function spread(string) {
+//   let strings = string.toLowerCase().split(" ");
+//   let newString = strings.map((data) => {
+//     if (data == "zero") return 0;
+//     if (data == "one") return 1;
+//   });
+//   console.log(newString);
 
-  let rem = newString.length % 8;
-  let answer = "";
-  rem === 0
-    ? (answer = newString.join(""))
-    : (answer = newString.splice(0, newString.length - rem).join(""));
-  return answer;
-}
-spread(
-  "zero zero one one zero Zero zero zero zero zero one one zero Zero zero"
-);
+//   let rem = newString.length % 8;
+//   let answer = "";
+//   rem === 0
+//     ? (answer = newString.join(""))
+//     : (answer = newString.splice(0, newString.length - rem).join(""));
+//   return answer;
+// }
+// spread(
+//   "zero zero one one zero Zero zero zero zero zero one one zero Zero zero"
+// );
 
 // function fac(n) {
 
