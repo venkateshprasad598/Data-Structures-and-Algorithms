@@ -1,4 +1,3 @@
-// ****************** Swapping largest number *********************
 const mean = (num) => {
   return (
     num
@@ -7,6 +6,14 @@ const mean = (num) => {
       .map((data) => parseInt(data))
       .reduce((a, b) => a + b) / num.toString().length
   );
+  OR;
+
+  // let nums = num.toString().split("");
+
+  // let sum = nums.reduce((a, b) => {
+  //   return a + +b;
+  // }, 0);
+  // return sum;
 };
 console.log(mean(33));
 
