@@ -1,3 +1,12 @@
+// ****************** Swapping largest number *********************
+function swap(num) {
+  let string = num + "";
+  let reverse = string.split("").reverse().join("");
+
+  return string >= reverse ? true : false;
+}
+console.log(swap(99));
+
 // ****************** Bollean chain *********************
 
 // function and(arr) {
@@ -11,7 +20,7 @@
 // let answer = and([1, 2, 3, 4]);
 // console.log(answer);
 
-console.log(false || true);
+// console.log(false || true);
 
 // ****************** Zero to one and one to Zero*********************
 
