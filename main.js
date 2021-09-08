@@ -1,27 +1,40 @@
+// ****************** Bollean chain *********************
+
+// function and(arr) {
+//   return arr.reduce((a, b) => {
+//     console.log(a);
+//     console.log(b);
+//     console.log("---------");
+//     return a !== b;
+//   });
+// }
+// let answer = and([1, 2, 3, 4]);
+// console.log(answer);
+
+console.log(false || true);
+
 // ****************** Zero to one and one to Zero*********************
 
-function string(str) {
-  let mystr = str.toLowerCase().split(" ");
-  let map = mystr
-    .map((data) => {
-      if (data == "one") return 1;
-      if (data == "zero") return 0;
-    })
-    .filter((data) => {
-      return data >= 0;
-    });
+// function string(str) {
+//   let mystr = str.toLowerCase().split(" ");
+//   let map = mystr
+//     .map((data) => {
+//       if (data == "one") return 1;
+//       if (data == "zero") return 0;
+//     })
+//     .filter((data) => {
+//       return data >= 0;
+//     });
 
-  if (map.length % 8 === 0) {
-    return map.join("");
-  } else {
-    let rem = map.length % 8;
-    return map.splice(0, map.length - rem).join("");
-  }
-}
-let answer = string(
-  "one one one one one zero zero zero zero one One one one zero zero one zero"
-);
-console.log(answer);
+//   if (map.length % 8 === 0) {
+//     return map.join("");
+//   } else {
+//     let rem = map.length % 8;
+//     return map.splice(0, map.length - rem).join("");
+//   }
+// }
+// let answer = string("one one one one one zero zero zero");
+// console.log(answer);
 // ******************EXPERIMENTING JS*********************
 
 // console.log("Hello");
