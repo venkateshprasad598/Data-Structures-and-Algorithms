@@ -1,6 +1,24 @@
 // ****************** Swapping largest number *********************
-const swap = (num) => num.toString().split("").reverse().join("") <= num;
-console.log(swap(26));
+const mean = (num) => {
+  return (
+    num
+      .toString()
+      .split("")
+      .map((data) => parseInt(data))
+      .reduce((a, b) => a + b) / num.toString().length
+  );
+};
+console.log(mean(33));
+
+// let sum = 12;
+// let num = sum.toString().split("");
+// let mum = num.map((data) => parseInt(data));
+// console.log(mum);
+// let jum = mum.reduce((a, b) => a + b);
+// console.log(jum / mum.length);
+// ****************** Swapping largest number *********************
+// const swap = (num) => num.toString().split("").reverse().join("") <= num;
+// console.log(swap(26));
 
 // let num = 26;
 // console.log(num.toString().split(""));
