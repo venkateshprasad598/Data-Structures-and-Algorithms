@@ -1,12 +1,9 @@
 // ****************** Swapping largest number *********************
-function swap(num) {
-  let string = num + "";
-  let reverse = string.split("").reverse().join("");
+const swap = (num) => num.toString().split("").reverse().join("") <= num;
+console.log(swap(26));
 
-  return string >= reverse ? true : false;
-}
-console.log(swap(99));
-
+// let num = 26;
+// console.log(num.toString().split(""));
 // ****************** Bollean chain *********************
 
 // function and(arr) {
