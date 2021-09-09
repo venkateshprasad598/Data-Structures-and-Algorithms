@@ -8,26 +8,27 @@
 
 // upwardTrend([1, 2, 3, 6, 7]) ➞ true
 
-let a = [1, 2, 4, 5, 3];
-let upward = "upward";
-let sort = a.sort((a, b) => {
-  if (typeof a === "string") {
-    upward = "string";
-  } else if (a - b < 0) {
-    if (upward === "string") {
-    } else {
-      upward = "notUpward";
-    }
-  }
-});
+const upward = (arr) => {
+  let upward = "upward";
+  let isString = false;
 
-if (upward === "string") {
-  console.log("String not permitted");
-} else if (upward === "upward") {
-  console.log(true);
-} else if (upward === "notUpward") {
-  console.log(false);
-}
+  arr.sort((a, b) =>
+    typeof b === "string" || typeof a === "string"
+      ? (isString = true)
+      : a - b < 0
+      ? (upward = "notUpward")
+      : null
+  );
+  return isString === true
+    ? "Strings not permitted!"
+    : upward === "upward"
+    ? true
+    : upward === "notUpward"
+    ? false
+    : null;
+};
+let answer = upward([1, 2, 3, 3, 5, 8]);
+console.log(answer);
 // ******************Find the Second Occurrence of "zip" in a String ***************
 
 // const findZip = (string) => {
