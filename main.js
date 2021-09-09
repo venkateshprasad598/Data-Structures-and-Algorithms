@@ -1,18 +1,48 @@
+// ******************Is There an Upward Trend? ***************
+
+// upwardTrend([1, 2, 3, 4]) ➞ true
+
+// upwardTrend([1, 2, 6, 5, 7, 8]) ➞ false
+
+// upwardTrend([1, 2, 3, "4"]) ➞ "Strings not permitted!"
+
+// upwardTrend([1, 2, 3, 6, 7]) ➞ true
+
+let a = [1, 2, 4, 5, 3];
+let upward = "upward";
+let sort = a.sort((a, b) => {
+  if (typeof a === "string") {
+    upward = "string";
+  } else if (a - b < 0) {
+    if (upward === "string") {
+    } else {
+      upward = "notUpward";
+    }
+  }
+});
+
+if (upward === "string") {
+  console.log("String not permitted");
+} else if (upward === "upward") {
+  console.log(true);
+} else if (upward === "notUpward") {
+  console.log(false);
+}
 // ******************Find the Second Occurrence of "zip" in a String ***************
 
-const findZip = (string) => {
-  let index = string.indexOf("zip");
+// const findZip = (string) => {
+//   let index = string.indexOf("zip");
 
-  let splitString = string.split("");
+//   let splitString = string.split("");
 
-  splitString.splice(index, 1);
+//   splitString.splice(index, 1);
 
-  let splicedString = splitString.join("").indexOf("zip");
+//   let splicedString = splitString.join("").indexOf("zip");
 
-  return splicedString === -1 ? -1 : splicedString + 1;
-};
-let answer = findZip("zip is zip");
-console.log(answer);
+//   return splicedString === -1 ? -1 : splicedString + 1;
+// };
+// let answer = findZip("zip is zip");
+// console.log(answer);
 
 // ******************Find the Mean*********************
 // const mean = (num) => {
