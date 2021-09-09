@@ -1,21 +1,36 @@
-const mean = (num) => {
-  return (
-    num
-      .toString()
-      .split("")
-      .map((data) => parseInt(data))
-      .reduce((a, b) => a + b) / num.toString().length
-  );
-  OR;
+// ******************Find the Second Occurrence of "zip" in a String ***************
 
-  // let nums = num.toString().split("");
+const findZip = (string) => {
+  let index = string.indexOf("zip");
 
-  // let sum = nums.reduce((a, b) => {
-  //   return a + +b;
-  // }, 0);
-  // return sum;
+  let splitString = string.split("");
+
+  splitString.splice(index, 1);
+
+  let splicedString = splitString.join("").indexOf("zip");
+
+  return splicedString === -1 ? -1 : splicedString + 1;
 };
-console.log(mean(33));
+let answer = findZip("zip is zip");
+console.log(answer);
+
+// ******************Find the Mean*********************
+// const mean = (num) => {
+//   return (
+//     num
+//       .toString()
+//       .split("")
+//       .map((data) => parseInt(data))
+//       .reduce((a, b) => a + b) / num.toString().length
+//   );
+//   OR;
+// let nums = num.toString().split("");
+// let sum = nums.reduce((a, b) => {
+//   return a + +b;
+// }, 0);
+// return sum;
+// };
+// console.log(mean(33));
 
 // let sum = 12;
 // let num = sum.toString().split("");
