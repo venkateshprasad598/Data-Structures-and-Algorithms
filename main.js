@@ -1,3 +1,35 @@
+// ******************PUZZLE PIECES ***************
+// puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]) ➞ true
+// // 1 + 4 = 5;  2 + 3 = 5;  3 + 2 = 5;  4 + 1 = 5
+// // Both arrays sum to [5, 5, 5, 5]
+
+// puzzlePieces([1, 8, 5, 0, -1, 7], [0, -7, -4, 1, 2, -6]) ➞ true
+
+// puzzlePieces([1, 2], [-1, -1]) ➞ false
+
+// puzzlePieces([9, 8, 7], [7, 8, 9, 10]) ➞ false
+
+let a = [1, 2, 3, 4, 3];
+let b = [4, 3, 2, 1, 2];
+function puzzle(a1, a2) {
+  let sum = a1[0] + a2[0];
+  let isPuzzle = true;
+  if (a1.length !== a2.length) {
+    isPuzzle = false;
+  }
+
+  for (i = 0; i < a2.length; i++) {
+    if (a1[i] + a2[i] !== sum) {
+      isPuzzle = false;
+    }
+  }
+
+  return isPuzzle;
+}
+
+let answer = puzzle(a, b);
+console.log(answer);
+
 // ******************Is There an Upward Trend? ***************
 
 // upwardTrend([1, 2, 3, 4]) ➞ true
@@ -8,27 +40,27 @@
 
 // upwardTrend([1, 2, 3, 6, 7]) ➞ true
 
-const upward = (arr) => {
-  let upward = "upward";
-  let isString = false;
+// const upward = (arr) => {
+//   let upward = "upward";
+//   let isString = false;
 
-  arr.sort((a, b) =>
-    typeof b === "string" || typeof a === "string"
-      ? (isString = true)
-      : a - b < 0
-      ? (upward = "notUpward")
-      : null
-  );
-  return isString === true
-    ? "Strings not permitted!"
-    : upward === "upward"
-    ? true
-    : upward === "notUpward"
-    ? false
-    : null;
-};
-let answer = upward([1, 2, 3, 3, 5, 8]);
-console.log(answer);
+//   arr.sort((a, b) =>
+//     typeof b === "string" || typeof a === "string"
+//       ? (isString = true)
+//       : a - b < 0
+//       ? (upward = "notUpward")
+//       : null
+//   );
+//   return isString === true
+//     ? "Strings not permitted!"
+//     : upward === "upward"
+//     ? true
+//     : upward === "notUpward"
+//     ? false
+//     : null;
+// };
+// let answer = upward([1, 2, 3, 3, 5, 8]);
+// console.log(answer);
 // ******************Find the Second Occurrence of "zip" in a String ***************
 
 // const findZip = (string) => {
