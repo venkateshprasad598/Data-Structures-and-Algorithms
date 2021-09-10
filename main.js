@@ -1,4 +1,19 @@
 // ******************PUZZLE PIECES ***************
+
+let a = [1, 6, -1, 4, 5];
+let b = a.reduce((acc, cur) => {
+  console.log(acc);
+  console.log(cur);
+  console.log("---");
+  if (acc > cur) {
+    return acc;
+  } else {
+    return cur;
+  }~
+}, 0);
+
+console.log(b);
+// ******************PUZZLE PIECES ***************
 // puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]) ➞ true
 // // 1 + 4 = 5;  2 + 3 = 5;  3 + 2 = 5;  4 + 1 = 5
 // // Both arrays sum to [5, 5, 5, 5]
