@@ -1,18 +1,15 @@
 // ******************PUZZLE PIECES ***************
 
-let a = [1, 6, -1, 4, 5];
-let b = a.reduce((acc, cur) => {
-  console.log(acc);
-  console.log(cur);
-  console.log("---");
-  if (acc > cur) {
-    return acc;
-  } else {
-    return cur;
-  }~
-}, 0);
+function product(arr) {
+  let splice = arr.splice(1, 1);
+  let multi = 1;
+  let remainingArray = arr.filter((c) => c !== splice);
+  for (let i of remainingArray) multi *= i;
+  return multi === splice[0] ? true : false;
+}
+let answer = product([2, 8, 4, 1]);
+console.log(answer);
 
-console.log(b);
 // ******************PUZZLE PIECES ***************
 // puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]) ➞ true
 // // 1 + 4 = 5;  2 + 3 = 5;  3 + 2 = 5;  4 + 1 = 5
@@ -24,26 +21,26 @@ console.log(b);
 
 // puzzlePieces([9, 8, 7], [7, 8, 9, 10]) ➞ false
 
-let a = [1, 2, 3, 4, 3];
-let b = [4, 3, 2, 1, 2];
-function puzzle(a1, a2) {
-  let sum = a1[0] + a2[0];
-  let isPuzzle = true;
-  if (a1.length !== a2.length) {
-    isPuzzle = false;
-  }
+// let a = [1, 2, 3, 4, 3];
+// let b = [4, 3, 2, 1, 2];
+// function puzzle(a1, a2) {
+//   let sum = a1[0] + a2[0];
+//   let isPuzzle = true;
+//   if (a1.length !== a2.length) {
+//     isPuzzle = false;
+//   }
 
-  for (i = 0; i < a2.length; i++) {
-    if (a1[i] + a2[i] !== sum) {
-      isPuzzle = false;
-    }
-  }
+//   for (i = 0; i < a2.length; i++) {
+//     if (a1[i] + a2[i] !== sum) {
+//       isPuzzle = false;
+//     }
+//   }
 
-  return isPuzzle;
-}
+//   return isPuzzle;
+// }
 
-let answer = puzzle(a, b);
-console.log(answer);
+// let answer = puzzle(a, b);
+// console.log(answer);
 
 // ******************Is There an Upward Trend? ***************
 
