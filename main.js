@@ -1,35 +1,28 @@
 // **************** Vowel words ***************
-let vowel = ["a", "e", "i", "o", "u"];
-let q = "hoops";
-let s = q.split("");
-console.log(s);
-let Array = [];
+function vowel(w) {
+  let vowel = ["a", "e", "i", "o", "u"];
+  let first = w[0].split("").filter((data) => vowel.includes(data));
+  console.log(first);
+  let array = [];
+  let map = w.map((data) => {
+    let ok = data.split("");
+    console.log(ok);
+    let istrue = true;
 
-let ans = s.map((data) => {
-  if (vowel.includes(data)) {
-    Array.push(data);
-  }
-});
-console.log(Array);
+    let be = ok.map((ata) => {
+      if (vowel.includes(ata) && !first.includes(ata)) {
+        console.log(ata);
+        istrue = false;
+      }
+    });
 
-console.log("____________________________");
-
-let two = "botei";
-let two2 = two.split("");
-console.log(two2);
-let ok = two2.filter((data) => {
-  return vowel.includes(data);
-});
-console.log(ok);
-console.log("---------------------------");
-
-let three = "chuff";
-let three2 = three.split("");
-let okk = three2.map((data) => {
-  if (vowel.includes(data)) {
-    console.log(data);
-  }
-});
+    if (istrue === true) {
+      array.push(data);
+    }
+  });
+  console.log(array);
+}
+let answer = vowel(["toe", "ocelot", "maniac"]);
 
 // ****************** Product of a remaining elements ***************
 
