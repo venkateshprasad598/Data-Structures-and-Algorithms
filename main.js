@@ -1,14 +1,47 @@
-// ******************PUZZLE PIECES ***************
+// **************** Vowel words ***************
+let vowel = ["a", "e", "i", "o", "u"];
+let q = "hoops";
+let s = q.split("");
+console.log(s);
+let Array = [];
 
-function product(arr) {
-  let splice = arr.splice(1, 1);
-  let multi = 1;
-  let remainingArray = arr.filter((c) => c !== splice);
-  for (let i of remainingArray) multi *= i;
-  return multi === splice[0] ? true : false;
-}
-let answer = product([2, 8, 4, 1]);
-console.log(answer);
+let ans = s.map((data) => {
+  if (vowel.includes(data)) {
+    Array.push(data);
+  }
+});
+console.log(Array);
+
+console.log("____________________________");
+
+let two = "botei";
+let two2 = two.split("");
+console.log(two2);
+let ok = two2.filter((data) => {
+  return vowel.includes(data);
+});
+console.log(ok);
+console.log("---------------------------");
+
+let three = "chuff";
+let three2 = three.split("");
+let okk = three2.map((data) => {
+  if (vowel.includes(data)) {
+    console.log(data);
+  }
+});
+
+// ****************** Product of a remaining elements ***************
+
+// function product(arr) {
+//   let splice = arr.splice(1, 1);
+//   let multi = 1;
+//   let remainingArray = arr.filter((c) => c !== splice);
+//   for (let i of remainingArray) multi *= i;
+//   return multi === splice[0] ? true : false;
+// }
+// let answer = product([2, 8, 4, 1]);
+// console.log(answer);
 
 // ******************PUZZLE PIECES ***************
 // puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]) ➞ true
