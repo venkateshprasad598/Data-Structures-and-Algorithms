@@ -1,28 +1,45 @@
-// **************** Vowel words ***************
-function vowel(w) {
-  let vowel = ["a", "e", "i", "o", "u"];
-  let first = w[0].split("").filter((data) => vowel.includes(data));
-  console.log(first);
-  let array = [];
-  let map = w.map((data) => {
-    let ok = data.split("");
-    console.log(ok);
-    let istrue = true;
+// **************** Cut the Stick ***************
+function Arr(arr) {
+  let hey = [...arr];
+  console.log(hey);
+  let Array = [];
 
-    let be = ok.map((ata) => {
-      if (vowel.includes(ata) && !first.includes(ata)) {
-        console.log(ata);
-        istrue = false;
-      }
-    });
-
-    if (istrue === true) {
-      array.push(data);
+  for (i = 0; i < arr.length; i++) {
+    if (hey.length !== 0) {
+      Array.push(hey.length);
+      let be = Math.min(...hey);
+      let ok = hey.filter((data) => data !== be).map((data) => data - be);
+      hey = ok;
+      console.log(hey);
     }
-  });
-  console.log(array);
+  }
+
+  console.log(Array);
 }
-let answer = vowel(["toe", "ocelot", "maniac"]);
+let answer = Arr([1, 2, 3, 4, 3, 3, 2, 1]);
+
+// console.log(answer);
+
+// **************** Vowel words ***************
+
+// function myVowel(w) {
+//   let vowel = ["a", "e", "i", "o", "u"];
+//   let first = w[0].split("").filter((data) => vowel.includes(data));
+//   let array = [];
+//   w.map((data) => {
+//     let isWord = true;
+//     let splitData = data.split("");
+//     splitData.map((vowels) => {
+//       if (vowel.includes(vowels) && !first.includes(vowels)) {
+//         isWord = false;
+//       }
+//     });
+//     return isWord === true ? array.push(data) : null;
+//   });
+//   return array;
+// }
+// let answer = myVowel(["toe", "ocelot", "maniac"]);
+// console.log(answer);
 
 // ****************** Product of a remaining elements ***************
 
