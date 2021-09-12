@@ -1,3 +1,27 @@
+// **************** unique Charcter Mapping ***************
+
+const unique = (str) => {
+  let split = str.split("");
+  let strings = [];
+  let Array = [];
+  let sum = 0;
+  split.map((data) => {
+    if (!strings.includes(data)) {
+      strings.push(data);
+      Array.push(sum);
+      sum++;
+    } else {
+      strings.push(data);
+      let index = strings.indexOf(data);
+      console.log(`${data} : ${Array[index]}`);
+      Array.push(Array[index]);
+    }
+  });
+  return Array;
+};
+let answer = unique("aaabbcdefghiii");
+console.log(answer);
+
 // **************** Find the Median ***************
 // Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 // Output: [1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000]
@@ -11,28 +35,28 @@
 //  1  3  -1  -3 [5  3  6] 7        5
 //  1  3  -1  -3  5 [3  6  7]       6
 
-let num = [1, 2, 3, 4, 2, 3, 1, 4, 2];
-let n = 4;
-const myMedian = (nums, k) => {
-  let Array = [];
-  for (let i = 0; i <= nums.length - k; i++) {
-    let myNums = [...nums];
-    let splice = myNums.splice(i, k);
-    let sort = splice.sort((a, b) => a - b);
-    if (sort.length % 2 === 1) {
-      let math = Math.floor(sort.length / 2);
-      Array.push(sort[math]);
-    } else {
-      let evenLength = sort.length / 2;
-      let oddLength = evenLength - 1;
-      let median = (sort[oddLength] + sort[evenLength]) / 2;
-      Array.push(median);
-    }
-  }
-  return Array;
-};
-let answer = myMedian(num, n);
-console.log(answer);
+// let num = [1, 2, 3, 4, 2, 3, 1, 4, 2];
+// let n = 4;
+// const myMedian = (nums, k) => {
+//   let Array = [];
+//   for (let i = 0; i <= nums.length - k; i++) {
+//     let myNums = [...nums];
+//     let splice = myNums.splice(i, k);
+//     let sort = splice.sort((a, b) => a - b);
+//     if (sort.length % 2 === 1) {
+//       let math = Math.floor(sort.length / 2);
+//       Array.push(sort[math]);
+//     } else {
+//       let evenLength = sort.length / 2;
+//       let oddLength = evenLength - 1;
+//       let median = (sort[oddLength] + sort[evenLength]) / 2;
+//       Array.push(median);
+//     }
+//   }
+//   return Array;
+// };
+// let answer = myMedian(num, n);
+// console.log(answer);
 
 // **************** Cut the Stick ***************
 // function Arr(arr) {
