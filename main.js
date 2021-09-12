@@ -10,11 +10,10 @@ function Arr(arr) {
       let be = Math.min(...hey);
       let ok = hey.filter((data) => data !== be).map((data) => data - be);
       hey = ok;
-      console.log(hey);
     }
   }
 
-  console.log(Array);
+return Array
 }
 let answer = Arr([1, 2, 3, 4, 3, 3, 2, 1]);
 
