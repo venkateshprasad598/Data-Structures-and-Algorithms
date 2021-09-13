@@ -1,26 +1,53 @@
 // **************** unique Charcter Mapping ***************
+// console.log("Hello");
 
-const unique = (str) => {
-  let split = str.split("");
-  let strings = [];
+const abb = (abbs, words) => {
   let Array = [];
-  let sum = 0;
-  split.map((data) => {
-    if (!strings.includes(data)) {
-      strings.push(data);
-      Array.push(sum);
-      sum++;
-    } else {
-      strings.push(data);
-      let index = strings.indexOf(data);
-      console.log(`${data} : ${Array[index]}`);
-      Array.push(Array[index]);
-    }
+  words.map((data, index) => {
+    let wordsSplit = data.split("");
+    console.log(wordsSplit);
+    let abbsSplit = abbs[index].split("");
+    console.log(abbsSplit);
+
+    // let includes = true;
+    // abbsSplit.map((megaData) => {
+    //   if (wordsSplit.includes(megaData))) {
+    //     includes = false;
+    //   }
+    // });
+
+    Array.push(abbs[index]);
+    // console.log(includes);
+    //   abbs.map((metaData) => {
+
+    //   })
   });
-  return Array;
+  console.log(Array);
 };
-let answer = unique("aaabbcdefghiii");
-console.log(answer);
+let answer = abb(["ho", "ho"], ["house", "hope"]);
+// **************** unique Charcter Mapping ***************
+
+// const unique = (str) => {
+//   let split = str.split("");
+//   let strings = [];
+//   let Array = [];
+//   let sum = 0;
+//   split.map((data) => {
+//     if (!strings.includes(data)) {
+//       strings.push(data);
+//       Array.push(sum);
+//       sum++;
+//     } else {
+//       strings.push(data);
+//       let index = strings.indexOf(data);
+//       console.log(`${data} : ${Array[index]}`);
+//       Array.push(Array[index]);
+//     }
+//   });
+//   return Array;
+// };
+// let answer = unique("aaabbcdefghiii");
+// console.log(answer);
 
 // **************** Find the Median ***************
 // Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
