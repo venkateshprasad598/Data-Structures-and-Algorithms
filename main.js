@@ -1,19 +1,53 @@
+function difference(arr) {
+  let ok = [...arr];
+  let Array = [];
+
+  arr.map((data) => {
+    ok.map((meta) => {
+      if (data - meta === 2) {
+        let sort = [data, meta];
+        let sorted = sort.sort((a, b) => a - b);
+        Array.push(sorted);
+      }
+    });
+  });
+  console.log(Array.sort());
+}
+
+difference([4, 3, 1, 5, 6]);
+
 // **************** Strange Counter ***************
 
-function counter(t) {
-  let value = 4;
-  let logic = 3;
-  for (let i = 1; i <= t; i++) {
-    value--;
-    if (value < 1) {
-      value = logic * 2;
-      logic = value;
-    }
-  }
-  return value;
-}
-let answer = counter(2);
-console.log(answer);
+// function diff(arr) {
+//   let Array = [];
+//   let num = 2;
+//   arr.map((data) => {
+//     if (data - num === 2 || data - num === 0) {
+//       Array.push(data);
+//     }
+//   });
+//   console.log(Array);
+// }
+// diff([1, 2, 3, 4]);
+
+// **************** Strange Counter ***************
+
+// function counter(t) {
+//   let value = 4;
+//   let logic = 3;
+//   for (let i = 1; i <= t; i++) {
+//     value--;
+//     if (value < 1) {
+//       value = logic * 2;
+//       logic = value;
+//     }
+//   }
+//   return value;
+// }
+// let answer = counter(2);
+// console.log(answer);
+// let sort = [1, 1000, 100, 2, 2000, 30000, 3, 300];
+// console.log(sort.sort());
 
 // **************** Genarate Words by names ***************
 // function abb(abbs, words) {
