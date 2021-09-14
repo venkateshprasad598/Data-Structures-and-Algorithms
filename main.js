@@ -1,46 +1,69 @@
-// **************** unique Charcter Mapping ***************
-// console.log("Hello");
+// **************** Genarate Words by names ***************
+function abb(abbs, words) {
+  // let includes = true;
+  // names.map((name, index) => {
+  //   let myName = name.split("");
+  //   console.log(myName + " " + index);
+  //   abbs.map((abbs_a, index_a) => {
+  //     let abbs_b = abbs_a.split("");
 
-// const abb = (abbs, words) => {
-//   let Array = [];
-//   words.map((data, index) => {
-//     let wordsSplit = data.split("");
-//     console.log(wordsSplit);
-//     let abbsSplit = abbs[index].split("");
-//     console.log(abbsSplit);
-//   });
-//   console.log(Array);
-// };
-// let answer = abb(["ho", "ho"], ["house", "hope"]);
-
-function generate(name, words) {
-  let splitNames = name.split("");
-  let names = splitNames.filter((data) => data !== " ");
+  //     console.log(`${abbs_a} : ${index_a}`);
+  //     if (index === index_a) {
+  //       abbs_b.map((abbs_c) => {
+  //         if (!myName.includes(abbs_c)) {
+  //           includes = false;
+  //         }
+  //       });
+  //     }
+  //   });
+  //   console.log("-----");
+  // });
+  // console.log(includes);
 
   let includes = true;
-  let sum = 0;
-  words.map((data) => {
-    let word = data.split("");
-    sum += word.length;
-
-    word.map((metaData) => {
-      if (
-        !names.includes(metaData.toLowerCase()) &&
-        !names.includes(metaData.toUpperCase())
-      ) {
-        console.log(metaData);
+  words.map((data, index) => {
+    let word_split = data.split("");
+    abbs.map((data_one, index_one) => {
+      console.log(data_one);
+      if (index === index_one && !word_split.includes(data_one)) {
         includes = false;
       }
     });
   });
-
-  if (includes === true && sum === names.length) {
-    return true;
-  } else {
-    return false;
-  }
+  console.log(includes);
 }
-generate("Jeff Goldblum", ["jog", "meld", "bluffs"]);
+abb(["s", "t", "v"], ["stamina", "television", "vindaloo"]);
+
+// **************** Genarate Words by names ***************
+
+// function generate(name, words) {
+//   let splitNames = name.split("");
+//   let names = splitNames.filter((data) => data !== " ");
+
+//   let includes = true;
+//   let sum = 0;
+//   words.map((data) => {
+//     let word = data.split("");
+//     sum += word.length;
+
+//     word.map((metaData) => {
+//       if (
+//         !names.includes(metaData.toLowerCase()) &&
+//         !names.includes(metaData.toUpperCase())
+//       ) {
+//         console.log(metaData);
+//         includes = false;
+//       }
+//     });
+//   });
+
+//   if (includes === true && sum === names.length) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// generate("Jeff Goldblum", ["jog", "meld", "bluffs"]);
 // **************** unique Charcter Mapping ***************
 
 // const unique = (str) => {
