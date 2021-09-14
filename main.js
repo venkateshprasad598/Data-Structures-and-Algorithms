@@ -1,30 +1,46 @@
 // **************** unique Charcter Mapping ***************
 // console.log("Hello");
 
-const abb = (abbs, words) => {
-  let Array = [];
-  words.map((data, index) => {
-    let wordsSplit = data.split("");
-    console.log(wordsSplit);
-    let abbsSplit = abbs[index].split("");
-    console.log(abbsSplit);
+// const abb = (abbs, words) => {
+//   let Array = [];
+//   words.map((data, index) => {
+//     let wordsSplit = data.split("");
+//     console.log(wordsSplit);
+//     let abbsSplit = abbs[index].split("");
+//     console.log(abbsSplit);
+//   });
+//   console.log(Array);
+// };
+// let answer = abb(["ho", "ho"], ["house", "hope"]);
 
-    // let includes = true;
-    // abbsSplit.map((megaData) => {
-    //   if (wordsSplit.includes(megaData))) {
-    //     includes = false;
-    //   }
-    // });
+function generate(name, words) {
+  let splitNames = name.split("");
+  let names = splitNames.filter((data) => data !== " ");
 
-    Array.push(abbs[index]);
-    // console.log(includes);
-    //   abbs.map((metaData) => {
+  let includes = true;
+  let sum = 0;
+  words.map((data) => {
+    let word = data.split("");
+    sum += word.length;
 
-    //   })
+    word.map((metaData) => {
+      if (
+        !names.includes(metaData.toLowerCase()) &&
+        !names.includes(metaData.toUpperCase())
+      ) {
+        console.log(metaData);
+        includes = false;
+      }
+    });
   });
-  console.log(Array);
-};
-let answer = abb(["ho", "ho"], ["house", "hope"]);
+
+  if (includes === true && sum === names.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+generate("Jeff Goldblum", ["jog", "meld", "bluffs"]);
 // **************** unique Charcter Mapping ***************
 
 // const unique = (str) => {
