@@ -1,38 +1,57 @@
-// **************** Genarate Words by names ***************
-function abb(abbs, words) {
-  // let includes = true;
-  // names.map((name, index) => {
-  //   let myName = name.split("");
-  //   console.log(myName + " " + index);
-  //   abbs.map((abbs_a, index_a) => {
-  //     let abbs_b = abbs_a.split("");
+// **************** Strange Counter ***************
 
-  //     console.log(`${abbs_a} : ${index_a}`);
-  //     if (index === index_a) {
-  //       abbs_b.map((abbs_c) => {
-  //         if (!myName.includes(abbs_c)) {
-  //           includes = false;
-  //         }
-  //       });
-  //     }
-  //   });
-  //   console.log("-----");
-  // });
-  // console.log(includes);
-
-  let includes = true;
-  words.map((data, index) => {
-    let word_split = data.split("");
-    abbs.map((data_one, index_one) => {
-      console.log(data_one);
-      if (index === index_one && !word_split.includes(data_one)) {
-        includes = false;
-      }
-    });
-  });
-  console.log(includes);
+function counter(t) {
+  let value = 4;
+  let logic = 3;
+  for (let i = 1; i <= t; i++) {
+    value--;
+    if (value < 1) {
+      value = logic * 2;
+      logic = value;
+    }
+  }
+  return value;
 }
-abb(["s", "t", "v"], ["stamina", "television", "vindaloo"]);
+let answer = counter(2);
+console.log(answer);
+
+// **************** Genarate Words by names ***************
+// function abb(abbs, words) {
+// let includes = true;
+// names.map((name, index) => {
+//   let myName = name.split("");
+//   console.log(myName + " " + index);
+//   abbs.map((abbs_a, index_a) => {
+//     let abbs_b = abbs_a.split("");
+
+//     console.log(`${abbs_a} : ${index_a}`);
+//     if (index === index_a) {
+//       abbs_b.map((abbs_c) => {
+//         if (!myName.includes(abbs_c)) {
+//           includes = false;
+//         }
+//       });
+//     }
+//   });
+//   console.log("-----");
+// });
+// console.log(includes);
+
+//   let includes = true;
+//   words.map((data, index) => {
+//     let word_split = data.split("");
+//     abbs.map((data_one, index_one) => {
+//       console.log(data_one);
+//       if (index === index_one && !word_split.includes(data_one)) {
+//         includes = false;
+//       }else{
+
+//       }
+//     });
+//   });
+//   console.log(includes);
+// }
+// abb(["s", "t", "v"], ["stamina", "television", "vindaloo"]);
 
 // **************** Genarate Words by names ***************
 
@@ -54,7 +73,8 @@ abb(["s", "t", "v"], ["stamina", "television", "vindaloo"]);
 //         console.log(metaData);
 //         includes = false;
 //       }
-//     });
+//     }
+// );
 //   });
 
 //   if (includes === true && sum === names.length) {
