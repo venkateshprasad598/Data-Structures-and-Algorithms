@@ -1,20 +1,59 @@
-function difference(arr) {
-  let ok = [...arr];
-  let Array = [];
-
-  arr.map((data) => {
-    ok.map((meta) => {
-      if (data - meta === 2) {
-        let sort = [data, meta];
-        let sorted = sort.sort((a, b) => a - b);
-        Array.push(sorted);
+// **************** Tic Toc Toe ***************
+function tic(a) {
+  for (let i = 0; i < a.length; i++) {
+    for (j = 0; j < a[i].length; j++) {
+      if (
+        (a[i][j] === a[i][j + 1] && a[i][j] === a[i][j + 2]) ||
+        (a[i][j] === a[i + 1][j] && a[i][j] === a[i + a.length - 1][j])
+      ) {
+        console.log(a[i][j]);
       }
-    });
-  });
-  console.log(Array.sort());
+    }
+  }
 }
+tic([
+  ["x", "x", "x"],
+  ["x", "o", "x"],
+  ["x", "o", "x"],
+]);
 
-difference([4, 3, 1, 5, 6]);
+// **************** Array Exchange ***************
+// let myArray = ["a", "b", "c"];
+// let otherArray = [1, 2, 3];
+// function exchangeWith(a, b) {
+//   x = a.reverse();
+//   a = b.reverse();
+//   b = x;
+//   return [a, b];
+// }
+// let answer = exchangeWith(["a", "b", "c"], [1, 2, 3]);
+// console.log(answer);
+
+// function exchange(myArray, otherArray) {
+//   let ok = exchange(myArray, otherArray);
+// }
+// let answer = exchange(["a", "b", "c"], [1, 2, 3]);
+// console.log(answer);
+// **************** Difference of 2 ***************
+
+// function difference(arr) {
+//   let metaData = [...arr];
+//   let Array = [];
+
+//   arr.map((data) => {
+//     metaData.map((meta) => {
+//       if (data - meta === 2) {
+//         let sort = [data, meta];
+//         let sortedData = sort.sort((a, b) => a - b);
+//         Array.push(sortedData);
+//       }
+//     });
+//   });
+
+//   return Array.sort();
+// }
+// let answer = difference([4, 3, 1, 5, 6]);
+// console.log(answer);
 
 // **************** Strange Counter ***************
 
