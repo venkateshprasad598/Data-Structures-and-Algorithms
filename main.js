@@ -16,11 +16,12 @@ let n = 5;
 let sum = "";
 
 for (i = 1; i <= n; i++) {
-  for (k = 0; k < n - i; k++) {
-    sum += " ";
-  }
-  for (j = 0; j < 2 * i - 1; j++) {
-    sum += "*";
+  for (j = 0; j < i; j++) {
+    if ((i === 3 && j === 1) || (i === 4 && j === 1) || (i === 4 && j === 2)) {
+      sum += " ";
+    } else {
+      sum += "*";
+    }
   }
   console.log(sum);
   sum = "";
