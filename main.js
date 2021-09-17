@@ -1,52 +1,66 @@
+// ******************Patterns***************************
 // let sum = "";
 // let n = 7;
 // for (i = 1; i <= n; i++) {
-//   for (k = 0; k < n - i - 2; k++) {
+//   for (k = 0; k < n - i; k++) {
 //     sum += " ";
 //   }
 
-//   for (j = 0; j < i; j++) {
+//   for (j = 0; j < 2 * i - 1; j++) {
 //     sum += "*";
 //   }
 //   console.log(sum);
 //   sum = "";
 // }
 
-let n = 5;
-let sum = "";
+// let n = 5;
+// let sum = "";
 
-for (i = 1; i <= n; i++) {
-  for (j = 0; j < i; j++) {
-    if ((i === 3 && j === 1) || (i === 4 && j === 1) || (i === 4 && j === 2)) {
-      sum += " ";
-    } else {
-      sum += "*";
-    }
-  }
-  console.log(sum);
-  sum = "";
-}
-
-// **************** Tic Toc Toe ***************
-// function tic(a) {
-//   for (let i = 0; i < a.length; i++) {
-//     for (j = 0; j < a[i].length; j++) {
-//       if (
-//         (a[i][j] === a[i][j + 1] && a[i][j] === a[i][j + 2]) ||
-//         (a[i][j] === a[i + 1][j] && a[i][j] === a[i + a.length - 1][j])
-//       ) {
-//         console.log(a[i][j]);
-//       }
+// for (i = 1; i <= n; i++) {
+//   for (j = 0; j < i; j++) {
+//     if ((i === 3 && j === 1) || (i === 4 && j === 1) || (i === 4 && j === 2)) {
+//       sum += " ";
+//     } else {
+//       sum += "*";
 //     }
 //   }
+//   console.log(sum);
+//   sum = "";
 // }
-// tic([
-//   ["x", "x", "x"],
-//   ["x", "o", "x"],
-//   ["x", "o", "x"],
-// ]);
 
-// **************** Array Exchange ***************
+// **************** Tic Toc Toe ***************
+function tic(a) {
+  let x = a.flat().join("");
+  let winnerWho = [
+    x[0] + x[1] + x[2],
+    x[3] + x[4] + x[5],
+    x[6] + x[7] + x[8],
+    x[0] + x[3] + x[6],
+    x[2] + x[5] + x[8],
+    x[1] + x[4] + x[7],
+    x[2] + x[4] + x[6],
+    x[0] + x[4] + x[8],
+  ];
+  return winnerWho.includes("XXX")
+    ? "X"
+    : winnerWho.includes("OOO")
+    ? "O"
+    : "Draw";
+}
+tic([
+  ["x", "o", "x"],
+  ["o", "o", "o"],
+  ["x", "x", "x"],
+]);
+
+let ok = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [6, 7, 8],
+];
+console.log(ok.flat());
+
+// **************** Array Eichange ***************
 // let myArray = ["a", "b", "c"];
 // let otherArray = [1, 2, 3];
 // function exchangeWith(a, b) {
