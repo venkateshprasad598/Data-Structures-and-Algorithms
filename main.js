@@ -1,21 +1,40 @@
-// **************** Tic Toc Toe ***************
-function tic(a) {
-  for (let i = 0; i < a.length; i++) {
-    for (j = 0; j < a[i].length; j++) {
-      if (
-        (a[i][j] === a[i][j + 1] && a[i][j] === a[i][j + 2]) ||
-        (a[i][j] === a[i + 1][j] && a[i][j] === a[i + a.length - 1][j])
-      ) {
-        console.log(a[i][j]);
-      }
+let sum = "";
+let n = 4;
+for (i = 0; i < n; i++) {
+  for (j = 0; j < n; j++) {
+    if (
+      (j == 1 && i == 1) ||
+      (j == 2 && i == 2) ||
+      (j == 2 && i == 1) ||
+      (j == 1 && i == 2)
+    ) {
+      sum += " ";
+    } else {
+      sum += "*";
     }
   }
+  console.log(sum);
+  sum = "";
 }
-tic([
-  ["x", "x", "x"],
-  ["x", "o", "x"],
-  ["x", "o", "x"],
-]);
+
+// **************** Tic Toc Toe ***************
+// function tic(a) {
+//   for (let i = 0; i < a.length; i++) {
+//     for (j = 0; j < a[i].length; j++) {
+//       if (
+//         (a[i][j] === a[i][j + 1] && a[i][j] === a[i][j + 2]) ||
+//         (a[i][j] === a[i + 1][j] && a[i][j] === a[i + a.length - 1][j])
+//       ) {
+//         console.log(a[i][j]);
+//       }
+//     }
+//   }
+// }
+// tic([
+//   ["x", "x", "x"],
+//   ["x", "o", "x"],
+//   ["x", "o", "x"],
+// ]);
 
 // **************** Array Exchange ***************
 // let myArray = ["a", "b", "c"];
