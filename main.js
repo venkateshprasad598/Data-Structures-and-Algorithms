@@ -1,17 +1,12 @@
 let sum = "";
-let n = 4;
-for (i = 0; i < n; i++) {
-  for (j = 0; j < n; j++) {
-    if (
-      (j == 1 && i == 1) ||
-      (j == 2 && i == 2) ||
-      (j == 2 && i == 1) ||
-      (j == 1 && i == 2)
-    ) {
-      sum += " ";
-    } else {
-      sum += "*";
-    }
+let n = 7;
+for (i = 1; i <= n; i++) {
+  for (k = 0; k < n - i - 2; k++) {
+    sum += " ";
+  }
+
+  for (j = 0; j < i; j++) {
+    sum += "*";
   }
   console.log(sum);
   sum = "";
