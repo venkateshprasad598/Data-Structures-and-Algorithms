@@ -1,11 +1,25 @@
+// let sum = "";
+// let n = 7;
+// for (i = 1; i <= n; i++) {
+//   for (k = 0; k < n - i - 2; k++) {
+//     sum += " ";
+//   }
+
+//   for (j = 0; j < i; j++) {
+//     sum += "*";
+//   }
+//   console.log(sum);
+//   sum = "";
+// }
+
+let n = 5;
 let sum = "";
-let n = 7;
+
 for (i = 1; i <= n; i++) {
-  for (k = 0; k < n - i - 2; k++) {
+  for (k = 0; k < n - i; k++) {
     sum += " ";
   }
-
-  for (j = 0; j < i; j++) {
+  for (j = 0; j < 2 * i - 1; j++) {
     sum += "*";
   }
   console.log(sum);
