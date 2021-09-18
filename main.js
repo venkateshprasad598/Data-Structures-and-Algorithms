@@ -1,12 +1,21 @@
-const positive = (Array) => {
-  const set = new Set(Array);
-  const newSet = [...set];
-  const positive = newSet.filter((data) => data > 0);
-  const negative = newSet.filter((data) => data < 0);
-  return positive.length >= negative.length ? true : false;
+const binary = (a) => {
+  console.log("Hello");
 };
-let answer = positive([1, 1, 1, -1, -2]);
-console.log(answer);
+
+let answet = binary(10);
+// console.log(answer);
+
+// **************** unique postive number ***************
+
+// const positive = (Array) => {
+//   const set = new Set(Array);
+//   const newSet = [...set];
+//   const positive = newSet.filter((data) => data > 0);
+//   const negative = newSet.filter((data) => data < 0);
+//   return positive.length >= negative.length ? true : false;
+// };
+// let answer = positive([1, 1, 1, -1, -2]);
+// console.log(answer);
 
 // **************** Tic Toc Toe ***************
 // function tic(a) {
