@@ -1,33 +1,3 @@
-// ******************Patterns***************************
-// let sum = "";
-// let n = 7;
-// for (i = 1; i <= n; i++) {
-//   for (k = 0; k < n - i; k++) {
-//     sum += " ";
-//   }
-
-//   for (j = 0; j < 2 * i - 1; j++) {
-//     sum += "*";
-//   }
-//   console.log(sum);
-//   sum = "";
-// }
-
-// let n = 5;
-// let sum = "";
-
-// for (i = 1; i <= n; i++) {
-//   for (j = 0; j < i; j++) {
-//     if ((i === 3 && j === 1) || (i === 4 && j === 1) || (i === 4 && j === 2)) {
-//       sum += " ";
-//     } else {
-//       sum += "*";
-//     }
-//   }
-//   console.log(sum);
-//   sum = "";
-// }
-
 // **************** Tic Toc Toe ***************
 function tic(a) {
   let x = a.flat().join("");
@@ -59,6 +29,38 @@ let ok = [
   [6, 7, 8],
 ];
 console.log(ok.flat());
+
+// ******************Patterns***************************
+// let sum = "";
+// let n = 7;
+// for (i = 1; i <= n; i++) {
+//   for (k = 0; k < n - i; k++) {
+//     sum += " ";
+//   }
+
+//   for (j = 0; j < 2 * i - 1; j++) {
+//     sum += "*";
+//   }
+//   console.log(sum);
+//   sum = "";
+// }
+
+// let n = 5;
+// let sum = "";
+
+// for (i = 1; i <= n; i++) {
+//   for (j = 0; j < i; j++) {
+//     if ((i === 3 && j === 1) || (i === 4 && j === 1) || (i === 4 && j === 2)) {
+//       sum += " ";
+//     } else {
+//       sum += "*";
+//     }
+//   }
+//   console.log(sum);
+//   sum = "";
+// }
+
+
 
 // **************** Array Eichange ***************
 // let myArray = ["a", "b", "c"];
