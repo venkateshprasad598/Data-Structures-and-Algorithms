@@ -1,8 +1,22 @@
+// **************** Binary ***************
+
 const binary = (a) => {
   console.log("Hello");
+  let y = a;
+  let binary = "";
+  for (i = 0; i < a; i++) {
+    if (y !== 0) {
+      x = y % 2;
+      binary += x;
+      z = y / 2;
+      y = parseInt(z);
+    }
+  }
+  let binaryString = binary.split("").reverse().join("");
+  console.log(binaryString);
 };
 
-let answet = binary(10);
+let answet = binary(5);
 // console.log(answer);
 
 // **************** unique postive number ***************
