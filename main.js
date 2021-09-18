@@ -1,34 +1,44 @@
-// **************** Tic Toc Toe ***************
-function tic(a) {
-  let x = a.flat().join("");
-  let winnerWho = [
-    x[0] + x[1] + x[2],
-    x[3] + x[4] + x[5],
-    x[6] + x[7] + x[8],
-    x[0] + x[3] + x[6],
-    x[2] + x[5] + x[8],
-    x[1] + x[4] + x[7],
-    x[2] + x[4] + x[6],
-    x[0] + x[4] + x[8],
-  ];
-  return winnerWho.includes("XXX")
-    ? "X"
-    : winnerWho.includes("OOO")
-    ? "O"
-    : "Draw";
-}
-tic([
-  ["x", "o", "x"],
-  ["o", "o", "o"],
-  ["x", "x", "x"],
-]);
+const positive = (Array) => {
+  const set = new Set(Array);
+  const newSet = [...set];
+  const positive = newSet.filter((data) => data > 0);
+  const negative = newSet.filter((data) => data < 0);
+  return positive.length >= negative.length ? true : false;
+};
+let answer = positive([1, 1, 1, -1, -2]);
+console.log(answer);
 
-let ok = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [6, 7, 8],
-];
-console.log(ok.flat());
+// **************** Tic Toc Toe ***************
+// function tic(a) {
+//   let x = a.flat().join("");
+//   let winnerWho = [
+//     x[0] + x[1] + x[2],
+//     x[3] + x[4] + x[5],
+//     x[6] + x[7] + x[8],
+//     x[0] + x[3] + x[6],
+//     x[2] + x[5] + x[8],
+//     x[1] + x[4] + x[7],
+//     x[2] + x[4] + x[6],
+//     x[0] + x[4] + x[8],
+//   ];
+//   return winnerWho.includes("XXX")
+//     ? "X"
+//     : winnerWho.includes("OOO")
+//     ? "O"
+//     : "Draw";
+// }
+// tic([
+//   ["x", "o", "x"],
+//   ["o", "o", "o"],
+//   ["x", "x", "x"],
+// ]);
+
+// let ok = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [6, 7, 8],
+// ];
+// console.log(ok.flat());
 
 // ******************Patterns***************************
 // let sum = "";
@@ -59,8 +69,6 @@ console.log(ok.flat());
 //   console.log(sum);
 //   sum = "";
 // }
-
-
 
 // **************** Array Eichange ***************
 // let myArray = ["a", "b", "c"];
