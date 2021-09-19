@@ -1,26 +1,46 @@
-// let newAnswer = answer();
-// console.log(newAnswer);
-// let name = 5;
-// function nam(P) {
-//   let newName = P + 5;
-//   return newName;
-// }
-// console.log(nam(5));
-// console.log(name);
-
-function something(n) {
-  let x = n;
+function matrix(n) {
   let sum = "";
-  for (i = 0; x > 0; i++) {
-    let y = x % 2;
-    sum += y;
-    let z = x / 2;
-    x = parseInt(z);
+  for (let i = 1; i <= n; i++) {
+    // if (i > 1) {
+    //   for (let k = n-i; k <= n; k--) {
+    //     sum += k;
+    //   }
+    // } else {
+    //   for (let j = 1; j <= n; j++) {
+    //     sum += j;
+    //   }
+    // }
+    for (i = 1; i <= n; i++) {
+      for (j = i; j < n + i; j++) {
+        if (j > n) {
+          sum += n + i - j;
+        } else {
+          sum += j;
+        }
+      }
+      console.log(sum);
+      sum = "";
+    }
   }
-  return x === 0 ? 0 : sum.split("").reverse().join("");
 }
-let answer = something(0);
-console.log(answer);
+let answer = matrix(3);
+
+// console.log(name);
+// **************** Binary Number ***************
+
+// function something(n) {
+//   let x = n;
+//   let sum = "";
+//   for (i = 0; x > 0; i++) {
+//     let y = x % 2;
+//     sum += y;
+//     let z = x / 2;
+//     x = parseInt(z);
+//   }
+//   return x === 0 ? 0 : sum.split("").reverse().join("");
+// }
+// let answer = something(0);
+// console.log(answer);
 // **************** Binary ***************
 
 // const binary = (a) => {
