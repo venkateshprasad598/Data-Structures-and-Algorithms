@@ -1,19 +1,41 @@
-function matrix(n) {
-  let sum = "";
-  for (let i = 1; i <= n; i++) {
-    for (j = i; j < n + i; j++) {
-      if (j > n) {
-        sum += j - n;
-      } else {
-        sum += j;
-      }
-    }
+function tables(a, b, groups) {
+  let oneSeater = a;
+  let twoSeater = b * 2;
+  let sum = oneSeater + twoSeater;
+  console.log(sum);
 
-    console.log(sum);
-    sum = "";
-  }
+  let Array = [];
+  let reject = 0;
+  groups.map((data) => {
+    sum -= data;
+    if (sum < 0) {
+      sum = sum + data;
+      reject += data;
+    } else {
+      Array.push(data);
+    }
+  });
+  return reject;
 }
-let answer = matrix(5);
+let answer = tables(1, 1, [1, 1, 2, 1]);
+
+// **************** Matrix of numbers ***************
+
+// function matrix(n) {
+//   let sum = "";
+//   for (let i = 1; i <= n; i++) {
+//     for (j = i; j < n + i; j++) {
+//       if (j > n) {
+//         sum += j - n;
+//       } else {
+//         sum += j;
+//       }
+//     }
+//     console.log(sum);
+//     sum = "";
+//   }
+// }
+// let answer = matrix(5);
 
 // console.log(name);
 // **************** Binary Number ***************
