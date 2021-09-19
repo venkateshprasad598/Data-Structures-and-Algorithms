@@ -1,22 +1,48 @@
+// let newAnswer = answer();
+// console.log(newAnswer);
+// let name = 5;
+// function nam(P) {
+//   let newName = P + 5;
+//   return newName;
+// }
+// console.log(nam(5));
+// console.log(name);
+
+function something(n) {
+  let x = n;
+  let sum = "";
+  for (i = 0; x > 0; i++) {
+    let y = x % 2;
+    sum += y;
+    let z = x / 2;
+    x = parseInt(z);
+  }
+  return x === 0 ? 0 : sum.split("").reverse().join("");
+}
+let answer = something(0);
+console.log(answer);
 // **************** Binary ***************
 
-const binary = (a) => {
-  console.log("Hello");
-  let y = a;
-  let binary = "";
-  for (i = 0; i < a; i++) {
-    if (y !== 0) {
-      x = y % 2;
-      binary += x;
-      z = y / 2;
-      y = parseInt(z);
-    }
-  }
-  let binaryString = binary.split("").reverse().join("");
-  console.log(binaryString);
-};
+// const binary = (a) => {
+//   console.log("Hello");
+//   let y = a;
+//   let binary = "";
+//   for (i = 0; i < a; i++) {
+//     console.log(y);
+//     if (y !== 0) {
+//       x = y % 2;
+//       // console.log(x);
+//       binary += x;
+//       z = y / 2;
+//       y = z;
+//     }
+//   }
+//   let binaryString = binary.split("").reverse().join("");
+//   console.log(binaryString);
+// };
 
-let answet = binary(5);
+// let answet = binary(5);
+// console.log(1 % 2);
 // console.log(answer);
 
 // **************** unique postive number ***************
