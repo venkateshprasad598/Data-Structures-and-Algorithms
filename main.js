@@ -1,29 +1,19 @@
 function matrix(n) {
   let sum = "";
   for (let i = 1; i <= n; i++) {
-    // if (i > 1) {
-    //   for (let k = n-i; k <= n; k--) {
-    //     sum += k;
-    //   }
-    // } else {
-    //   for (let j = 1; j <= n; j++) {
-    //     sum += j;
-    //   }
-    // }
-    for (i = 1; i <= n; i++) {
-      for (j = i; j < n + i; j++) {
-        if (j > n) {
-          sum += n + i - j;
-        } else {
-          sum += j;
-        }
+    for (j = i; j < n + i; j++) {
+      if (j > n) {
+        sum += j - n;
+      } else {
+        sum += j;
       }
-      console.log(sum);
-      sum = "";
     }
+
+    console.log(sum);
+    sum = "";
   }
 }
-let answer = matrix(3);
+let answer = matrix(5);
 
 // console.log(name);
 // **************** Binary Number ***************
