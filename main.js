@@ -1,12 +1,39 @@
-// **************** Sort two arrays ***************
-function sort(a, b) {
-  let c = [...a, ...b];
-  let sortedArray = c.sort((a, b) => a - b);
-  let answer = new Set(sortedArray);
-  return [...answer];
+// ****************Robo Moves 90Degree ***************
+function robbo(...b) {
+  let a = b;
+  let even = a.filter((data, index) => index % 2 == 0);
+  let odd = a.filter((data, index) => index % 2 == 1);
+  let x = 0;
+  let y = 0;
+  even.map((data, index) => {
+    if (index % 2 === 0) {
+      y += data;
+    } else {
+      y -= data;
+    }
+  });
+
+  odd.map((data, index) => {
+    if (index % 2 === 0) {
+      x += data;
+    } else {
+      x -= data;
+    }
+  });
+
+  return [x, y];
 }
-let answer = sort([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);
-console.log(answer);
+let answer = robbo(1, 2, 3, 4, 5);
+
+// **************** Sort two arrays ***************
+// function sort(a, b) {
+//   let c = [...a, ...b];
+//   let sortedArray = c.sort((a, b) => a - b);
+//   let answer = new Set(sortedArray);
+//   return [...answer];
+// }git a
+// let answer = sort([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);
+// console.log(answer);
 
 // **************** Restaurant Tables ***************
 
