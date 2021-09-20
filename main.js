@@ -1,29 +1,69 @@
-// ****************Robo Moves 90Degree ***************
-function robbo(...b) {
-  let a = b;
-  let even = a.filter((data, index) => index % 2 == 0);
-  let odd = a.filter((data, index) => index % 2 == 1);
-  let x = 0;
-  let y = 0;
-  even.map((data, index) => {
-    if (index % 2 === 0) {
-      y += data;
-    } else {
-      y -= data;
-    }
-  });
-
-  odd.map((data, index) => {
-    if (index % 2 === 0) {
-      x += data;
-    } else {
-      x -= data;
-    }
-  });
-
-  return [x, y];
+// ****************Array Methods***************
+function arr(a) {
+  console.log(a.flat());
 }
-let answer = robbo(1, 2, 3, 4, 5);
+console.log(
+  arr([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+  ])
+);
+// let num = [1, 2, 3, 4, 5];
+// let map = num.map()
+// let Array = [];
+// let forEach = num.forEach((data) => Array.push(data * 3));
+// console.log(num);
+// console.log(Array);
+// let num = [1, 2, 3, 4, 5];
+// let answer = num.join();
+// console.log(answer);
+
+// let ok = ["Helo", "soir"];
+// let sum = ok.toString();
+// console.log(sum);
+// let num = [1, 2, 4, 5];
+
+// //Adding
+// let index = num.indexOf(4);
+// console.log(index);
+// let add = [...num.slice(0, index), 3, ...num.slice(index)];
+// console.log(add); // [1, 2, 3, 4, 5]
+
+// //Removing
+// let filter = add.filter((data) => data != 3);
+// console.log(filter); // [1, 2, 4, 5]
+
+// //Updating
+// let update = num.map((data) => (data === 4 ? data * 2 : data));
+// console.log(update); // [1, 2, 8, 5]
+// ****************Robo Moves 90Degree ***************
+// function robbo(...b) {
+//   let a = b;
+//   let even = a.filter((data, index) => index % 2 == 0);
+//   let odd = a.filter((data, index) => index % 2 == 1);
+//   let x = 0;
+//   let y = 0;
+//   even.map((data, index) => {
+//     if (index % 2 === 0) {
+//       y += data;
+//     } else {
+//       y -= data;
+//     }
+//   });
+
+//   odd.map((data, index) => {
+//     if (index % 2 === 0) {
+//       x += data;
+//     } else {
+//       x -= data;
+//     }
+//   });
+
+//   return [x, y];
+// }
+// let answer = robbo(1, 2, 3, 4, 5);
+// console.log(answer)
 
 // **************** Sort two arrays ***************
 // function sort(a, b) {
