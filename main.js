@@ -1,23 +1,35 @@
-function tables(a, b, groups) {
-  let oneSeater = a;
-  let twoSeater = b * 2;
-  let sum = oneSeater + twoSeater;
-  console.log(sum);
-
-  let Array = [];
-  let reject = 0;
-  groups.map((data) => {
-    sum -= data;
-    if (sum < 0) {
-      sum = sum + data;
-      reject += data;
-    } else {
-      Array.push(data);
-    }
-  });
-  return reject;
+// **************** Sort two arrays ***************
+function sort(a, b) {
+  let c = [...a, ...b];
+  let sortedArray = c.sort((a, b) => a - b);
+  let answer = new Set(sortedArray);
+  return [...answer];
 }
-let answer = tables(1, 1, [1, 1, 2, 1]);
+let answer = sort([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);
+console.log(answer);
+
+// **************** Restaurant Tables ***************
+
+// function tables(a, b, groups) {
+//   let oneSeater = a;
+//   let twoSeater = b * 2;
+//   let sum = oneSeater + twoSeater;
+//   console.log(sum);
+
+//   let Array = [];
+//   let reject = 0;
+//   groups.map((data) => {
+//     sum -= data;
+//     if (sum < 0) {
+//       sum = sum + data;
+//       reject += data;
+//     } else {
+//       Array.push(data);
+//     }
+//   });
+//   return reject;
+// }
+// let answer = tables(1, 1, [1, 1, 2, 1]);
 
 // **************** Matrix of numbers ***************
 
