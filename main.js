@@ -1,14 +1,28 @@
+// **************** Objects ***************
+console.log("Hello");
+let a = [1, 2, 3, 4, 5];
+let b = a.reduce((a, b) => {
+  console.log(a);
+  console.log(b);
+  console.log("---");
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+});
+console.log(b);
 // ****************Array Methods***************
-function arr(a) {
-  console.log(a.flat());
-}
-console.log(
-  arr([
-    [1, 2],
-    [3, 4],
-    [5, 6],
-  ])
-);
+// function arr(a) {
+//   console.log(a.flat());
+// }
+// console.log(
+//   arr([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+//   ])
+// );
 // let num = [1, 2, 3, 4, 5];
 // let map = num.map()
 // let Array = [];
