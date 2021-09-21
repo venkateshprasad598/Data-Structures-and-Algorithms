@@ -1,18 +1,31 @@
-// **************** Pricey Products ***************
-function products(obj) {
-  let keys = Object.keys(obj);
-  let myObj = obj;
-  let product = [];
-  keys.map((data) => {
-    if (myObj[data] >= 500) {
-      product.push(data);
-    }
+// ****************Get Sum of People's Budget***************
+function budget(n) {
+  let budgets = 0;
+  n.map((data) => {
+    budgets += data.budget;
   });
-  let myProducts = product.sort((a, b) => obj[b] - obj[a]);
-  console.log(myProducts);
-  return myProducts;
+  console.log(budgets);
 }
-products({ Computer: 600, TV: 800, Radio: 50 });
+budget([
+  { name: "John", age: 21, budget: 29000 },
+  { name: "Steve", age: 32, budget: 32000 },
+  { name: "Martin", age: 16, budget: 1600 },
+]);
+// **************** Pricey Products ***************
+// function products(obj) {
+//   let keys = Object.keys(obj);
+//   let myObj = obj;
+//   let product = [];
+//   keys.map((data) => {
+//     if (myObj[data] >= 500) {
+//       product.push(data);
+//     }
+//   });
+//   let myProducts = product.sort((a, b) => obj[b] - obj[a]);
+//   console.log(myProducts);
+//   return myProducts;
+// }
+// products({ Computer: 600, TV: 800, Radio: 50 });
 
 // **************** Count the Letters and Digits***************
 
