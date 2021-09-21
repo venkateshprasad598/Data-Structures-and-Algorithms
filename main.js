@@ -26,12 +26,18 @@ console.log(func("HellYa"));
 
 let objj = {
   Hello: "Hey",
-  say() {
-    console.log(`Hey how are you ${this.Hello}`);
+  say(name) {
+    console.log(`Hey how are you ${this.Hello} ${name}`);
   },
 };
-objj.say();
+objj.say("Ven");
 
+let name = "Venkatesh";
+let age = 23;
+let locality = "Yadgir";
+console.log(
+  `Hello my names is ${name} ${age} year old and I am from ${locality}`
+);
 // ****************Array Methods***************
 // function arr(a) {
 //   console.log(a.flat());
