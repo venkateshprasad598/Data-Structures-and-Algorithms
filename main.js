@@ -1,3 +1,19 @@
+// **************** Pricey Products ***************
+function products(obj) {
+  let keys = Object.keys(obj);
+  let myObj = obj;
+  let product = [];
+  keys.map((data) => {
+    if (myObj[data] >= 500) {
+      product.push(data);
+    }
+  });
+  let myProducts = product.sort((a, b) => obj[b] - obj[a]);
+  console.log(myProducts);
+  return myProducts;
+}
+products({ Computer: 600, TV: 800, Radio: 50 });
+
 // **************** Count the Letters and Digits***************
 
 // let Name = "Hello Wo1ld";
@@ -15,22 +31,22 @@
 //   }
 // });
 
-function string(name) {
-  let names = name.split("").filter((data) => data != " ");
-  console.log(names);
-  let myNames = [];
-  names.map((data) => {
-    if (!isNaN(data)) {
-      myNames.push(data);
-    }
-  });
-  return {
-    LETTERS: names.length - myNames.length,
-    DIGITS: myNames.length,
-  };
-}
-let answer = string("Hello M0M");
-console.log(answer);
+// function string(name) {
+//   let names = name.split("").filter((data) => data != " ");
+//   console.log(names);
+//   let myNames = [];
+//   names.map((data) => {
+//     if (!isNaN(data)) {
+//       myNames.push(data);
+//     }
+//   });
+//   return {
+//     LETTERS: names.length - myNames.length,
+//     DIGITS: myNames.length,
+//   };
+// }
+// let answer = string("Hello M0M");
+// console.log(answer);
 // console.log(isNaN("N"));
 // **************** Objects ***************
 // const obj = {
