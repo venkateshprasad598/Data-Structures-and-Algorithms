@@ -1,43 +1,59 @@
+// **************** Count the Letters and Digits***************
+
+let Name = "Hello Wo1ld";
+let names = Name.split("").filter((a) => a !== " ");
+console.log(names);
+let words = 0;
+let nums = 0;
+
+names.map((data) => {
+  //   console.log(typeof data);
+  let parse = parseInt(data);
+  //   console.log(parse);
+  if (typeof parse === "number") {
+    console.log(data);
+  }
+});
 // **************** Objects ***************
-const obj = {
-  Hello: "Venkatesh",
-  age: {
-    school: "DSI",
-    ok: {
-      please: "Access",
-    },
-  },
-  "Hello World": "Hello World",
-};
-obj.hey = "Hey";
-// delete obj.hey;
-console.log(obj);
-console.log(obj.hasOwnProperty("Hello"));
-const {
-  Hello,
-  age: {
-    ok: { please },
-  },
-} = obj;
-console.log(please);
+// const obj = {
+//   Hello: "Venkatesh",
+//   age: {
+//     school: "DSI",
+//     ok: {
+//       please: "Access",
+//     },
+//   },
+//   "Hello World": "Hello World",
+// };
+// obj.hey = "Hey";
+// // delete obj.hey;
+// console.log(obj);
+// console.log(obj.hasOwnProperty("Hello"));
+// const {
+//   Hello,
+//   age: {
+//     ok: { please },
+//   },
+// } = obj;
+// console.log(please);
 
-const func = (myName = "Hello") => `Hey ${myName}`;
-console.log(func("HellYa"));
+// const func = (myName = "Hello") => `Hey ${myName}`;
+// console.log(func("HellYa"));
 
-let objj = {
-  Hello: "Hey",
-  say(name) {
-    console.log(`Hey how are you ${this.Hello} ${name}`);
-  },
-};
-objj.say("Ven");
+// let objj = {
+//   Hello: "Hey",
+//   say(name) {
+//     console.log(`Hey how are you ${this.Hello} ${name}`);
+//   },
+// };
+// objj.say("Ven");
 
-let name = "Venkatesh";
-let age = 23;
-let locality = "Yadgir";
-console.log(
-  `Hello my names is ${name} ${age} year old and I am from ${locality}`
-);
+// let name = "Venkatesh";
+// let age = 23;
+// let locality = "Yadgir";
+// console.log(
+//   `Hello my names is ${name} ${age} year old and I am from ${locality}`
+// );
 // ****************Array Methods***************
 // function arr(a) {
 //   console.log(a.flat());
