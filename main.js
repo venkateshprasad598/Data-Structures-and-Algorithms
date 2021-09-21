@@ -1,16 +1,34 @@
 // ****************Get Sum of People's Budget***************
-function budget(n) {
-  let budgets = 0;
-  n.map((data) => {
-    budgets += data.budget;
-  });
-  console.log(budgets);
+
+function Alternate(n) {
+  let split = n.split("");
+  let zero = split.filter((data) => data === "0");
+  let one = split.filter((data) => data === "1");
+  if (n.length == 1) {
+    console.log(false);
+  } else if (n.length == 2 && one.length - zero.length == 0) {
+    console.log(true);
+  } else if (one.length - zero.length == 1 || zero.length - one.length == 1) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
-budget([
-  { name: "John", age: 21, budget: 29000 },
-  { name: "Steve", age: 32, budget: 32000 },
-  { name: "Martin", age: 16, budget: 1600 },
-]);
+Alternate("00110");
+
+// ****************Get Sum of People's Budget***************
+// function budget(n) {
+//   let budgets = 0;
+//   n.map((data) => {
+//     budgets += data.budget;
+//   });
+//   console.log(budgets);
+// }
+// budget([
+//   { name: "John", age: 21, budget: 29000 },
+//   { name: "Steve", age: 32, budget: 32000 },
+//   { name: "Martin", age: 16, budget: 1600 },
+// ]);
 // **************** Pricey Products ***************
 // function products(obj) {
 //   let keys = Object.keys(obj);
