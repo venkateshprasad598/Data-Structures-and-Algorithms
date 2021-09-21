@@ -1,17 +1,37 @@
 // **************** Objects ***************
-console.log("Hello");
-let a = [1, 2, 3, 4, 5];
-let b = a.reduce((a, b) => {
-  console.log(a);
-  console.log(b);
-  console.log("---");
-  if (a > b) {
-    return a;
-  } else {
-    return b;
-  }
-});
-console.log(b);
+const obj = {
+  Hello: "Venkatesh",
+  age: {
+    school: "DSI",
+    ok: {
+      please: "Access",
+    },
+  },
+  "Hello World": "Hello World",
+};
+obj.hey = "Hey";
+// delete obj.hey;
+console.log(obj);
+console.log(obj.hasOwnProperty("Hello"));
+const {
+  Hello,
+  age: {
+    ok: { please },
+  },
+} = obj;
+console.log(please);
+
+const func = (myName = "Hello") => `Hey ${myName}`;
+console.log(func("HellYa"));
+
+let objj = {
+  Hello: "Hey",
+  say() {
+    console.log(`Hey how are you ${this.Hello}`);
+  },
+};
+objj.say();
+
 // ****************Array Methods***************
 // function arr(a) {
 //   console.log(a.flat());
