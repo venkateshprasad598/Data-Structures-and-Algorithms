@@ -1,19 +1,37 @@
 // **************** Count the Letters and Digits***************
 
-let Name = "Hello Wo1ld";
-let names = Name.split("").filter((a) => a !== " ");
-console.log(names);
-let words = 0;
-let nums = 0;
+// let Name = "Hello Wo1ld";
+// let names = Name.split("").filter((a) => a !== " ");
+// console.log(names);
+// let words = 0;
+// let nums = 0;
 
-names.map((data) => {
-  //   console.log(typeof data);
-  let parse = parseInt(data);
-  //   console.log(parse);
-  if (typeof parse === "number") {
-    console.log(data);
-  }
-});
+// names.map((data) => {
+//   //   console.log(typeof data);
+//   let parse = parseInt(data);
+//   //   console.log(parse);
+//   if (typeof parse === "number") {
+//     console.log(data);
+//   }
+// });
+
+function string(name) {
+  let names = name.split("").filter((data) => data != " ");
+  console.log(names);
+  let myNames = [];
+  names.map((data) => {
+    if (!isNaN(data)) {
+      myNames.push(data);
+    }
+  });
+  return {
+    LETTERS: names.length - myNames.length,
+    DIGITS: myNames.length,
+  };
+}
+let answer = string("Hello M0M");
+console.log(answer);
+// console.log(isNaN("N"));
 // **************** Objects ***************
 // const obj = {
 //   Hello: "Venkatesh",
