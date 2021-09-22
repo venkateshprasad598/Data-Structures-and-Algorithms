@@ -4,17 +4,20 @@ function Alternate(n) {
   let split = n.split("");
   let zero = split.filter((data) => data === "0");
   let one = split.filter((data) => data === "1");
-  if (n.length == 1) {
-    console.log(false);
-  } else if (n.length == 2 && one.length - zero.length == 0) {
-    console.log(true);
-  } else if (one.length - zero.length == 1 || zero.length - one.length == 1) {
-    console.log(true);
+  if (one.length - zero.length == 0) {
+    let zeros = zero.every((data) => data == "0");
+    let ones = one.every((data) => data == "1");
+    if (ones === zeros) {
+      return true;
+    }
+  }
+  if (one.length - zero.length == 1 || zero.length - one.length == 1) {
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
-Alternate("00110");
+Alternate("10101010");
 
 // ****************Get Sum of People's Budget***************
 // function budget(n) {
