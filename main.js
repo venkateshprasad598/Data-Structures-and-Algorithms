@@ -1,23 +1,45 @@
+// ****************  ***************
+function double(m) {
+  let set = m.split("");
+  console.log(set);
+  let myNew = new Set(set);
+  let newSet = [...myNew];
+  let array = [];
+  let answer = [];
+  newSet.map((data) => {
+    let newData = set.filter((metaData) => data == metaData);
+    array.push(newData.length);
+  });
+
+  for (i = 0; i < array.length; i++) {
+    answer.push(newSet[i], array[i]);
+  }
+  console.log(answer);
+  console.log(array);
+}
+
+double("mmmnn");
 // ****************Get Sum of People's Budget***************
 
-function Alternate(n) {
-  let split = n.split("");
-  let zero = split.filter((data) => data === "0");
-  let one = split.filter((data) => data === "1");
-  if (one.length - zero.length == 0) {
-    let zeros = zero.every((data) => data == "0");
-    let ones = one.every((data) => data == "1");
-    if (ones === zeros) {
-      return true;
-    }
-  }
-  if (one.length - zero.length == 1 || zero.length - one.length == 1) {
-    return true;
-  } else {
-    return false;
-  }
-}
-Alternate("10101010");
+// function Alternate(n) {
+//   let split = n.split("");
+//   let zero = split.filter((data) => data === "0");
+//   let one = split.filter((data) => data === "1");
+//   if (one.length - zero.length == 0) {
+//     let zeros = zero.every((data) => data == "0");
+//     let ones = one.every((data) => data == "1");
+//     if (ones === zeros) {
+//       return true;
+//     }
+//   }
+//   if (one.length - zero.length == 1 || zero.length - one.length == 1) {
+//     return true;
+//   } else {
+//     git;
+//     return false;
+//   }
+// }
+// Alternate("10101010");
 
 // ****************Get Sum of People's Budget***************
 // function budget(n) {
