@@ -1,24 +1,312 @@
-// ****************  ***************
-function double(m) {
-  let set = m.split("");
-  console.log(set);
-  let myNew = new Set(set);
-  let newSet = [...myNew];
-  let array = [];
-  let answer = [];
-  newSet.map((data) => {
-    let newData = set.filter((metaData) => data == metaData);
-    array.push(newData.length);
+// **************** Object Final Question ***************
+let data = {
+  songs: [
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/6CXEwIaXYfVJ84biCxqc9k",
+            },
+            href: "https://api.spotify.com/v1/artists/6CXEwIaXYfVJ84biCxqc9k",
+            id: "6CXEwIaXYfVJ84biCxqc9k",
+            name: "Vishal Dadlani",
+            type: "artist",
+            uri: "spotify:artist:6CXEwIaXYfVJ84biCxqc9k",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3tPQOjkxO3mrYrrgkTeXgH",
+            },
+            href: "https://api.spotify.com/v1/artists/3tPQOjkxO3mrYrrgkTeXgH",
+            id: "3tPQOjkxO3mrYrrgkTeXgH",
+            name: "Nikhita Gandhi",
+            type: "artist",
+            uri: "spotify:artist:3tPQOjkxO3mrYrrgkTeXgH",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 239552,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INZ031405687",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/3qOZR5uMAguqjBUsILWDbL",
+        },
+        href: "https://api.spotify.com/v1/tracks/3qOZR5uMAguqjBUsILWDbL",
+        id: "3qOZR5uMAguqjBUsILWDbL",
+        is_local: false,
+        is_playable: true,
+        name: "Madaari",
+        popularity: 35,
+        preview_url:
+          "https://p.scdn.co/mp3-preview/1893398448e2086b2855dcf54d90c29cdb8a4cff?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:3qOZR5uMAguqjBUsILWDbL",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/76DiXwbDvK690KWyvU5JoP",
+            },
+            href: "https://api.spotify.com/v1/artists/76DiXwbDvK690KWyvU5JoP",
+            id: "76DiXwbDvK690KWyvU5JoP",
+            name: "Dj Kiran Kamath",
+            type: "artist",
+            uri: "spotify:artist:76DiXwbDvK690KWyvU5JoP",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 212352,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INS171807547",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/6yESq1llaLQJSbGVex6La8",
+        },
+        href: "https://api.spotify.com/v1/tracks/6yESq1llaLQJSbGVex6La8",
+        id: "6yESq1llaLQJSbGVex6La8",
+        is_local: false,
+        is_playable: true,
+        name: "New Year Mix 2018 - DJ Kiran Kamath",
+        popularity: 46,
+        preview_url:
+          "https://p.scdn.co/mp3-preview/cfdad6b4f543e1d7e08058640885ac6538cd5595?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:6yESq1llaLQJSbGVex6La8",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/0y59o4v8uw5crbN9M3JiL1",
+            },
+            href: "https://api.spotify.com/v1/artists/0y59o4v8uw5crbN9M3JiL1",
+            id: "0y59o4v8uw5crbN9M3JiL1",
+            name: "Badshah",
+            type: "artist",
+            uri: "spotify:artist:0y59o4v8uw5crbN9M3JiL1",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/00sCATpEvwH48ays7PlQFU",
+            },
+            href: "https://api.spotify.com/v1/artists/00sCATpEvwH48ays7PlQFU",
+            id: "00sCATpEvwH48ays7PlQFU",
+            name: "Jonita Gandhi",
+            type: "artist",
+            uri: "spotify:artist:00sCATpEvwH48ays7PlQFU",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 186751,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INV111801142",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/69iaaF0VAWOciXqJ2wfe54",
+        },
+        href: "https://api.spotify.com/v1/tracks/69iaaF0VAWOciXqJ2wfe54",
+        id: "69iaaF0VAWOciXqJ2wfe54",
+        is_local: false,
+        is_playable: true,
+        name: 'Tip Tip - From "Lockdown"',
+        popularity: 52,
+        preview_url:
+          "https://p.scdn.co/mp3-preview/e6a7013b3d1a12a6f240081a0d482deab2487124?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:69iaaF0VAWOciXqJ2wfe54",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/4ItzUQL1OI4JNDGNdKHR1K",
+            },
+            href: "https://api.spotify.com/v1/artists/4ItzUQL1OI4JNDGNdKHR1K",
+            id: "4ItzUQL1OI4JNDGNdKHR1K",
+            name: "Navraj Hans",
+            type: "artist",
+            uri: "spotify:artist:4ItzUQL1OI4JNDGNdKHR1K",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3xU8YsNNkmWSPewlB18NUz",
+            },
+            href: "https://api.spotify.com/v1/artists/3xU8YsNNkmWSPewlB18NUz",
+            id: "3xU8YsNNkmWSPewlB18NUz",
+            name: "Harshdeep Kaur",
+            type: "artist",
+            uri: "spotify:artist:3xU8YsNNkmWSPewlB18NUz",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3dN9MQpjIyNxyeRfz4EDZe",
+            },
+            href: "https://api.spotify.com/v1/artists/3dN9MQpjIyNxyeRfz4EDZe",
+            id: "3dN9MQpjIyNxyeRfz4EDZe",
+            name: "Rochak Kohli",
+            type: "artist",
+            uri: "spotify:artist:3dN9MQpjIyNxyeRfz4EDZe",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 219934,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INH101900031",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/5aN5zVgz1zAfE6LMxuJYaJ",
+        },
+        href: "https://api.spotify.com/v1/tracks/5aN5zVgz1zAfE6LMxuJYaJ",
+        id: "5aN5zVgz1zAfE6LMxuJYaJ",
+        is_local: false,
+        is_playable: false,
+        name: 'Gud Naal Ishq Mitha (From "Ek Ladki Ko Dekha Toh Aisa Laga")',
+        popularity: 44,
+        preview_url: null,
+        restrictions: {
+          reason: "market",
+        },
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:5aN5zVgz1zAfE6LMxuJYaJ",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
+  ],
+};
+let Array = [];
+let newArray = [];
+let myData = data.songs;
+console.log(myData);
+myData.map((data) => {
+  data.track.artists.map((metaData) => {
+    console.log(metaData.name);
+    console.log(data.track.name);
+    Array.push({
+      artistName: metaData.name,
+      songName: data.track.name,
+    });
   });
+  console.log("-----------");
+});
+console.log(Array);
 
-  for (i = 0; i < array.length; i++) {
-    answer.push(newSet[i], array[i]);
-  }
-  console.log(answer);
-  console.log(array);
-}
+let final = Array.filter((data, index) => data.artistName === "Vishal Dadlani");
+console.log(final);
+let keys = Object.keys(final[0]);
+console.log(keys);
 
-double("mmmnn");
+final.map((obj) => {
+  obj[obj.artistName] = obj.songName;
+  console.log(obj);
+  //   delete obj[obj.artistName];
+  //   return obj;
+});
+console.log(final);
+// **************** objects ***************
+// function double(m) {
+//   let set = m.split("");
+//   console.log(set);
+//   let myNew = new Set(set);
+//   let newSet = [...myNew];
+//   let array = [];
+//   let answer = [];
+//   newSet.map((data) ss=> {
+//     let newData = set.filter((metaData) => data == metaData);
+//     array.push(newData.length);
+//   });
+
+//   for (i = 0; i < array.length; i++) {
+//     answer.push(newSet[i], array[i]);
+//   }
+//   console.log(answer);
+//   console.log(array);
+// }
+
+// double("mmmnn");
 // ****************Get Sum of People's Budget***************
 
 // function Alternate(n) {
