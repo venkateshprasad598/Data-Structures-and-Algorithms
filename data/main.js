@@ -428,9 +428,11 @@ Array.map((data) => {
   console.log("-----");
 });
 console.log(newArray);
-let answer = new Set(newArray);
+let string = newArray.map((data) => JSON.stringify(data));
+let answer = new Set(string);
 let newAnswer = [...answer];
-console.log(newAnswer);
+let ok = newAnswer.map((data) => JSON.parse(data));
+console.log(ok);
 
 books = [
   { title: "C++", author: "Bjarne" },
