@@ -280,7 +280,7 @@ let keys = Object.keys(final[0]);
 console.log(keys);
 
 final.map((obj) => {
-  obj[obj.artistName] = obj.songName;
+  obj[obj.artistName] = obj.son;
   console.log(obj);
   //   delete obj[obj.artistName];
   //   return obj;
