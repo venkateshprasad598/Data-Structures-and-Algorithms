@@ -255,37 +255,198 @@ let data = {
         url: null,
       },
     },
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/6CXEwIaXYfVJ84biCxqc9k",
+            },
+            href: "https://api.spotify.com/v1/artists/6CXEwIaXYfVJ84biCxqc9k",
+            id: "6CXEwIaXYfVJ84biCxqc9k",
+            name: "Vishal Dadlani",
+            type: "artist",
+            uri: "spotify:artist:6CXEwIaXYfVJ84biCxqc9k",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3tPQOjkxO3mrYrrgkTeXgH",
+            },
+            href: "https://api.spotify.com/v1/artists/3tPQOjkxO3mrYrrgkTeXgH",
+            id: "3tPQOjkxO3mrYrrgkTeXgH",
+            name: "Nikhita Gandhi",
+            type: "artist",
+            uri: "spotify:artist:3tPQOjkxO3mrYrrgkTeXgH",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 239552,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INZ031405687",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/3qOZR5uMAguqjBUsILWDbL",
+        },
+        href: "https://api.spotify.com/v1/tracks/3qOZR5uMAguqjBUsILWDbL",
+        id: "3qOZR5uMAguqjBUsILWDbL",
+        is_local: false,
+        is_playable: true,
+        name: "Aduari",
+        popularity: 35,
+        preview_url:
+          "https://p.scdn.co/mp3-preview/1893398448e2086b2855dcf54d90c29cdb8a4cff?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:3qOZR5uMAguqjBUsILWDbL",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
+    {
+      added_at: "2019-08-28T22:32:47Z",
+      added_by: {
+        external_urls: {
+          spotify: "https://open.spotify.com/user/",
+        },
+        href: "https://api.spotify.com/v1/users/",
+        id: "",
+        type: "user",
+        uri: "spotify:user:",
+      },
+      is_local: false,
+      primary_color: null,
+      track: {
+        artists: [
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/4ItzUQL1OI4JNDGNdKHR1K",
+            },
+            href: "https://api.spotify.com/v1/artists/4ItzUQL1OI4JNDGNdKHR1K",
+            id: "4ItzUQL1OI4JNDGNdKHR1K",
+            name: "Navraj Hans",
+            type: "artist",
+            uri: "spotify:artist:4ItzUQL1OI4JNDGNdKHR1K",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3xU8YsNNkmWSPewlB18NUz",
+            },
+            href: "https://api.spotify.com/v1/artists/3xU8YsNNkmWSPewlB18NUz",
+            id: "3xU8YsNNkmWSPewlB18NUz",
+            name: "Harshdeep Kaur",
+            type: "artist",
+            uri: "spotify:artist:3xU8YsNNkmWSPewlB18NUz",
+          },
+          {
+            external_urls: {
+              spotify: "https://open.spotify.com/artist/3dN9MQpjIyNxyeRfz4EDZe",
+            },
+            href: "https://api.spotify.com/v1/artists/3dN9MQpjIyNxyeRfz4EDZe",
+            id: "3dN9MQpjIyNxyeRfz4EDZe",
+            name: "Rochak Kohli",
+            type: "artist",
+            uri: "spotify:artist:3dN9MQpjIyNxyeRfz4EDZe",
+          },
+        ],
+        disc_number: 1,
+        duration_ms: 219934,
+        episode: false,
+        explicit: false,
+        external_ids: {
+          isrc: "INH101900031",
+        },
+        external_urls: {
+          spotify: "https://open.spotify.com/track/5aN5zVgz1zAfE6LMxuJYaJ",
+        },
+        href: "https://api.spotify.com/v1/tracks/5aN5zVgz1zAfE6LMxuJYaJ",
+        id: "5aN5zVgz1zAfE6LMxuJYaJ",
+        is_local: false,
+        is_playable: false,
+        name: 'Gud Naal Ishq Mitha (From "Ek Ladki Ko Dekha Toh Aisa Laga")',
+        popularity: 44,
+        preview_url: null,
+        restrictions: {
+          reason: "market",
+        },
+        track: true,
+        track_number: 1,
+        type: "track",
+        uri: "spotify:track:5aN5zVgz1zAfE6LMxuJYaJ",
+      },
+      video_thumbnail: {
+        url: null,
+      },
+    },
   ],
 };
-let Array = [];
-let newArray = [];
+
+console.log(data);
 let myData = data.songs;
-console.log(myData);
+let Array = [];
 myData.map((data) => {
   data.track.artists.map((metaData) => {
-    console.log(metaData.name);
-    console.log(data.track.name);
-    Array.push({
-      artistName: metaData.name,
-      songName: data.track.name,
-    });
+    let obj = {
+      artist: metaData.name,
+      song: data.track.name,
+    };
+    Array.push(obj);
+    obj = {};
   });
-  console.log("-----------");
 });
 console.log(Array);
+let obj = {};
+let newArray = [];
+Array.map((data) => {
+  let filter = Array.filter((metaData) => metaData.artist === data.artist);
+  console.log(filter);
+  let songArray = [];
+  let name;
+  filter.map((data) => {
+    songArray.push(data.song);
+    name = data.artist;
+  });
+  obj[name] = songArray;
+  newArray.push(obj);
+  obj = {};
 
-let final = Array.filter((data, index) => data.artistName === "Vishal Dadlani");
-console.log(final);
-let keys = Object.keys(final[0]);
-console.log(keys);
-
-final.map((obj) => {
-  obj[obj.artistName] = obj.son;
-  console.log(obj);
-  //   delete obj[obj.artistName];
-  //   return obj;
+  console.log("-----");
 });
-console.log(final);
+console.log(newArray);
+let answer = new Set(newArray);
+let newAnswer = [...answer];
+console.log(newAnswer);
+
+books = [
+  { title: "C++", author: "Bjarne" },
+  { title: "Java", author: "James" },
+  { title: "Python", author: "Guido" },
+  { title: "Java", author: "James" },
+];
+
+jsonObject = books.map(JSON.stringify);
+
+console.log(jsonObject);
+
+uniqueSet = new Set(jsonObject);
+// uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+
+console.log(uniqueSet);
 // **************** objects ***************
 // function double(m) {
 //   let set = m.split("");
