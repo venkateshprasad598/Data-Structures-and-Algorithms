@@ -1,10 +1,12 @@
 // ****************  ***************
 function length(str) {
-  if (str === "") return 0;
-  return 1 + length(str.substr(1));
+  if (str === "") return "";
+  return str.substr(str.length - 1) + length(str.substr(0, str.length - 1));
 }
 let answer = length("Hello");
 console.log(answer);
+// let a = "hello";
+// console.log(a.substr(0, 4));
 
 // let a = "hello";
 // let ok = a.substr(0, 2);
