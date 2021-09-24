@@ -1,14 +1,31 @@
-// **************** RRecusion find index ***************
-function search(arr, item) {
-  if (arr.length - 1 === 0 && arr[arr.length - 1] !== item) {
-    return -1;
-  } else if (arr[arr.length - 1] == item) {
-    return arr.length - 1;
-  } else {
-    let ok = arr.slice(0, arr.length - 1);
-    return search(ok, item) + 0;
-  }
+// **************** ABACABA ***************
+function Abc(n) {
+  let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return (
+    string.slice(0, n - 1) +
+    string[n - 1] +
+    string.slice(0, n - 1) +
+    string[n] +
+    string.slice(0, n - 1) +
+    string[n - 1] +
+    string.slice(0, n - 1)
+  );
 }
+let answer = Abc(3);
+console.log(answer);
+// **************** Recusion find index ***************
+// function search(arr, item) {
+//   if (arr.length - 1 === 0 && arr[arr.length - 1] !== item) {
+//     return -1;
+//   } else if (arr[arr.length - 1] == item) {
+//     return arr.length - 1;
+//   } else {
+//     let ok = arr.slice(0, arr.length - 1);
+//     return search(ok, item) + 0;
+//   }
+// }
+// let answer = search([1, 2, 3, 4, 5, 6], 8);
+// console.log(answer);
 
 // function nthArr(arr, index) {
 //   if (arr[arr.length - 1] == index) {
@@ -19,8 +36,6 @@ function search(arr, item) {
 //   }
 // }
 
-let answer = search([1, 2, 3, 4, 5, 6], 8);
-console.log(answer);
 // function search(arr, item) {
 //   if (arr[arr.length - 1] == item) {
 //     return arr.indexOf(item);
