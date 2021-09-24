@@ -1,15 +1,35 @@
-// ****************  ***************
-function length(str) {
-  if (str === "") return "";
-  return str.substr(str.length - 1) + length(str.substr(0, str.length - 1));
+// **************** RRecusion find index ***************
+function search(arr, item) {
+  if (arr[arr.length - 1] == item) {
+    return arr.indexOf(item);
+  }
+  return 0 + search(arr.slice(0, arr.length - 1), item);
 }
-let answer = length("Hello");
+let answer = search([1, 2, 3, 4, 6], 2);
 console.log(answer);
+
+// for (i = 0; i < array.length; i++) {
+//   if (i == 3) {
+
+//   }
+//   console.log(i);
+// }
+// console.log(answer);
+// let a = [1, 2, 3, 4, 5];
+// let slice = a.slice(0, a.length - 1);
+// console.log(slice);
+// **************** Reverse the string in recursion ***************
+// function length(str) {
+//   if (str === "") return "";
+//   return str.substr(str.length - 1) + length(str.substr(0, str.length - 1));
+// }
+// let answer = length("Hello");
+// console.log(answer);
 // let a = "hello";
 // console.log(a.substr(0, 4));
 
 // let a = "hello";
-// let ok = a.substr(0, 2);
+// let ok = a.substr(3);
 // console.log(ok);
 // **************** Spotify PlayList ***************
 
