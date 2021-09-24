@@ -1,10 +1,17 @@
 // ****************  ***************
-function sliceMe(n) {
-  return n == 0 ? 0 : n + sliceMe(n - 1);
-}
-let answer = sliceMe(3);
-console.log(answer);
+// function sliceMe(n) {
+// if( n = ""){
+//   return 0
+// }else{
+//   return sliceMe()
+// }
+// }
+// let answer = sliceMe("slice");
+// console.log(answer);
 
+let a = "hello";
+let ok = a.substr(0, 2);
+console.log(ok);
 // **************** Spotify PlayList ***************
 
 // let myData = data.songs;
