@@ -1,17 +1,14 @@
 // ****************  ***************
-// function sliceMe(n) {
-// if( n = ""){
-//   return 0
-// }else{
-//   return sliceMe()
-// }
-// }
-// let answer = sliceMe("slice");
-// console.log(answer);
+function length(str) {
+  if (str === "") return 0;
+  return 1 + length(str.substr(1));
+}
+let answer = length("Hello");
+console.log(answer);
 
-let a = "hello";
-let ok = a.substr(0, 2);
-console.log(ok);
+// let a = "hello";
+// let ok = a.substr(0, 2);
+// console.log(ok);
 // **************** Spotify PlayList ***************
 
 // let myData = data.songs;
