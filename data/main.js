@@ -1,12 +1,34 @@
 // **************** RRecusion find index ***************
 function search(arr, item) {
-  if (arr[arr.length - 1] == item) {
-    return arr.indexOf(item);
+  if (arr.length - 1 === 0 && arr[arr.length - 1] !== item) {
+    return -1;
+  } else if (arr[arr.length - 1] == item) {
+    return arr.length - 1;
+  } else {
+    let ok = arr.slice(0, arr.length - 1);
+    return search(ok, item) + 0;
   }
-  return 0 + search(arr.slice(0, arr.length - 1), item);
 }
-let answer = search([1, 2, 3, 4, 6], 2);
+
+// function nthArr(arr, index) {
+//   if (arr[arr.length - 1] == index) {
+//     return arr.length - 1;
+//   } else {
+//     let ok = arr.slice(0, arr.length - 1);
+//     return nthArr(ok, index);
+//   }
+// }
+
+let answer = search([1, 2, 3, 4, 5, 6], 8);
 console.log(answer);
+// function search(arr, item) {
+//   if (arr[arr.length - 1] == item) {
+//     return arr.indexOf(item);
+//   }
+//   return search(arr, item);
+// }
+// let answer = search([1, 2, 3, 4, 6], 2);
+// console.log(answer);
 
 // for (i = 0; i < array.length; i++) {
 //   if (i == 3) {
