@@ -1,15 +1,8 @@
 // **************** ABACABA ***************
 function Abc(n) {
   let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  return (
-    string.slice(0, n - 1) +
-    string[n - 1] +
-    string.slice(0, n - 1) +
-    string[n] +
-    string.slice(0, n - 1) +
-    string[n - 1] +
-    string.slice(0, n - 1)
-  );
+
+console.log("Hello");
 }
 let answer = Abc(3);
 console.log(answer);
