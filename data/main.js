@@ -1,11 +1,25 @@
-// **************** ABACABA ***************
-function Abc(n) {
-  let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-console.log("Hello");
+let n = [1, 2, 3, 4, 5];
+let sum = "";
+for (let i = 1; i <= n.length; i++) {
+  for (let k = 0; k < n.length - i; k++) {
+    sum += "";
+  }
+  for (let j = 1; j <= 2 * i - 1; j++) {
+    sum += "*";
+  }
+  console.log(sum);
+  sum = "";
 }
-let answer = Abc(3);
-console.log(answer);
+
+//
+// function Abc(n) {
+//   let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+//   Recursion
+// console.log("Hello");
+// }
+// let answer = Abc(3);
+// console.log(answer);
 // **************** Recusion find index ***************
 // function search(arr, item) {
 //   if (arr.length - 1 === 0 && arr[arr.length - 1] !== item) {
