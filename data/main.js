@@ -8,8 +8,15 @@ for (let i = 2; i <= n; i++) {
 if (isPrime) {
   console.log(true);
 } else {
-  console.log(false);
 }
+function num(n) {
+  if (n === 1) {
+    return 1;
+  }
+  return n * num(n - 1);
+}
+// num(5);
+console.log(num(5));
 //
 // function Abc(n) {
 //   let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
