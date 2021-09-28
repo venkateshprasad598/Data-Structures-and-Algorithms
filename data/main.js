@@ -1,16 +1,15 @@
-let n = [1, 2, 3, 4, 5];
-let sum = "";
-for (let i = 1; i <= n.length; i++) {
-  for (let k = 0; k < n.length - i; k++) {
-    sum += "";
+let n = 2;
+let isPrime = true;
+for (let i = 2; i <= n; i++) {
+  if (n % i === 0 && i !== n) {
+    isPrime = false;
   }
-  for (let j = 1; j <= 2 * i - 1; j++) {
-    sum += "*";
-  }
-  console.log(sum);
-  sum = "";
 }
-
+if (isPrime) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 //
 // function Abc(n) {
 //   let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
