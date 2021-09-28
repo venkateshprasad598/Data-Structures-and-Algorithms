@@ -1,22 +1,58 @@
-let n = 2;
-let isPrime = true;
-for (let i = 2; i <= n; i++) {
-  if (n % i === 0 && i !== n) {
-    isPrime = false;
-  }
+const places = [
+  { name: "Spain", id: 1 },
+  { name: "Sweden", id: 2 },
+  { name: "Scotland", id: 3 },
+];
+function getName() {
+  setTimeout(() => {
+    places.map((data) => {
+      console.log(data.name);
+    });
+  }, 2000);
 }
-if (isPrime) {
-  console.log(true);
-} else {
+
+// function addName(add) {}
+
+const addName = (add) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      places.push(add);
+      if (true) {
+        resolve();
+      } else {
+        reject("Error");
+      }
+    }, 3000);
+  });
+};
+// addName({ name: "Singapore", id: 4 }).then(getName);
+
+async function newName() {
+  await addName({ name: "Singapore", id: 4 });
+  getName();
 }
-function num(n) {
-  if (n === 1) {
-    return 1;
-  }
-  return n * num(n - 1);
-}
-// num(5);
-console.log(num(5));
+
+newName();
+// let n = 2;
+
+// let isPrime = true;
+// for (let i = 2; i <= n; i++) {
+//   if (n % i === 0 && i !== n) {
+//     isPrime = false;
+//   }
+// }
+// if (isPrime) {
+//   console.log(true);
+// } else {
+// }
+// function num(n) {
+//   if (n === 1) {
+//     return 1;
+//   }
+//   return n * num(n - 1);
+// }
+// // num(5);
+// console.log(num(5));
 //
 // function Abc(n) {
 //   let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
