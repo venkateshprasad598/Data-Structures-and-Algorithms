@@ -1,25 +1,47 @@
-function rec(n) {
-  let a;
-  let Array = [];
-  for (let i = 0; i < n.length; i++) {
-    a = n.flat();
-  }
-  console.log(a);
-  a.map((data) => {
-    if (typeof data == "function") {
-      let func = data();
-      Array.push(func);
-    } else if (typeof data == "object") {
-      Array.push(data);
-    } else {
-      Array.push(data);
-    }
-  });
+// function rec(n) {
+//   let a;
+//   let Array = [];
+//   for (let i = 0; i < n.length; i++) {
+//     a = n.flat();
+//   }
+//   a.map((data) => {
+//     if (typeof data == "function") {
+//       let func = data();
+//       Array.push(func);
+//     } else if (typeof data == "object") {
+//       let d = Object.keys(data);
+//       if (d) {
+//         console.log(d);
+//         console.log(data);
+//         Array.push(data);
+//       }
+//     } else {
+//       Array.push(data);
+//     }
+//   });
 
-  console.log(Array);
-}
+//   console.log(Array);
+//   for(i = 0; i < Array.length ; i++){
 
-rec([
+//   }
+// }
+
+// rec([
+//   1,
+//   "2",
+//   [
+//     3,
+//     function () {
+//       return 4;
+//     },
+//     ["five"],
+//     "six",
+//     true,
+//     { prop: "val" },
+//   ],
+// ]);
+
+let a = [
   1,
   "2",
   [
@@ -32,7 +54,14 @@ rec([
     true,
     { prop: "val" },
   ],
-]);
+];
+let b = a.flat();
+console.log(b);
+let c = b.flat();
+console.log(c);
+// let b = [1, [5], { a: 6 }];
+// let a = [1, 2, 3, [4], 5];
+// console.log(a.flat());
 
 // const places = [
 //   { name: "Spain", id: 1 },
