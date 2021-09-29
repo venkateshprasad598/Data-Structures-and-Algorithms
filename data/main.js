@@ -1,47 +1,22 @@
-// function rec(n) {
-//   let a;
-//   let Array = [];
-//   for (let i = 0; i < n.length; i++) {
-//     a = n.flat();
-//   }
-//   a.map((data) => {
-//     if (typeof data == "function") {
-//       let func = data();
-//       Array.push(func);
-//     } else if (typeof data == "object") {
-//       let d = Object.keys(data);
-//       if (d) {
-//         console.log(d);
-//         console.log(data);
-//         Array.push(data);
-//       }
-//     } else {
-//       Array.push(data);
-//     }
-//   });
-
-//   console.log(Array);
-//   for(i = 0; i < Array.length ; i++){
-
-//   }
-// }
-
-// rec([
-//   1,
-//   "2",
-//   [
-//     3,
-//     function () {
-//       return 4;
-//     },
-//     ["five"],
-//     "six",
-//     true,
-//     { prop: "val" },
-//   ],
-// ]);
-
-let a = [
+function rec(array) {
+  if (array) {
+    let a = array;
+    for (let i = 0; i < a.length; i++) {
+      let z = a.flat();
+      a = z;
+    }
+    a.map((data) => {
+      if (typeof data == "function") {
+        let index = a.indexOf(data);
+        a.splice(index, 1, data());
+      }
+    });
+    return a;
+  } else {
+    return [];
+  }
+}
+let z = rec([
   1,
   "2",
   [
@@ -54,11 +29,27 @@ let a = [
     true,
     { prop: "val" },
   ],
-];
-let b = a.flat();
-console.log(b);
-let c = b.flat();
-console.log(c);
+]);
+console.log(z);
+
+// let a = [
+//   1,
+//   "2",
+//   [
+//     3,
+//     function () {
+//       return 4;
+//     },
+//     ["five"],
+//     "six",
+//     true,
+//     { prop: "val" },
+//   ],
+// ];
+// let b = a.flat();
+// console.log(b);
+// let c = b.flat();
+// console.log(c);
 // let b = [1, [5], { a: 6 }];
 // let a = [1, 2, 3, [4], 5];
 // console.log(a.flat());
