@@ -1,22 +1,6 @@
 function rec(n) {
-  let a;
-  let Array = [];
-  for (let i = 0; i < n.length; i++) {
-    a = n.flat();
-  }
+  let a = n.flat();
   console.log(a);
-  a.map((data) => {
-    if (typeof data == "function") {
-      let func = data();
-      Array.push(func);
-    } else if (typeof data == "object") {
-      Array.push(data);
-    } else {
-      Array.push(data);
-    }
-  });
-
-  console.log(Array);
 }
 
 rec([
