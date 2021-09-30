@@ -1,36 +1,56 @@
-function rec(array) {
-  if (array) {
-    let a = array;
-    for (let i = 0; i < a.length; i++) {
-      let z = a.flat();
-      a = z;
-    }
-    a.map((data) => {
-      if (typeof data == "function") {
-        let index = a.indexOf(data);
-        a.splice(index, 1, data());
-      }
-    });
-    return a;
-  } else {
-    return [];
-  }
+// console.log("Hello");
+// function flatten(arr) {
+//   let flattened = [];
+//   for (i = 0; i < arr.length; i++) {
+
+//   }
+// }
+// flatten([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ]);
+
+let a = { num: 3 };
+// console.log(Array.isArray(a));
+if (Array.isArray(a)) {
+  console.log("Array");
+} else if (typeof a === "object") {
+  console.log("object");
 }
-let z = rec([
-  1,
-  "2",
-  [
-    3,
-    function () {
-      return 4;
-    },
-    ["five"],
-    "six",
-    true,
-    { prop: "val" },
-  ],
-]);
-console.log(z);
+// function rec(array) {
+//   if (array) {
+//     let a = array;
+//     for (let i = 0; i < a.length; i++) {
+//       let z = a.flat();
+//       a = z;
+//     }
+//     a.map((data) => {
+//       if (typeof data == "function") {
+//         let index = a.indexOf(data);
+//         a.splice(index, 1, data());
+//       }
+//     });
+//     return a;j
+//   } else {
+//     return [];
+//   }
+// }
+// let z = rec([
+//   1,
+//   "2",
+//   [
+//     3,
+//     function () {
+//       return 4;
+//     },
+//     ["five"],
+//     "six",
+//     true,
+//     { prop: "val" },
+//   ],
+// ]);
+// console.log(z);
 
 // let a = [
 //   1,
