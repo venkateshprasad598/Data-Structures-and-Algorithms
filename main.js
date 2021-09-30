@@ -1,23 +1,38 @@
+// ************** FABONACCI *********************
+// 0 1 1 2 3 5
+function fab(n) {
+  let Array = [];
+  let y = 0;
+  let x = 0;
+  for (i = 0; i < n; i++) {
+    x += i;
+    Array.push(x);
+  }
+  return Array;
+}
+console.log(fab(5));
+
 // console.log("Hello");
 // function flatten(arr) {
 //   let flattened = [];
 //   for (i = 0; i < arr.length; i++) {
-
+//     if (Array.isArray(arr[i])) {
+//       flattened = flattened.concat(flatten(arr[i]));
+//     } else {
+//       flattened.push(arr[i]);
+//     }
 //   }
+//   return flattened;
 // }
-// flatten([
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9],
-// ]);
 
-let a = { num: 3 };
-// console.log(Array.isArray(a));
-if (Array.isArray(a)) {
-  console.log("Array");
-} else if (typeof a === "object") {
-  console.log("object");
-}
+// console.log(
+//   flatten([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//   ])
+// );
+
 // function rec(array) {
 //   if (array) {
 //     let a = array;
