@@ -51,6 +51,9 @@ console.log(fab(5));
 //     return [];
 //   }
 // }
+
+let a = "INterview";
+console.log("Let's crack it");
 // let z = rec([
 //   1,
 //   "2",
