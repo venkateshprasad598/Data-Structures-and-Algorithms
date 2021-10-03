@@ -2,12 +2,15 @@ const str = "freeCodeCamp";
 const regex = /Code/;
 let answer = regex.test(str);
 console.log(answer);
-
 let regexx = /free/;
-
 if (regexx.test(str)) {
   console.log(true);
 }
+
+let a = "There was an";
+let regg = /dog | cat | mouse/;
+let ans = regg.test(a);
+console.log(ans);
 
 // function flatten(arr) {
 //   let flattened = [];
