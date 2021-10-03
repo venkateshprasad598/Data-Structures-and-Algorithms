@@ -2,6 +2,7 @@
 let str = "The String";
 const regex = /string/i;
 
+prompt("Let's stop Regex");
 prompt(regex.test(str));
 // const str = "freeCodeCamp";
 // const regex = /Code/;
