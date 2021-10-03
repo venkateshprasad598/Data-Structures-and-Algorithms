@@ -1,17 +1,23 @@
-const str = "freeCodeCamp";
-const regex = /Code/;
-let answer = regex.test(str);
-console.log(answer);
-let regexx = /free/;
-if (regexx.test(str)) {
-  console.log(true);
-}
+// ******************** REGEX ***********************
+let str = "The String";
+const regex = /string/i;
 
-let a = "There was an";
-let regg = /dog | cat | mouse/;
-let ans = regg.test(a);
-console.log(ans);
+prompt(regex.test(str));
+// const str = "freeCodeCamp";
+// const regex = /Code/;
+// let answer = regex.test(str);
+// console.log(answer);
+// let regexx = /free/;
+// if (regexx.test(str)) {
+//   console.log(true);
+// }
 
+// let a = "There was an;
+// let regg = /dog | cat | mouse/;
+// let ans = regg.test(a);
+// console.log(ans);
+
+// ******************** REGEX ***********************
 // function flatten(arr) {
 //   let flattened = [];
 //   for (i = 0; i < arr.length; i++) {
