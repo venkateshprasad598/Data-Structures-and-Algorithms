@@ -1,18 +1,5 @@
-// ************** FABONACCI *********************
-// 0 1 1 2 3 5
-function fab(n) {
-  let Array = [];
-  let y = 0;
-  let x = 0;
-  for (i = 0; i < n; i++) {
-    x += i;
-    Array.push(x);
-  }
-  return Array;
-}
-console.log(fab(5));
+console.log("Let's start the day with regular expression");
 
-// console.log("Hello");
 // function flatten(arr) {
 //   let flattened = [];
 //   for (i = 0; i < arr.length; i++) {
@@ -27,6 +14,7 @@ console.log(fab(5));
 
 // console.log(
 //   flatten([
+
 //     [1, 2, 3],
 //     [4, 5, 6],
 //     [7, 8, 9],
@@ -52,8 +40,6 @@ console.log(fab(5));
 //   }
 // }
 
-let a = "INterview";
-console.log("Let's crack it");
 // let z = rec([
 //   1,
 //   "2",
