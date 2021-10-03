@@ -1,4 +1,13 @@
-console.log("Let's start the day with regular expression");
+const str = "freeCodeCamp";
+const regex = /Code/;
+let answer = regex.test(str);
+console.log(answer);
+
+let regexx = /free/;
+
+if (regexx.test(str)) {
+  console.log(true);
+}
 
 // function flatten(arr) {
 //   let flattened = [];
