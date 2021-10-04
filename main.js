@@ -1,9 +1,11 @@
 // ******************** REGEX ***********************
-let str = "The String";
-const regex = /string/i;
+const hello = "Hello";
 
-prompt("Let's stop Regex");
-prompt(regex.test(str));
+// let str = "The String";
+// const regex = /string/i;
+
+// prompt("Let's stop Regex");
+// prompt(regex.test(str));
 // const str = "freeCodeCamp";
 // const regex = /Code/;
 // let answer = regex.test(str);
