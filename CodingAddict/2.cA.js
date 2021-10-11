@@ -1,26 +1,34 @@
 const math = (array) => {
   let sum = 0;
-  let x = 0;
-  let y = 0;
-  console.log(array);
-  array.map((data) => {
-    sum += data;
-    if (sum - x == array[0]) {
-      console.log("Arthematic");
-    } else if (sum - x === x * array[0]) {
-      console.log("GEOMETRIC");
+  let x = array[0];
+  let isArthematic = 0;
+  let isGeometric = 0;
+
+  array.map((data, index) => {
+    if (index > 0) {
+      sum += data;
+      let difference = sum - x;
+      if (difference == array[0]) {
+        isArthematic++;
+      } else if (difference == x * 2) {
+        isGeometric++;
+      }
+      x = sum;
+      sum = 0;
     }
-    x = sum;
-    sum = 0;
   });
+
+  if (isGeometric == array.length - 1) {
+    console.log("GEO");
+  } else if (isArthematic == array.length - 1) {
+    console.log("ART");
+  } else {
+    console.log("-1");
+  }
 };
 
-let func = [
-  //   math([2, 4, 6, 8]),
-  math([3, 9, 27]),
-  // math([2, 5, 14, 89])
-];
-
-for (let i = 0; i < func.length; i++) {
-  func[i];
-}
+math([3, 6, 9]);
+math([3, 9, 27]);
+math([3, 9, 25]);
+math([2, 4, 6, 8, 10]);
+math([5, 10, 15]);
