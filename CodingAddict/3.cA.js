@@ -57,5 +57,14 @@
 //   console.log(isAnswer);
 // }
 // unique("abcde");
-let unique = "abcdea";
-console.log(unique.lastIndexOf("a"));
+// let unique = "abcdea";
+// console.log(unique.lastIndexOf("a"));
+function largest(n) {
+  let max = Math.max(...n);
+  n.splice(n.indexOf(max), 1);
+  let sum = 0;
+  n.map((data) => (sum += data));
+  return sum === max ? true : false;
+}
+let ans = largest([1, 5, 5]);
+console.log(ans);
