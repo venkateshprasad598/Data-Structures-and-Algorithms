@@ -35,10 +35,27 @@
 // capitilize("Hey how are you venkatesh");
 // capitilize("let make thus ad sdfkn k");
 
-function capitilize(str) {
-  let array = str.split(" ").map((word) => {
-    return word[0].toUpperCase() + word.slice(1);
-  });
-  console.log(array);
-}
-capitilize("hey there is no need of it");
+// function capitilize(str) {
+//   let array = str.split(" ").map((word) => {
+//     return word[0].toUpperCase() + word.slice(1);
+//   });
+//   console.log(array);
+// }
+// capitilize("hey there is no need of it");
+
+// function unique(str) {
+//   let split = str.split("");
+//   let array = [];
+//   let isAnswer = true;
+//   split.map((data) => {
+//     if (!array.includes(data)) {
+//       array.push(data);
+//     } else {
+//       isAnswer = false;
+//     }
+//   });
+//   console.log(isAnswer);
+// }
+// unique("abcde");
+let unique = "abcdea";
+console.log(unique.lastIndexOf("a"));
