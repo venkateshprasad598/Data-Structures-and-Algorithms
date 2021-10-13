@@ -1,3 +1,10 @@
+const a = [1, 2, 3, 4, 2];
+const ans = a.sort((b, a) => {
+  return a - b;
+});
+
+console.log(a);
+
 // ******************** REGEX ***********************
 // let str = "The String";
 // const regex = /string/i;
