@@ -3,19 +3,26 @@
 function repeat(str) {
   const split = str.split(" ");
   console.log(split);
+  let num = [];
   split.map((data) => {
     const split = data.split("");
     // const set = [...new Set(split)];
     let array = [];
+    let sum = 0;
     split.map((data) => {
       if (array.includes(data)) {
-        console.log(data);
+        sum++;
       }
       array.push(data);
     });
+    console.log(sum);
+    num.push(sum);
   });
+  console.log(num);
+  let index = num.indexOf(Math.max(...num));
+  console.log(split[index]);
 }
-repeat("javaScript");
+repeat("javaScript is aaa wonderfuul ok what is up boooooooob yooooooooy");
 
 //********************************************************** */
 // const product = [
