@@ -1,41 +1,61 @@
-const product = [
-  {
-    title: "Iphone 8",
-    company: "apple",
-  },
-  {
-    title: "samsung I10",
-    company: "samsung",
-  },
-  {
-    title: "Iphone 8s",
-    company: "apple",
-  },
-  {
-    title: "samsung phone",
-    company: "samsung",
-  },
-  {
-    title: "watch",
-    company: "onePlus",
-  },
-  {
-    title: "Tv",
-    company: "boat",
-  },
-];
+// return first word with gretest number of repeated letters
 
-let arrat = [];
-product.map((data) => {
-  arrat.push(data.company);
-});
-const set = [...new Set(arrat)];
-console.log(set);
+function repeat(str) {
+  const split = str.split(" ");
+  console.log(split);
+  split.map((data) => {
+    const split = data.split("");
+    // const set = [...new Set(split)];
+    let array = [];
+    split.map((data) => {
+      if (array.includes(data)) {
+        console.log(data);
+      }
+      array.push(data);
+    });
+  });
+}
+repeat("javaScript");
 
-set.map((data) => {
-  const products = product.filter((metaData) => metaData.company == data);
-  console.log(products);
-});
+//********************************************************** */
+// const product = [
+//   {
+//     title: "Iphone 8",
+//     company: "apple",
+//   },
+//   {
+//     title: "samsung I10",
+//     company: "samsung",
+//   },
+//   {
+//     title: "Iphone 8s",
+//     company: "apple",
+//   },
+//   {
+//     title: "samsung phone",
+//     company: "samsung",
+//   },
+//   {
+//     title: "watch",
+//     company: "onePlus",
+//   },
+//   {
+//     title: "Tv",
+//     company: "boat",
+//   },
+// ];
+
+// let arrat = [];
+// product.map((data) => {
+//   arrat.push(data.company);
+// });
+// const set = [...new Set(arrat)];
+// console.log(set);
+
+// set.map((data) => {
+//   const products = product.filter((metaData) => metaData.company == data);
+//   console.log(products);
+// });
 
 // function same(str) {
 //   const split = str.split("");
