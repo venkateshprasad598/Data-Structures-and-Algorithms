@@ -1,14 +1,53 @@
-function same(str) {
-  const split = str.split("");
-  const set = new Set(str);
-  console.log(set);
-  split.map((data) => {
-    if (set.has(data)) {
-      console.log(data);
-    }
-  });
-}
-const array = same("abcdeffffffff");
+const product = [
+  {
+    title: "Iphone 8",
+    company: "apple",
+  },
+  {
+    title: "samsung I10",
+    company: "samsung",
+  },
+  {
+    title: "Iphone 8s",
+    company: "apple",
+  },
+  {
+    title: "samsung phone",
+    company: "samsung",
+  },
+  {
+    title: "watch",
+    company: "onePlus",
+  },
+  {
+    title: "Tv",
+    company: "boat",
+  },
+];
+
+let arrat = [];
+product.map((data) => {
+  arrat.push(data.company);
+});
+const set = [...new Set(arrat)];
+console.log(set);
+
+set.map((data) => {
+  const products = product.filter((metaData) => metaData.company == data);
+  console.log(products);
+});
+
+// function same(str) {
+//   const split = str.split("");
+//   const set = new Set(str);
+//   console.log(set);
+//   split.map((data) => {
+//     if (set.has(data)) {
+//       console.log(data);
+//     }
+//   });
+// }
+// const array = same("abcdeffffffff");
 
 // ******************** Practice ***********************
 
