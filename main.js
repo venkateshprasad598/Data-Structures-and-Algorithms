@@ -22,7 +22,7 @@ function repeat(str) {
   let index = num.indexOf(Math.max(...num));
   console.log(split[index]);
 }
-repeat("javaScript is aaa wonderfuul ok what is up boooooooob yooooooooy");
+repeat("javaScript is aaa wonderfuul ok what is up boooooooob yoooooooooy");
 
 //********************************************************** */
 // const product = [
