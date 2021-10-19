@@ -1,6 +1,5 @@
-console.log(this);
-var a = 8;
-console.log(window.a);
+function x(y)console.log(y);
+x("y");
 // function repeat(str) {
 //   const split = str.split(" ");
 //   console.log(split);
