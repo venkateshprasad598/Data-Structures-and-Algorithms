@@ -1,6 +1,19 @@
-function x(y)console.log(y);
-x("y");
-// function repeat(str) {
+console.log("Hello");
+
+function set(){
+    setTimeout(() => {
+        console.log("SetTimeOut");
+      }, 3000);
+}
+set()
+
+let time = new Date().getTime();
+console.log(time);
+for (i = 0; i < 10000; i++) {
+  console.log(i);
+}
+console.log("End");
+
 //   const split = str.split(" ");
 //   console.log(split);
 //   let num = [];
