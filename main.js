@@ -1,18 +1,18 @@
-console.log("Hello");
+let obj = {
+  name: "Venkatesh Prasad",
+  age: 23,
+  myData: function () {
+    console.log(this.name);
+  },
+};
+obj.myData.call();
 
-function set(){
-    setTimeout(() => {
-        console.log("SetTimeOut");
-      }, 3000);
-}
-set()
-
-let time = new Date().getTime();
-console.log(time);
-for (i = 0; i < 10000; i++) {
-  console.log(i);
-}
-console.log("End");
+// let obj2 = {
+//   name: "Venkatesh",
+//   age: 21,
+// };
+// obj.myData.call(obj2);
+// console.log(obj2);
 
 //   const split = str.split(" ");
 //   console.log(split);
