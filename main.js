@@ -5,13 +5,13 @@ let obj = {
     console.log(this.name);
   },
 };
-obj.myData.call();
+obj.myDat();
 
 // let obj2 = {
 //   name: "Venkatesh",
 //   age: 21,
 // };
-// obj.myData.call(obj2);
+// obj.myData.call(obj2);q
 // console.log(obj2);
 
 //   const split = str.split(" ");
