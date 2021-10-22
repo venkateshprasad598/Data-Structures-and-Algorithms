@@ -1,17 +1,18 @@
-let obj = {
-  name: "Venkatesh Prasad",
-  age: 23,
-  myData: function () {
-    console.log(this.name);
-  },
-};
-obj.myDat();
+let n = 9;
+let isPrime = false;
+for (i = 2; i < n; i++) {
+  if (n % i === 0 && i !== n) {
+    isPrime = true;
+  }
+}
+
+isPrime === false ? console.log(true) : console.log(false);
 
 // let obj2 = {
 //   name: "Venkatesh",
 //   age: 21,
 // };
-// obj.myData.call(obj2);q
+// obj.myData.call(obj2);
 // console.log(obj2);
 
 //   const split = str.split(" ");
