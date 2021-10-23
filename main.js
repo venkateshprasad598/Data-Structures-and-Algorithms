@@ -5,8 +5,20 @@ for (i = 2; i < n; i++) {
     isPrime = true;
   }
 }
-
 isPrime === false ? console.log(true) : console.log(false);
+let m = 5;
+let sum = "";
+
+for (i = 1; i <= m; i++) {
+  for (k = 1; k <= m - i; k++) {
+    sum += " ";
+  }
+  for (j = 1; j <= 2 * i - 1; j++) {
+    sum += "*";
+  }
+  console.log(sum);
+  sum = "";
+}
 
 // let obj2 = {
 //   name: "Venkatesh",
