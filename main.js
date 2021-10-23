@@ -1,25 +1,45 @@
-let n = 9;
-let isPrime = false;
-for (i = 2; i < n; i++) {
-  if (n % i === 0 && i !== n) {
-    isPrime = true;
-  }
-}
-isPrime === false ? console.log(true) : console.log(false);
-let m = 5;
-let sum = "";
+function destroyer(...arr) {
+  console.log(arr);
+  let arri = arr.splice(0, 1)[0];
+  console.log(arri);
 
-for (i = 1; i <= m; i++) {
-  for (k = 1; k <= m - i; k++) {
-    sum += " ";
-  }
-  for (j = 1; j <= 2 * i - 1; j++) {
-    sum += "*";
-  }
-  console.log(sum);
-  sum = "";
+  arr.map((data) => {
+    arri.map((metaData) => {
+      if (arri.includes(data)) {
+        arri.splice(arri.indexOf(data), 1);
+        console.log(arri);
+      }
+    });
+  });
+  console.log(arri);
+  return arri;
 }
 
+destroyer([2, 3, 2, 3], 2, 3);
+
+// let n = 9;
+// let isPrime = false;
+// for (i = 2; i < n; i++) {
+//   if (n % i === 0 && i !== n) {
+//     isPrime = true;
+//   }
+// }
+// isPrime === false ? console.log(true) : console.log(false);
+// let m = 5;
+// let sum = "";
+
+// for (i = 1; i <= m; i++) {
+//   for (k = 1; k <= m - i; k++) {
+//     sum += " ";
+//   }
+//   for (j = 1; j <= 2 * i - 1; j++) {
+//     sum += "*";
+//   }
+//   console.log(sum);
+//   sum = "";
+// }
+// console.log("Wow")
+// console.log("I got")
 // let obj2 = {
 //   name: "Venkatesh",
 //   age: 21,
