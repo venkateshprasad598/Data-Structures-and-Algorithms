@@ -14,8 +14,8 @@ function destroyer(...arr) {
   console.log(arri);
   return arri;
 }
-
 destroyer([2, 3, 2, 3], 2, 3);
+console.log("Hey")
 
 // let n = 9;
 // let isPrime = false;
