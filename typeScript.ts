@@ -1,9 +1,9 @@
-console.log("Hello Typescript")
-let a : string = "9"
-console.log(a)
+console.log("Hello Typescript");
+var a : string = "9";
+console.log(a);
 
-let str : number = 10
+var str : number = 10;
 console.log(str)
 
-let boo : boolean = true
+var boo : boolean = true
 console.log("boolean", boo)
