@@ -36,6 +36,7 @@ let x = 5;
 function out() {
   return function inner() {
     console.log(x);
+    console.log(y);
   };
   // inner();
 }
