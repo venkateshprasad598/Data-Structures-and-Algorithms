@@ -81,6 +81,7 @@ function recursion(i, n) {
   if (i == 1) console.log(1);
   console.log(5 * i);
   return recursion(i + 1, n);
+  console.log("ok");
 }
 
 // recursion(1, 30);
