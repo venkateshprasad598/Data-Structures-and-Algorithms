@@ -65,16 +65,23 @@ function stack(push, pop) {
   }
   return true;
 }
-
-// function recursion(i, n) {
-//   let int = parseInt(n / 5);
-//   if (i >= int) {
-//     return 1;
-//   }
-//   if (i == 1) console.log(1);
-//   console.log(5 * i);
-//   return recursion(i + 1, n);
-// }
+console.log("Hello")
+class Shape {
+  constructor() {}
+  Shape() {
+    console.log("This is This is shape");
+  }
+}
+const newShape = new Shape();
+function recursion(i, n) {
+  let int = parseInt(n / 5);
+  if (i >= int) {
+    return 1;
+  }
+  if (i == 1) console.log(1);
+  console.log(5 * i);
+  return recursion(i + 1, n);
+}
 
 // recursion(1, 30);
 // *************************PATTERNS*****************************
