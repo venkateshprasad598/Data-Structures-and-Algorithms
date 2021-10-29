@@ -1,23 +1,31 @@
-function destroyer(...arr) {
-  console.log(arr);
-  let arri = arr.splice(0, 1)[0];
-  console.log(arri);
-
-  arr.map((data) => {
-    arri.map((metaData) => {
-      if (arri.includes(data)) {
-        arri.splice(arri.indexOf(data), 1);
-        console.log(arri);
-      }
-    });
-  });
-  console.log(arri);
-  return arri;
+// ************************** Insertion Sort **********************************
+function sort(arr) {
+  let array = arr.sort((a, b) => a - b);
+  console.log(array);
 }
-destroyer([2, 3, 2, 3], 2, 3);
-console.log("Hey");
-console.log("ok");
-console.log("Hmm..");
+sort([1, 2, 5, 3, 6, 8]);
+// **************************************************************
+
+// function destroyer(...arr) {
+//   console.log(arr);
+//   let arri = arr.splice(0, 1)[0];
+//   console.log(arri);
+
+//   arr.map((data) => {
+//     arri.map((metaData) => {
+//       if (arri.includes(data)) {
+//         arri.splice(arri.indexOf(data), 1);
+//         console.log(arri);
+//       }
+//     });
+//   });
+//   console.log(arri);
+//   return arri;
+// }
+// destroyer([2, 3, 2, 3], 2, 3);
+// console.log("Hey");
+// console.log("ok");
+// console.log("Hmm..");
 
 // let n = 9;
 // let isPrime = false;
