@@ -1,12 +1,14 @@
 // ************************** Insertion Sort **********************************
-let xor = 0;
-function sort(arr) {
-  for (let i of arr) {
-    xor = xor ^ i;
-  }
-  console.log(xor);
-}
-sort([3, 5, 6, 7, 3, 5, 6, 7, 1, 8, 8, 1, 9]);
+// let xor = 0;
+// function sort(arr) {
+//   for (let i of arr) {
+//     xor = xor ^ i;
+//   }
+//   console.log(xor);
+// }
+// sort([3, 5, 6, 7, 3, 5, 6, 7, 1, 8, 8, 1, 9]);
+
+console.log(10101 >> 1);
 // **************************************************************
 
 // function destroyer(...arr) {
