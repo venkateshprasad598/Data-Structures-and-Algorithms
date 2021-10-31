@@ -7,8 +7,14 @@
 //   console.log(xor);
 // }
 // sort([3, 5, 6, 7, 3, 5, 6, 7, 1, 8, 8, 1, 9]);
+console.log(00000000000000000000000000001011 >> 2);
 
-console.log(5 >> 1);
+if (((5 >> 2) & 1) == 1) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
 // **************************************************************
 
 // function destroyer(...arr) {
