@@ -1,5 +1,20 @@
-// ************************** Insertion Sort **********************************
-// let xor = 0;
+function bit(n) {
+  let count = 0;
+  for (i = 0; i < 32; i++) {
+    if (((n >> i) & 1) == 1) {
+      count++;
+      console.log(n);
+    }
+  }
+  return count;
+}
+// const ans = bit(00000000000000000000000000001011);
+// const anss = bit(00000000000000000000000010000000);
+const ok = bit(11111111111111111111111111111101);
+// console.log(ans);
+// console.log(anss);
+console.log(ok);
+
 // function sort(arr) {
 //   for (let i of arr) {
 //     xor = xor ^ i;
