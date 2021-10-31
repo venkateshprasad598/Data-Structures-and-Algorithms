@@ -8,12 +8,20 @@ function bit(n) {
   }
   return count;
 }
+const ok = bit(11111111111111111111111111111101);
+console.log(ok);
 // const ans = bit(00000000000000000000000000001011);
 // const anss = bit(00000000000000000000000010000000);
-const ok = bit(11111111111111111111111111111101);
 // console.log(ans);
 // console.log(anss);
-console.log(ok);
+
+n = 11111111111111111111111111111101;
+console.log((00000000000000000000000000001011 >> 1) & 1);
+for (i = 0; i < 32; i++) {
+  if (((n >> i) & 1) == 1) {
+    console.log(i);
+  }
+}
 
 // function sort(arr) {
 //   for (let i of arr) {
@@ -22,13 +30,13 @@ console.log(ok);
 //   console.log(xor);
 // }
 // sort([3, 5, 6, 7, 3, 5, 6, 7, 1, 8, 8, 1, 9]);
-console.log(00000000000000000000000000001011 >> 2);
+// console.log(00000000000000000000000000001011 >> 2);
 
-if (((5 >> 2) & 1) == 1) {
-  console.log(true);
-} else {
-  console.log(false);
-}
+// if (((5 >> 2) & 1) == 1) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
 
 // **************************************************************
 
