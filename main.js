@@ -1,32 +1,57 @@
 function bit(n) {
   let arr = [];
   let ans = true;
-  for (let i = 0; i < 4; i++) {
-    if (i % 2 === 0) {
-      let a = (n >> i) & 1;
-      arr.push(a);
-    } else {
-      let b = (n >> i) & 1;
-      arr.push(b);
-    }
-  }
-  let bit = arr.reverse();
-  for (let i = 0; i < bit.length; i++) {
-    if (i % 2 === 0) {
-      if (bit[i] !== bit[0]) {
-        ans = false;
-      }
-    } else {
-      if (bit[i] !== bit[1]) {
-        ans = false;
-      }
-    }
-  }
-  return ans;
-}
-bit(11);
+  let flag = false;
+  let m = 0;
 
-let z = 100;
+  for (let i = 31; i >= 0; i--) {
+    let mask = 1 << i;
+
+    if (flag) {
+      console.log(i);
+    } else {
+      if ((n & mask) !== 0) {
+        m = i;
+        flag = true;
+        arr.push(1);
+      }
+    }
+  }
+
+  if (flag) {
+    for (let j = 0; j < m; j++) {
+      if (j % 2 === 0) {
+        let a = (n >> j) & 1;
+        arr.push(a);
+      } else {
+        let b = (n >> j) & 1;
+        arr.push(b);
+      }
+    }
+  }
+
+  // let bit = arr.reverse();
+  console.log(arr);
+  // for (let k = 0; k < bit.length; k++) {
+  //   if (k % 2 === 0) {
+  //     if (bit[k] !== bit[0]) {
+  //       ans = false;
+  //     }
+  //   } else {
+  //     if (bit[k] !== bit[1]) {
+  //       ans = false;
+  //     }
+  //   }
+  // }
+  // return ans;
+}
+bit(10);
+let p = 10;
+let mask = 1 << 3;
+console.log(p & mask);
+// let z = 5;
+// let mask = 1 << 2;
+// console.log(z & mask);
 
 // function bit(n) {
 //   let count = 0;
