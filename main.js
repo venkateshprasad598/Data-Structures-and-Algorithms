@@ -8,12 +8,10 @@ function bit(n) {
   }
   return count;
 }
-const ok = bit(11111111111111111111111111111101);
-console.log(ok);
-// const ans = bit(00000000000000000000000000001011);
-// const anss = bit(00000000000000000000000010000000);
-// console.log(ans);
-// console.log(anss);
+const ans = bit(00000000000000000000000000001011);
+const ans1 = bit(00000000000000000000000010000000);
+console.log(ans);
+console.log(ans1);
 
 n = 11111111111111111111111111111101;
 console.log((00000000000000000000000000001011 >> 1) & 1);
