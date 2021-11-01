@@ -22,9 +22,11 @@ function bit(n) {
       }
     }
   }
-  console.log(ans);
+  return ans;
 }
 bit(11);
+
+let z = 100;
 
 // function bit(n) {
 //   let count = 0;
