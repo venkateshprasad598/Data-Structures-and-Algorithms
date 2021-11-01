@@ -1,25 +1,46 @@
 function bit(n) {
-  let count = 0;
-  for (i = 0; i < 32; i++) {
-    if (((n >> i) & 1) == 1) {
-      count++;
-      console.log(n);
+  let arr = [];
+  let bitA = 0;
+  for (let i = 0; i < 4; i++) {
+    if (i % 2 === 0) {
+      let a = (n >> i) & 1;
+      arr.push(a);
+      console.log(a);
+      bitA = a;
+    } else {
+      let b = (n >> i) & 1;
+      arr.push(b);
+      if (b == bitA) {
+        console.log(false);
+      }
     }
   }
-  return count;
+  console.log(arr.reverse());
 }
-const ans = bit(00000000000000000000000000001011);
-const ans1 = bit(00000000000000000000000010000000);
-console.log(ans);
-console.log(ans1);
+bit(10);
 
-n = 11111111111111111111111111111101;
-console.log((00000000000000000000000000001011 >> 1) & 1);
-for (i = 0; i < 32; i++) {
-  if (((n >> i) & 1) == 1) {
-    console.log(i);
-  }
-}
+// function bit(n) {
+//   let count = 0;
+//   for (i = 0; i < 32; i++) {
+//     if (((n >> i) & 1) == 1) {
+//       count++;
+//       console.log(n);
+//     }
+//   }
+//   return count;
+// }
+// const ans = bit(0000000000000000000000000000n11);
+// const ans1 = bit(00000000000000000000000010000000);
+// console.log(ans);
+// console.log(ans1);
+
+// n = 11111111111111111111111111111101;
+// console.log((00000000000000000000000000001011 >> 1) & 1);
+// for (i = 0; i < 32; i++) {
+//   if (((n >> i) & 1) == 1) {
+//     console.log(i);
+//   }
+// }
 
 // function sort(arr) {
 //   for (let i of arr) {
