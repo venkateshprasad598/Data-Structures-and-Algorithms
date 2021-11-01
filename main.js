@@ -1,23 +1,30 @@
 function bit(n) {
   let arr = [];
-  let bitA = 0;
+  let ans = true;
   for (let i = 0; i < 4; i++) {
     if (i % 2 === 0) {
       let a = (n >> i) & 1;
       arr.push(a);
-      console.log(a);
-      bitA = a;
     } else {
       let b = (n >> i) & 1;
       arr.push(b);
-      if (b == bitA) {
-        console.log(false);
+    }
+  }
+  let bit = arr.reverse();
+  for (let i = 0; i < bit.length; i++) {
+    if (i % 2 === 0) {
+      if (bit[i] !== bit[0]) {
+        ans = false;
+      }
+    } else {
+      if (bit[i] !== bit[1]) {
+        ans = false;
       }
     }
   }
-  console.log(arr.reverse());
+  console.log(ans);
 }
-bit(10);
+bit(11);
 
 // function bit(n) {
 //   let count = 0;
