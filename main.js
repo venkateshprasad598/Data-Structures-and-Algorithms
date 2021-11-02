@@ -1,27 +1,61 @@
-function reverse(n) {
-  let z = n;
-  let arr = [];
-  let list = { 10: "a", 11: "b", 12: "c", 13: "d", 14: "e", 15: "f" };
-  if (z == 0) {
-    return "0";
-  } else if (z < 0) {
-    z = z + 2 ** 32;
-  }
+// **********************************Alternative Bits************************
 
-  while (z !== 0) {
-    let a = z % 16;
-    let b = parseInt(z / 16);
-    z = b;
-    if (a > 9) {
-      arr.push(list[a]);
-    } else {
-      arr.push(a);
+function sort(data) {
+  let flag = false;
+  let arr = [];
+  let count = 0;
+
+  data.map((n) => {
+    for (let i = 31; i >= 0; i--) {
+      let mask = 1 << i;
+      if (flag) {
+        if ((n & mask) !== 0) {
+          count++;
+        } else {
+          // arr.push(0);
+        }
+      } else {
+        if ((n & mask) !== 0) {
+          flag = true;
+          count++;
+        }
+      }
     }
-  }
-  return arr.reverse().join("");
+    arr.push(count);
+    flag = false;
+    count = 0;
+  });
+
+  console.log(arr);
+  console.log(count);
 }
-let answer = reverse(-1);
-console.log(answer);
+sort([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+
+// **********************************Alternative Bits************************
+// function reverse(n) {
+//   let z = n;
+//   let arr = [];
+//   let list = { 10: "a", 11: "b", 12: "c", 13: "d", 14: "e", 15: "f" };
+//   if (z == 0) {
+//     return "0";
+//   } else if (z < 0) {
+//     z = z + 2 ** 32;
+//   }
+
+//   while (z !== 0) {
+//     let a = z % 16;
+//     let b = parseInt(z / 16);
+//     z = b;
+//     if (a > 9) {
+//       arr.push(list[a]);
+//     } else {
+//       arr.push(a);
+//     }
+//   }
+//   return arr.reverse().join("");
+// }
+// let answer = reverse(-1);
+// console.log(answer);
 
 // **********************************Alternative Bits************************
 
