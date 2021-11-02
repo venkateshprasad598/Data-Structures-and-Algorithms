@@ -1,54 +1,89 @@
+function bits(n) {
+  let count = 0;
+
+  for (let i = 0; i < 32; i++) {
+    if ((n & (1 << i)) !== 0) count++;
+  }
+  return count;
+}
+let myAns = bits(11111111111111111111111111111101);
+console.log(myAns);
+// **********************************Alternative Bits************************
+
+// function bit(n) {
+//   let arr = [];
+//   let ans = true;
+//   let flag = false;
+//   let myBits = 0;
+
+//   for (let i = 31; i >= 0; i--) {
+//     let mask = 1 << i;
+
+//     if (flag) {
+//       if ((n & mask) !== 0) {
+//         arr.push(1);
+//       } else {
+//         arr.push(0);
+//       }
+//     } else {
+//       if ((n & mask) !== 0) {
+//         m = i;
+//         flag = true;
+//         arr.push(1);
+//         let metaMask = 1 << j;
+//         rev = rev | metaMask;
+//         j++;
+//       }
+//     }
+//   }
+//   console.log(arr);
+//   for (let k = 0; k < arr.length; k++) {
+//     if (k % 2 === 0) {
+//       myBits = arr[k];
+//       if (arr[k - 1] === myBits) {
+//         ans = false;
+//       }
+//     } else {
+//       if (arr[k] === myBits) {
+//         ans = false;
+//       }
+//     }
+//   }
+//   return ans;
+// }
+// let answer = bit(10);
+// console.log(answer);
+
+// *****************************Reverse Bit ***************************
 function bit(n) {
-  let arr = [];
-  let ans = true;
   let flag = false;
-  let m = 0;
-  let myBits = 0;
+  let rev = 0;
+  let j = 0;
 
   for (let i = 31; i >= 0; i--) {
     let mask = 1 << i;
-
     if (flag) {
-      // console.log(i);
+      if ((n & mask) !== 0) {
+        let metaMask = 1 << j;
+        rev = rev | metaMask;
+        j++;
+      } else {
+        j++;
+      }
     } else {
       if ((n & mask) !== 0) {
-        m = i;
         flag = true;
-        console.log(i);
+        let metaMask = 1 << j;
+        rev = rev | metaMask;
+        j++;
       }
     }
   }
-  if (flag) {
-    for (let j = 0; j <= m; j++) {
-      if (j % 2 === 0) {
-        let a = (n >> j) & 1;
-        arr.push(a);
-      } else {
-        let b = (n >> j) & 1;
-        arr.push(b);
-      }
-    }
-  }
-
-  console.log(arr);
-  for (let k = 0; k < arr.length; k++) {
-    if (k % 2 === 0) {
-      myBits = arr[k];
-      if (arr[k - 1] === myBits) {
-        ans = false;
-      }
-    } else {
-      if (arr[k] === myBits) {
-        ans = false;
-      }
-    }
-  }
-  console.log(ans);
+  return rev;
 }
-bit(5);
-let p = 10;
-let mask = 1 << 3;
-console.log(p & mask);
+let answer = bit(10);
+// console.log(answer);
+// **********************************Reverse BIt************************
 // let z = 5;
 // let mask = 1 << 2;
 // console.log(z & mask);
