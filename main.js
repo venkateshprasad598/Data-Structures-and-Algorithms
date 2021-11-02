@@ -1,13 +1,28 @@
-function bits(n) {
-  let count = 0;
-
-  for (let i = 0; i < 32; i++) {
-    if ((n & (1 << i)) !== 0) count++;
+function reverse(n) {
+  let z = n;
+  let arr = [];
+  let list = { 10: "a", 11: "b", 12: "c", 13: "d", 14: "e", 15: "f" };
+  if (z == 0) {
+    return "0";
+  } else if (z < 0) {
+    z = z + 2 ** 32;
   }
-  return count;
+
+  while (z !== 0) {
+    let a = z % 16;
+    let b = parseInt(z / 16);
+    z = b;
+    if (a > 9) {
+      arr.push(list[a]);
+    } else {
+      arr.push(a);
+    }
+  }
+  return arr.reverse().join("");
 }
-let myAns = bits(11111111111111111111111111111101);
-console.log(myAns);
+let answer = reverse(-1);
+console.log(answer);
+
 // **********************************Alternative Bits************************
 
 // function bit(n) {
@@ -55,33 +70,34 @@ console.log(myAns);
 // console.log(answer);
 
 // *****************************Reverse Bit ***************************
-function bit(n) {
-  let flag = false;
-  let rev = 0;
-  let j = 0;
+// function bit(n) {
+//   let flag = false;
+//   let rev = 0;
+//   let j = 0;
 
-  for (let i = 31; i >= 0; i--) {
-    let mask = 1 << i;
-    if (flag) {
-      if ((n & mask) !== 0) {
-        let metaMask = 1 << j;
-        rev = rev | metaMask;
-        j++;
-      } else {
-        j++;
-      }
-    } else {
-      if ((n & mask) !== 0) {
-        flag = true;
-        let metaMask = 1 << j;
-        rev = rev | metaMask;
-        j++;
-      }
-    }
-  }
-  return rev;
-}
-let answer = bit(10);
+//   for (let i = 31; i >= 0; i--) {
+//     let mask = 1 << i;
+//     if (flag) {
+//       if ((n & mask) !== 0) {
+//         let metaMask = 1 << j;
+//         rev = rev | metaMask;
+//       } else {
+//       }
+//       j++;
+//     } else {
+//       if ((n & mask) !== 0) {
+//         flag = true;
+//         let metaMask = 1 << j;
+//         rev = rev | metaMask;
+//         j++;
+//       }
+//     }
+//   }
+
+//   console.log(rev);
+//   return rev;
+// }
+// let answer = bit(4294967293);
 // console.log(answer);
 // **********************************Reverse BIt************************
 // let z = 5;
