@@ -3,23 +3,23 @@ function bit(n) {
   let ans = true;
   let flag = false;
   let m = 0;
+  let myBits = 0;
 
   for (let i = 31; i >= 0; i--) {
     let mask = 1 << i;
 
     if (flag) {
-      console.log(i);
+      // console.log(i);
     } else {
       if ((n & mask) !== 0) {
         m = i;
         flag = true;
-        arr.push(1);
+        console.log(i);
       }
     }
   }
-
   if (flag) {
-    for (let j = 0; j < m; j++) {
+    for (let j = 0; j <= m; j++) {
       if (j % 2 === 0) {
         let a = (n >> j) & 1;
         arr.push(a);
@@ -30,22 +30,22 @@ function bit(n) {
     }
   }
 
-  // let bit = arr.reverse();
   console.log(arr);
-  // for (let k = 0; k < bit.length; k++) {
-  //   if (k % 2 === 0) {
-  //     if (bit[k] !== bit[0]) {
-  //       ans = false;
-  //     }
-  //   } else {
-  //     if (bit[k] !== bit[1]) {
-  //       ans = false;
-  //     }
-  //   }
-  // }
-  // return ans;
+  for (let k = 0; k < arr.length; k++) {
+    if (k % 2 === 0) {
+      myBits = arr[k];
+      if (arr[k - 1] === myBits) {
+        ans = false;
+      }
+    } else {
+      if (arr[k] === myBits) {
+        ans = false;
+      }
+    }
+  }
+  console.log(ans);
 }
-bit(10);
+bit(5);
 let p = 10;
 let mask = 1 << 3;
 console.log(p & mask);
