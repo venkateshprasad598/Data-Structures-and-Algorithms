@@ -1,8 +1,10 @@
 // **********************************Alternative Bits************************
-
+console.log(2 ** 5);
+console.log(Math.abs(-3));
 function sort(data) {
   let flag = false;
   let arr = [];
+  let ok = [];
   let count = 0;
 
   data.map((n) => {
@@ -22,14 +24,25 @@ function sort(data) {
       }
     }
     arr.push(count);
+    ok.push({ a: count, b: n });
     flag = false;
     count = 0;
   });
 
-  console.log(arr);
-  console.log(count);
+  let sortedB = ok.sort((a, b) => {
+    return a.b - b.b;
+  });
+
+  let sortedA = sortedB.sort((a, b) => {
+    return a.a - b.a;
+  });
+  let ans = sortedA.map((data) => data.b);
+  return ans;
 }
-sort([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+sort([
+  1111, 7644, 1107, 6978, 8742, 1, 7403, 7694, 9193, 4401, 377, 8641, 5311, 624,
+  3554, 6631,
+]);
 
 // **********************************Alternative Bits************************
 // function reverse(n) {
