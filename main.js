@@ -1,48 +1,73 @@
 // **********************************Alternative Bits************************
-console.log(2 ** 5);
-console.log(Math.abs(-3));
-function sort(data) {
-  let flag = false;
-  let arr = [];
-  let ok = [];
-  let count = 0;
 
-  data.map((n) => {
-    for (let i = 31; i >= 0; i--) {
-      let mask = 1 << i;
-      if (flag) {
-        if ((n & mask) !== 0) {
-          count++;
-        } else {
-          // arr.push(0);
-        }
-      } else {
-        if ((n & mask) !== 0) {
-          flag = true;
-          count++;
-        }
-      }
-    }
-    arr.push(count);
-    ok.push({ a: count, b: n });
-    flag = false;
-    count = 0;
-  });
+function divide(dividend, divisor) {
+  if (dividend == -Math.pow(2, 31) && divisor == -1) {
+    return Math.pow(2, 31) - 1;
+  }
+  let isNegative = false;
 
-  let sortedB = ok.sort((a, b) => {
-    return a.b - b.b;
-  });
-
-  let sortedA = sortedB.sort((a, b) => {
-    return a.a - b.a;
-  });
-  let ans = sortedA.map((data) => data.b);
-  return ans;
+  if (dividend == 0) {
+    return 0;
+  }
+  if ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) {
+    isNegative = true;
+  }
+  let result = 0;
+  let newDividend = Math.abs(dividend);
+  let newDivisor = Math.abs(divisor);
+  while (newDividend >= newDivisor) {
+    newDividend = newDividend - newDivisor;
+    result++;
+  }
+  return isNegative ? -result : result;
 }
-sort([
-  1111, 7644, 1107, 6978, 8742, 1, 7403, 7694, 9193, 4401, 377, 8641, 5311, 624,
-  3554, 6631,
-]);
+let ans = divide(-1, -1);
+console.log(ans);
+// **********************************Alternative Bits************************
+// console.log(2 ** 5);
+// console.log(Math.abs(-3));
+// function sort(data) {
+//   let flag = false;
+//   let arr = [];
+//   let ok = [];
+//   let count = 0;
+
+//   data.map((n) => {
+//     for (let i = 31; i >= 0; i--) {
+//       let mask = 1 << i;
+//       if (flag) {
+//         if ((n & mask) !== 0) {
+//           count++;
+//         } else {
+//           // arr.push(0);
+//         }
+//       } else {
+//         if ((n & mask) !== 0) {
+//           flag = true;
+//           count++;
+//         }
+//       }
+//     }
+//     arr.push(count);
+//     ok.push({ a: count, b: n });
+//     flag = false;
+//     count = 0;
+//   });
+
+//   let sortedB = ok.sort((a, b) => {
+//     return a.b - b.b;
+//   });
+
+//   let sortedA = sortedB.sort((a, b) => {
+//     return a.a - b.a;
+//   });
+//   let ans = sortedA.map((data) => data.b);
+//   return ans;
+// }
+// sort([
+//   1111, 7644, 1107, 6978, 8742, 1, 7403, 7694, 9193, 4401, 377, 8641, 5311, 624,
+//   3554, 6631,
+// ]);
 
 // **********************************Alternative Bits************************
 // function reverse(n) {
