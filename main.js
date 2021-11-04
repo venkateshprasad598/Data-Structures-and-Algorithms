@@ -21,8 +21,8 @@ function divide(dividend, divisor) {
   }
   return isNegative ? -result : result;
 }
-let ans = divide(-1, -1);
-console.log(ans);
+let an = divide(-1, -1);
+console.log(an);
 // **********************************Alternative Bits************************
 // console.log(2 ** 5);
 // console.log(Math.abs(-3));
