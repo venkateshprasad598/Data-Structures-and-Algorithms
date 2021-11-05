@@ -7,6 +7,7 @@ function recursion(i, n) {
   }
   if (i == 1) console.log(1);
   console.log(5 * i);
+  console.log("Hey");
   return recursion(i + 1, n);
 }
 
