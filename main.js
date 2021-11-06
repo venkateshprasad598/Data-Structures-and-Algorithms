@@ -1,28 +1,53 @@
+function range(a, b) {
+  let count = 0;
+  while (a !== b) {
+    count++;
+    a = a >> 1;
+    b = b >> 1;
+  }
+  return 1 << count;
+}
+let ans = range(5, 7);
+
+// **********************************Sub Arrays************************
+
+// let arr = [1, 2, 34, 5, 6, 77, 8, 9, 10];
+// for (let i = 0; i < arr.length; i++) {
+//   let sub = []
+//   for (let j = i; j < arr.length; j++) {
+//       sub.push(arr[j])
+
+//       console.log(sub)
+//   }
+//   sub = []
+// }
+
 // **********************************Alternative Bits************************
 
-function divide(dividend, divisor) {
-  if (dividend == -Math.pow(2, 31) && divisor == -1) {
-    return Math.pow(2, 31) - 1;
-  }
-  let isNegative = false;
+// function divide(dividend, divisor) {
+//   if (dividend == -Math.pow(2, 31) && divisor == -1) {
+//     return Math.pow(2, 31) - 1;
+//   }
+//   let isNegative = false;
 
-  if (dividend == 0) {
-    return 0;
-  }
-  if ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) {
-    isNegative = true;
-  }
-  let result = 0;
-  let newDividend = Math.abs(dividend);
-  let newDivisor = Math.abs(divisor);
-  while (newDividend >= newDivisor) {
-    newDividend = newDividend - newDivisor;
-    result++;
-  }
-  return isNegative ? -result : result;
-}
-let an = divide(-1, -1);
-console.log(an);
+//   if (dividend == 0) {
+//     return 0;
+//   }
+//   if ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) {
+//     isNegative = true;
+//   }
+//   let result = 0;
+//   let newDividend = Math.abs(dividend);
+//   let newDivisor = Math.abs(divisor);
+//   while (newDividend >= newDivisor) {
+//     newDividend = newDividend - newDivisor;
+//     result++;
+//   }
+//   return isNegative ? -result : result;
+// }
+// let a = divide(-1, -1);
+// console.log(a
+//   );
 // **********************************Alternative Bits************************
 // console.log(2 ** 5);
 // console.log(Math.abs(-3));
