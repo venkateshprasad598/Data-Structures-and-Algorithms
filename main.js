@@ -11,18 +11,24 @@ let ans = range(5, 7);
 
 // **********************************Sub Arrays************************
 
-// let arr = [1, 2, 34, 5, 6, 77, 8, 9, 10];
-// for (let i = 0; i < arr.length; i++) {
-//   let sub = []
-//   for (let j = i; j < arr.length; j++) {
-//       sub.push(arr[j])
+function or(arr) {
+  let value = [];
 
-//       console.log(sub)
-//   }
-//   sub = []
-// }
+  for (let i = 0; i < arr.length; i++) {
+    let rev = 0;
+    for (let j = i; j < arr.length; j++) {
+      rev |= arr[j];
+      value.push(rev);
+    }
+    sub = [];
+  }
+  console.log(value);
+  let [...unique] = new Set(value);
+  return unique.length;
+}
 
-// **********************************Alternative Bits************************
+let answer = or([1, 2, 4]);
+// **********************************Alternative Bits***``````````````````````````````````` *********************
 
 // function divide(dividend, divisor) {
 //   if (dividend == -Math.pow(2, 31) && divisor == -1) {
