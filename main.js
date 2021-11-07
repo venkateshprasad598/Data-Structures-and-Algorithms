@@ -7,27 +7,27 @@ function range(a, b) {
   }
   return 1 << count;
 }
-let ans = range(5, 7);
+let an = range(5, 7);
 
 // **********************************Sub Arrays************************
+// function or(arr) {
+//   let value = [];
 
-function or(arr) {
-  let value = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let rev = 0;
+//     for (let j = i; j < arr.length; j++) {
+//       rev |= arr[j];
+//       value.push(rev);
+//     }
+//     sub = [];
+//   }
+//   console.log(value);
+//   let [...unique] = new Set(value);
+//   return unique.length;
+// }
+// let answer = or([1, 2, 4]);
 
-  for (let i = 0; i < arr.length; i++) {
-    let rev = 0;
-    for (let j = i; j < arr.length; j++) {
-      rev |= arr[j];
-      value.push(rev);
-    }
-    sub = [];
-  }
-  console.log(value);
-  let [...unique] = new Set(value);
-  return unique.length;
-}
 
-let answer = or([1, 2, 4]);
 // **********************************Alternative Bits***``````````````````````````````````` *********************
 
 // function divide(dividend, divisor) {
