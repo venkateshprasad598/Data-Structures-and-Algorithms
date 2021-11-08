@@ -21,6 +21,50 @@ function recursion(i, n) {
   return recursion(i + 1, n);
 }
 
+
+  for (let k = 5; k > i; k--) {
+    sum += " ";
+  }
+  for (let j = 0; j < 2 * i - 1; j++) {
+    sum += "*";
+  }
+  console.log(sum);
+  sum = "";
+}
+
+let x = 5;
+function out() {
+  return function inner() {
+    console.log(x);
+  };
+  // inner();
+}
+let z = out();
+console.log(z);
+z();
+console.log("Hello");
+function stack(push, pop) {
+  let b = [];
+  let a = 0;
+  let popCount = 0;
+  while (push.length !== 0) {
+    if (!b.includes(pop[popCount])) {
+      b.push(push[a]);
+      a++;
+    } else {
+      console.log("Hello");
+      let popo = b.pop();
+      push.pop();
+      if (popo !== pop[popCount]) {
+        return false;
+      }
+      popCount++;
+      console.log(popCount);
+    }
+  }
+  return true;
+}
+
 // function recursion(i, n) {
 //   let int = parseInt(n / 5);
 //   if (i >= int) {
