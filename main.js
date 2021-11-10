@@ -1,5 +1,15 @@
 // *************************Recursion*****************************
-
+let sum = "";
+for (let i = 1; i <= 5; i++) {
+  for (let k = 5; k > i; k--) {
+    sum += " ";
+  }
+  for (let j = 0; j < 2 * i - 1; j++) {
+    sum += "*";
+  }
+  console.log(sum);
+  sum = "";
+}
 function recursion(i, n) {
   let int = parseInt(n / 5);
   if (i >= int) {
