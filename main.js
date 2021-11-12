@@ -1,21 +1,43 @@
 // **********************************Sub Arrays************************
 
-function reverse(n) {
-  let rev = 0;
-  let j = 0;
-  for (let i = 31; i >= 0; i--) {
-    let mask = 1 << i;
-    if ((n & mask) !== 0) {
-      let meta = 1 << j;
-      rev |= meta;
-      j++;
-    } else {
-      j++;
-    }
+class Shape {
+  constructor() {}
+  Shape() {
+    console.log("This is This is shape");
   }
-  console.log(rev);
 }
-let ans = reverse(4294967293);
+const newShape = new Shape();
+
+class Rectangle extends Shape {
+  constructor() {
+    super();
+  }
+  Rectangle() {
+    console.log("This is Rectangle shape");
+  }
+}
+const newRectangle = new Rectangle();
+
+class Square extends Rectangle {
+  constructor() {
+    super();
+  }
+  Square() {
+    console.log("This is Square Rectangle");
+  }
+}
+const newSquare = new Square();
+newSquare.Rectangle();
+newSquare.Shape();
+class Circle extends Shape {
+  constructor() {
+    super();
+  }
+  Circle() {
+    console.log("This is Circle shape");
+  }
+}
+const newCircle = new Circle();
 
 // **********************************Sub Arrays************************
 // function range(a, b) {
