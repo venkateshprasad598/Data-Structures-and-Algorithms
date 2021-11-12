@@ -1,13 +1,33 @@
-function range(a, b) {
-  let count = 0;
-  while (a !== b) {
-    count++;
-    a = a >> 1;
-    b = b >> 1;
+// **********************************Sub Arrays************************
+
+function reverse(n) {
+  let rev = 0;
+  let j = 0;
+  for (let i = 31; i >= 0; i--) {
+    let mask = 1 << i;
+    if ((n & mask) !== 0) {
+      let meta = 1 << j;
+      rev |= meta;
+      j++;
+    } else {
+      j++;
+    }
   }
-  return 1 << count;
+  console.log(rev);
 }
-let an = range(5, 7);
+let ans = reverse(4294967293);
+
+// **********************************Sub Arrays************************
+// function range(a, b) {
+//   let count = 0;
+//   while (a !== b) {
+//     count++;
+//     a = a >> 1;
+//     b = b >> 1;
+//   }
+//   return 1 << count;
+// }
+// let an = range(5, 7);
 
 // **********************************Sub Arrays************************
 // function or(arr) {
@@ -26,7 +46,6 @@ let an = range(5, 7);
 //   return unique.length;
 // }
 // let answer = or([1, 2, 4]);
-
 
 // **********************************Alternative Bits***``````````````````````````````````` *********************
 
