@@ -1,21 +1,22 @@
+console.log("Hello");
 function stack(push, pop) {
   let b = [];
   let a = 0;
   let popCount = 0;
-  // while (push.length !== 0) {
-  //   if (!b.includes(pop[popCount])) {
-  //     b.push(push[a]);
-  //     a++;
-  //   } else {
-  //     console.log("Hello");
-  //     let popo = b.pop();
-  //     push.pop();
-  //     if (popo !== pop[popCount]) {
-  //       return false;
-  //     } 
-  //     popCount++;
-  //     console.log(popCount);
-    // }
+  while (push.length !== 0) {
+    if (!b.includes(pop[popCount])) {
+      b.push(push[a]);
+      a++;
+    } else {
+      console.log("Hello");
+      let popo = b.pop();
+      push.pop();
+      if (popo !== pop[popCount]) {
+        return false;
+      }
+      popCount++;
+      console.log(popCount);
+    }
   }
   return true;
 }
