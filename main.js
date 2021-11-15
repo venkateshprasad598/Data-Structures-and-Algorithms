@@ -2360,6 +2360,11 @@
 // console.log(swap(2, 4));
 
 // DSA ********************************************************************
-console.log("hELLo");
-console.log("akkefhqweioisednf");
-console.log("dfdfdfdfdfdfdf");
+// SWAP TWO VARIABLES
+function swap(a, b) {
+  var temp = a;
+  var a = b;
+  var b = temp;
+  return [a, b];
+}
+console.log(swap(2, 4));
