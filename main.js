@@ -2368,3 +2368,4 @@ function swap(a, b) {
   return [a, b];
 }
 console.log(swap(2, 4));
+console.log(1);
