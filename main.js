@@ -2368,9 +2368,16 @@ function swap(a, b) {
   return [a, b];
 }
 console.log(swap(2, 4));
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
-console.log(6);
+
+function max(a, b, c) {
+  // var max = Math.max(a, b);
+  // console.log(max);
+  if (a >= b && a >= c) {
+    console.log(a);
+  } else if (b > a && b > c) {
+    console.log(b);
+  } else if (c > a && c > b) {
+    console.log(c);
+  }
+}
+max(10, 10, 10);
