@@ -2404,3 +2404,4 @@ if (hour > 6 && hour < 12) {
   }
 }
 max(10, 10, 10);
+console.log("ok");
