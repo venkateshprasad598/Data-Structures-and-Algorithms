@@ -2381,3 +2381,14 @@ function max(a, b, c) {
   }
 }
 max(10, 10, 10);
+max(10, 10, 20);
+
+var hour = 9;
+var message = "";
+if (hour > 6 && hour < 12) {
+  console.log((message = "good morning"));
+} else if (hour >= 12 && hour <= 18) {
+  console.log((message = "good evening"));
+} else {
+  console.log((message = "good night"));
+}
