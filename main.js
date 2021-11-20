@@ -2392,3 +2392,15 @@ if (hour > 6 && hour < 12) {
 } else {
   console.log((message = "good night"));
 }
+
+  var max = Math.max(a, b);
+  // console.log(max);
+  if (a >= b && a >= c) {
+    console.log(a);
+  } else if (b > a && b > c) {
+    console.log(b);
+  } else if (c > a && c > b) {
+    console.log(c);
+  }
+}
+max(10, 10, 10);
