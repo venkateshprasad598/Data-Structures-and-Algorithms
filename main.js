@@ -2405,3 +2405,18 @@ if (hour > 6 && hour < 12) {
 }
 max(10, 10, 10);
 console.log("ok");
+
+
+  var answer =
+    a >= b && a >= c
+      ? console.log(a)
+      : b > a && b > c
+      ? console.log(b)
+      : c > a && c > b
+      ? console.log(c)
+      : null;
+  return answer;
+  // var answer = marks >= 40 ? "PASS" : "FAIL";
+  // return answer;
+}
+console.log(myFunc(221, 3, 19));
