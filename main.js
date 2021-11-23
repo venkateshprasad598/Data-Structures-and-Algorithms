@@ -2421,3 +2421,20 @@ console.log("ok");
 }
 console.log(myFunc(221, 3, 19));
 console.log("Working");
+
+
+
+let sum = "";
+for (let i = 1; i < n; i++) {
+  for (let j = 1; j < n; j++) {
+    var k = i + j - 1;
+    if(k > 4){
+      k = k - 4
+    }
+    sum += k;
+  }
+  sum += "\n";
+}
+console.log(sum);
+}
+myFunc(5);
