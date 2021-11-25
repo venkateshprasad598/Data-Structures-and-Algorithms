@@ -2439,3 +2439,13 @@ console.log(sum);
 }
 myFunc(5);
 myFunc(8);
+
+  var j = 1;
+  while (j <= i) {
+    a = a + "*";
+    j++;
+  }
+  console.log(a);
+  var a = "";
+  i--;
+}
