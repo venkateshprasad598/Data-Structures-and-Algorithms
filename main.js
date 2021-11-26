@@ -2449,3 +2449,4 @@ myFunc(8);
   var a = "";
   i--;
 }
+console.log(j)
