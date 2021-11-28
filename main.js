@@ -2479,3 +2479,4 @@ while (i >= 0) {
   a = "";
   i--;
 }
+console.log(i);
