@@ -1,13 +1,27 @@
-let x = 5;
-function out() {
-  return function inner() {
-    console.log(x);
-  };
-  // inner();
+// *************************PATTERNS*****************************
+
+let sum = "";
+for (let i = 1; i <= 5; i++) {
+  for (let k = 5; k > i; k--) {
+    sum += " ";
+  }
+  for (let j = 0; j < 2 * i - 1; j++) {
+    sum += "*";
+  }
+  console.log(sum);
+  sum = "";
 }
-let z = out();
-console.log(z);
-z();
+
+// let x = 5;
+// function out() {
+//   return function inner() {
+//     console.log(x);
+//   };
+//   // inner();
+// }
+// let z = out();
+// console.log(z);
+// z();
 // console.log("Hello");
 // function stack(push, pop) {
 //   let b = [];
