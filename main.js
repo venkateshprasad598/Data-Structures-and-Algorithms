@@ -1,3 +1,13 @@
+let x = 5;
+function out() {
+  return function inner() {
+    console.log(x);
+  };
+  // inner();
+}
+let z = out();
+console.log(z);
+z();
 // console.log("Hello");
 // function stack(push, pop) {
 //   let b = [];
@@ -2361,123 +2371,118 @@
 
 // DSA ********************************************************************
 // SWAP TWO VARIABLES
-function swap(a, b) {
-  var temp = a;
-  var a = b;
-  var b = temp;
-  return [a, b];
-}
-console.log(swap(2, 4));
+// function swap(a, b) {
+//   var temp = a;
+//   var a = b;
+//   var b = temp;
+//   return [a, b];
+// }
+// console.log(swap(2, 4));
 
-function max(a, b, c) {
-  // var max = Math.max(a, b);
-  // console.log(max);
-  if (a >= b && a >= c) {
-    console.log(a);
-  } else if (b > a && b > c) {
-    console.log(b);
-  } else if (c > a && c > b) {
-    console.log(c);
-  }
-}
-max(10, 10, 10);
-max(10, 10, 20);
+// function max(a, b, c) {
+//   // var max = Math.max(a, b);
+//   // console.log(max);
+//   if (a >= b && a >= c) {
+//     console.log(a);
+//   } else if (b > a && b > c) {
+//     console.log(b);
+//   } else if (c > a && c > b) {
+//     console.log(c);
+//   }
+// }
+// max(10, 10, 10);
+// max(10, 10, 20);
 
-var hour = 9;
-var message = "";
-if (hour > 6 && hour < 12) {
-  console.log((message = "good morning"));
-} else if (hour >= 12 && hour <= 18) {
-  console.log((message = "good evening"));
-} else {
-  console.log((message = "good night"));
-}
+// var hour = 9;
+// var message = "";
+// if (hour > 6 && hour < 12) {
+//   console.log((message = "good morning"));
+// } else if (hour >= 12 && hour <= 18) {
+//   console.log((message = "good evening"));
+// } else {
+//   console.log((message = "good night"));
+// }
 
-  var max = Math.max(a, b);
-  // console.log(max);
-  if (a >= b && a >= c) {
-    console.log(a);
-  } else if (b > a && b > c) {
-    console.log(b);
-  } else if (c > a && c > b) {
-    console.log(c);
-  }
-}
-max(10, 10, 10);
-console.log("ok");
+//   var max = Math.max(a, b);
+//   // console.log(max);
+//   if (a >= b && a >= c) {
+//     console.log(a);
+//   } else if (b > a && b > c) {
+//     console.log(b);
+//   } else if (c > a && c > b) {
+//     console.log(c);
+//   }
+// }
+// max(10, 10, 10);
+// console.log("ok");
 
+//   var answer =
+//     a >= b && a >= c
+//       ? console.log(a)
+//       : b > a && b > c
+//       ? console.log(b)
+//       : c > a && c > b
+//       ? console.log(c)
+//       : null;
+//   return answer;
+// var answer = marks >= 40 ? "PASS" : "FAIL";
+// return answer;
+// }
+// console.log(myFunc(221, 3, 19));
+// console.log("Working");
 
-  var answer =
-    a >= b && a >= c
-      ? console.log(a)
-      : b > a && b > c
-      ? console.log(b)
-      : c > a && c > b
-      ? console.log(c)
-      : null;
-  return answer;
-  // var answer = marks >= 40 ? "PASS" : "FAIL";
-  // return answer;
-}
-console.log(myFunc(221, 3, 19));
-console.log("Working");
+// let sum = "";
+// for (let i = 1; i < n; i++) {
+//   for (let j = 1; j < n; j++) {
+//     var k = i + j - 1;
+//     if(k > 4){
+//       k = k - 4
+//     }
+//     sum += k;
+//   }
+//   sum += "\n";
+// }
+// console.log(sum);
+// }
+// myFunc(5);
+// myFunc(8);
 
+//   var j = 1;
+//   while (j <= i) {
+//     a = a + "*";
+//     j++;
+//   }
+//   console.log(a);
+//   var a = "";
+//   i--;
+// }
+// console.log(j)
 
+// var a = "";
+// var i = 5;
+// while (i >= 0) {
+//   if (i === 0) {
+//     var k = 1;
+//     while (k <= 5) {
+//       var m = 1;
+//       while (m <= k) {
+//         a = a + "*";
+//         m++;
+//       }
+//       console.log(a);
+//       a = "";
+//       k++;
+//     }
+//   }
 
-let sum = "";
-for (let i = 1; i < n; i++) {
-  for (let j = 1; j < n; j++) {
-    var k = i + j - 1;
-    if(k > 4){
-      k = k - 4
-    }
-    sum += k;
-  }
-  sum += "\n";
-}
-console.log(sum);
-}
-myFunc(5);
-myFunc(8);
-
-  var j = 1;
-  while (j <= i) {
-    a = a + "*";
-    j++;
-  }
-  console.log(a);
-  var a = "";
-  i--;
-}
-console.log(j)
-
-
-
-var a = "";
-var i = 5;
-while (i >= 0) {
-  if (i === 0) {
-    var k = 1;
-    while (k <= 5) {
-      var m = 1;
-      while (m <= k) {
-        a = a + "*";
-        m++;
-      }
-      console.log(a);
-      a = "";
-      k++;
-    }
-  }
-
-  var j = 1;
-  while (j <= i) {
-    a = a + "*";
-    j++;
-  }
-  console.log(a);
-  a = "";
-  i--;
-}
-console.log(i);
-console.log("completed");
+//   var j = 1;
+//   while (j <= i) {
+//     a = a + "*";
+//     j++;
+//   }
+//   console.log(a);
+//   a = "";
+//   i--;
+// }
+// console.log(i);
+// console.log("completed");
