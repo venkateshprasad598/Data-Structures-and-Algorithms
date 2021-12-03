@@ -1,14 +1,14 @@
-function recursion(m) {
-  let n = 5;
-  if (m === n) {
-    return 0;
+function recursion(i, n) {
+  let int = parseInt(n / 5);
+  if (i >= int) {
+    return 1;
   }
-
-  sum = m + recursion(m + 1);
-  return sum;
+  if (i == 1) console.log(1);
+  console.log(5 * i);
+  return recursion(i + 1, n);
 }
 
-console.log(recursion(1));
+recursion(1, 30);
 // *************************PATTERNS*****************************
 
 // let sum = "";
