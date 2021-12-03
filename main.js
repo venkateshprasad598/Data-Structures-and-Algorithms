@@ -1,16 +1,27 @@
+function recursion(m) {
+  let n = 5;
+  if (m === n) {
+    return 0;
+  }
+
+  sum = m + recursion(m + 1);
+  return sum;
+}
+
+console.log(recursion(1));
 // *************************PATTERNS*****************************
 
-let sum = "";
-for (let i = 1; i <= 5; i++) {
-  for (let k = 5; k > i; k--) {
-    sum += " ";
-  }
-  for (let j = 0; j < 2 * i - 1; j++) {
-    sum += "*";
-  }
-  console.log(sum);
-  sum = "";
-}
+// let sum = "";
+// for (let i = 1; i <= 5; i++) {
+//   for (let k = 5; k > i; k--) {
+//     sum += " ";
+//   }
+//   for (let j = 0; j < 2 * i - 1; j++) {
+//     sum += "*";
+//   }
+//   console.log(sum);
+//   sum = "";
+// }
 
 // let x = 5;
 // function out() {
