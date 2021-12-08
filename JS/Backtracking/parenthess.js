@@ -20,3 +20,4 @@ function parenthesses(n) {
   console.log(arr);
 }
 parenthesses(2);
+console.log("Hello");
