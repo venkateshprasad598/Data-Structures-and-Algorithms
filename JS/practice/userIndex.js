@@ -10651,26 +10651,93 @@ const jobIndex = {
 };
 
 function percentage(userIndex, jobIndex, autoMatch) {
-  autoMatch.map((autoMatch) => {
-    console.log(
-      "jobId :",
-      autoMatch.jobId,
-      "candidateId :",
-      autoMatch.candidateId
-    );
+  //   jobIndex[0].map((jobIndex) => {
+  const primarySkills = jobIndex[0].primarySkills;
+  const secondarySkills = jobIndex[0].secondarySkills;
+  const city = jobIndex[0].location.city;
+  const jobSkillSet = jobIndex[0].skillSet;
 
-    jobIndex.map((data) => {
-      if (autoMatch.jobId == data.jobId) {
-        console.log("Hello");
-        console.log(data);
+  userIndex.map((userIndex) => {
+    let count = 0;
+    let matches = [];
+    const userPrimary = userIndex.primarySkills;
+    const userSecodary = userIndex.secondarySkills;
+    const userSkillSet = userIndex.skillSet;
+    userPrimary.map((data) => {
+      if (primarySkills.includes(data)) {
+        count++;
+        matches.push(data);
       }
     });
 
-    userIndex.map((data) => {
-      if (autoMatch.candidateId == data.candidateID) {
-        console.log(data);
+    if (count !== 0) {
+      console.log("JobPrimarySkills", primarySkills);
+      console.log("UserPrimarySkills", userPrimary);
+      let percentage = (count * 100) / primarySkills.length;
+      console.log(count);
+      console.log("PrimaryMatch", matches);
+      console.log("PrimaryPercentage", percentage + "%");
+    } else {
+      console.log("Primary Skills Not Found");
+    }
+
+    if (count !== 0) {
+      // ****************SECONDARY SKILLS****************
+      let secondaryMatches = [];
+      secCount = 0;
+      userSecodary.map((data) => {
+        if (secondarySkills.includes(data)) {
+          secCount++;
+          secondaryMatches.push(data);
+        }
+      });
+      if (secCount !== 0) {
+        console.log("JobSecondarySkills", secondarySkills);
+        console.log("UserSecondarySkills", userSecodary);
+        let secondaryPercentage = (secCount * 100) / secondarySkills.length;
+        console.log(secCount);
+        console.log("SecondaryMatch", secondaryMatches);
+        console.log("SecondaryPercentage", secondaryPercentage + "%");
+      } else {
+        console.log("Secondary Skills Not Found");
       }
-    });
+      //   *********************LOCATION*****************
+
+      if (city == userIndex.addressCity) {
+        console.log("isLocationMatched", true);
+      } else {
+        console.log("isLocationMatched", false);
+      }
+      // **********************SKILLSET*************************
+      let matchedSkillSet = [];
+      userSkillSet.map((data) => {
+        if (jobSkillSet.includes(data)) {
+          matchedSkillSet.push(data);
+        }
+      });
+      matchedSkillSet.length > 0
+        ? console.log("MatchedSkillSet", matchedSkillSet)
+        : console.log("No SkillSet FOund");
+    }
+    console.log("---------");
   });
+  //   });
+
+  //   userIndex.map((userIndex) => {
+  //     const userPrimary = userIndex.primarySkills;
+  //     jobIndex.map((jobIndex) => {
+  //       let userCount = 0;
+  //       const primarySkills = jobIndex.primarySkills;
+  //       primarySkills.map((data) => {
+  //         if (userPrimary.includes(data)) {
+  //           userCount++;
+  //         }
+  //       });
+  //       console.log(primarySkills);
+  //       console.log(userPrimary);
+  //       console.log(userCount++);
+  //       console.log("---------");
+  //     });
+  //   });
 }
 percentage(userIndex.value, jobIndex.value, autoMatch.value);
