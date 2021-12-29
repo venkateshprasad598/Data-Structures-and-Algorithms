@@ -1,1 +1,1 @@
-console.log("Hello");
+function practice(arr1, arr2)
