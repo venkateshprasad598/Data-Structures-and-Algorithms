@@ -10651,19 +10651,17 @@ const jobIndex = {
 };
 
 function percentage(userIndex, jobIndex, autoMatch) {
-  console.log(userIndex);
-  console.log(jobIndex);
-  //   jobIndex[0].map((jobIndex) => {
+  //   jobIndex.map((jobIndex) => {
+  let candidateQualified = []; //Returning this array in the ends
   const primarySkills = jobIndex[0].primarySkills;
   const secondarySkills = jobIndex[0].secondarySkills;
   const city = jobIndex[0].location.city;
   const jobSkillSet = jobIndex[0].skillSet;
-  let candidateQualified = [];
   let jobId = jobIndex[0].jobId;
 
   userIndex.map((userIndex) => {
-    let count = 0;
-    let matches = [];
+    let count = 0; //Primary Skill Matched Count
+    let matches = []; //PrimarySkill
     let secondaryMatches = [];
     let location = [];
     let matchedSkillSet = [];
@@ -10671,12 +10669,12 @@ function percentage(userIndex, jobIndex, autoMatch) {
     let secondaryPercentage = 0;
     let locationPercentage = 0;
     let jobSkillSetPercentage = 0;
+    let total = 0;
 
     const userPrimary = userIndex.primarySkills;
     const userSecodary = userIndex.secondarySkills;
     const userSkillSet = userIndex.skillSet;
 
-    let total = 0;
     userPrimary.map((data) => {
       if (primarySkills.includes(data)) {
         count++;
@@ -10771,49 +10769,13 @@ function percentage(userIndex, jobIndex, autoMatch) {
       candidateQualified.push(newUserIndex);
     }
 
-    // **********Adding Total key to UserIndex*********
-    // userIndex.total = total;
-
     console.log("---------");
   });
 
-  // *******FILTER AND SORT THE USERINDEX USING TOTAL**********
-  // let qualifiedCandidates = userIndex
-  //   .filter((data) => data.total > 0)
-  //   .sort((a, b) => b.total - a.total);
-  // console.log(qualifiedCandidates);
-  //   });
-
-  // *******SORT JUST QUALIFIED CANDIDATES**********
+  // *******SORTING QUALIFIED CANDIDATES**********
   let theQualifiedCandidates = candidateQualified.sort(
     (a, b) => b.total - a.total
   );
   console.log(theQualifiedCandidates);
-  //   userIndex.map((userIndex) => {
-  //     const userPrimary = userIndex.primarySkills;
-  //     jobIndex.map((jobIndex) => {
-  //       let userCount = 0;
-  //       const primarySkills = jobIndex.primarySkills;
-  //       primarySkills.map((data) => {
-  //         if (userPrimary.includes(data)) {
-  //           userCount++;
-  //         }
-  //       });
-  //       console.log(primarySkills);
-  //       console.log(userPrimary);
-  //       console.log(userCount++);
-  //       console.log("---------");
-  //     });
-  //   });
 }
 percentage(userIndex.value, jobIndex.value, autoMatch.value);
-
-// jobId: "746546850",
-//       candidateId: "596890354",
-//       primarySkills: ["java"],
-//       secondarySkills: [],
-//       skillSet: [],
-// loaction : [],
-// firstName: "xanvier",
-// lastName: "xanmen",
-// updatedDate: "2021-12-17T10:46:25.668Z",
