@@ -10651,18 +10651,32 @@ const jobIndex = {
 };
 
 function percentage(userIndex, jobIndex, autoMatch) {
+  console.log(userIndex);
+  console.log(jobIndex);
   //   jobIndex[0].map((jobIndex) => {
   const primarySkills = jobIndex[0].primarySkills;
   const secondarySkills = jobIndex[0].secondarySkills;
   const city = jobIndex[0].location.city;
   const jobSkillSet = jobIndex[0].skillSet;
+  let candidateQualified = [];
+  let jobId = jobIndex[0].jobId;
 
   userIndex.map((userIndex) => {
     let count = 0;
     let matches = [];
+    let secondaryMatches = [];
+    let location = [];
+    let matchedSkillSet = [];
+    let percentage = 0;
+    let secondaryPercentage = 0;
+    let locationPercentage = 0;
+    let jobSkillSetPercentage = 0;
+
     const userPrimary = userIndex.primarySkills;
     const userSecodary = userIndex.secondarySkills;
     const userSkillSet = userIndex.skillSet;
+
+    let total = 0;
     userPrimary.map((data) => {
       if (primarySkills.includes(data)) {
         count++;
@@ -10673,17 +10687,18 @@ function percentage(userIndex, jobIndex, autoMatch) {
     if (count !== 0) {
       console.log("JobPrimarySkills", primarySkills);
       console.log("UserPrimarySkills", userPrimary);
-      let percentage = (count * 100) / primarySkills.length;
+      percentage = (count * 50) / primarySkills.length;
+      total += percentage;
       console.log(count);
       console.log("PrimaryMatch", matches);
-      console.log("PrimaryPercentage", percentage + "%");
+      console.log("PrimaryPercentage", percentage);
     } else {
       console.log("Primary Skills Not Found");
     }
 
     if (count !== 0) {
       // ****************SECONDARY SKILLS****************
-      let secondaryMatches = [];
+
       secCount = 0;
       userSecodary.map((data) => {
         if (secondarySkills.includes(data)) {
@@ -10694,35 +10709,86 @@ function percentage(userIndex, jobIndex, autoMatch) {
       if (secCount !== 0) {
         console.log("JobSecondarySkills", secondarySkills);
         console.log("UserSecondarySkills", userSecodary);
-        let secondaryPercentage = (secCount * 100) / secondarySkills.length;
+        secondaryPercentage = (secCount * 30) / secondarySkills.length;
+        total += secondaryPercentage;
         console.log(secCount);
         console.log("SecondaryMatch", secondaryMatches);
-        console.log("SecondaryPercentage", secondaryPercentage + "%");
+        console.log("SecondaryPercentage", secondaryPercentage);
       } else {
         console.log("Secondary Skills Not Found");
       }
       //   *********************LOCATION*****************
 
-      if (city == userIndex.addressCity) {
+      if (city == userIndex.addressCity && city !== "") {
         console.log("isLocationMatched", true);
+        location.push(city);
+        locationPercentage = 10;
+        total += locationPercentage;
       } else {
         console.log("isLocationMatched", false);
       }
       // **********************SKILLSET*************************
-      let matchedSkillSet = [];
+
+      let skillSetCount = 0;
       userSkillSet.map((data) => {
         if (jobSkillSet.includes(data)) {
+          skillSetCount++;
           matchedSkillSet.push(data);
         }
       });
-      matchedSkillSet.length > 0
-        ? console.log("MatchedSkillSet", matchedSkillSet)
-        : console.log("No SkillSet FOund");
+
+      if (jobSkillSet != 0) {
+        jobSkillSetPercentage = (skillSetCount * 30) / jobSkillSet.length;
+        total += jobSkillSetPercentage;
+        console.log("MatchedSkillSet", matchedSkillSet);
+      } else {
+        console.log("No SkillSet FOund");
+      }
     }
+    console.log("Total", total + "%");
+
+    if (total > 0) {
+      let newUserIndex = {};
+      newUserIndex.jobId = jobId;
+      newUserIndex.candidateId = userIndex.candidateID;
+
+      newUserIndex.primarySkills = matches;
+      newUserIndex.primarySkillsPercentage = percentage;
+      newUserIndex.secondarySkills = secondaryMatches;
+      newUserIndex.secondarySkillsPercentage = secondaryPercentage;
+      if (location[0]) {
+        newUserIndex.location = location[0];
+      } else {
+        newUserIndex.location = "";
+      }
+      newUserIndex.locationPercentage = locationPercentage;
+      newUserIndex.skillSet = matchedSkillSet;
+      newUserIndex.skillSetPercentage = jobSkillSetPercentage;
+      newUserIndex.total = total;
+      newUserIndex.firstName = userIndex.firstName;
+      newUserIndex.lastName = userIndex.lastName;
+      newUserIndex.updatedDate = userIndex.updatedDate;
+      candidateQualified.push(newUserIndex);
+    }
+
+    // **********Adding Total key to UserIndex*********
+    // userIndex.total = total;
+
     console.log("---------");
   });
+
+  // *******FILTER AND SORT THE USERINDEX USING TOTAL**********
+  // let qualifiedCandidates = userIndex
+  //   .filter((data) => data.total > 0)
+  //   .sort((a, b) => b.total - a.total);
+  // console.log(qualifiedCandidates);
   //   });
 
+  // *******SORT JUST QUALIFIED CANDIDATES**********
+  let theQualifiedCandidates = candidateQualified.sort(
+    (a, b) => b.total - a.total
+  );
+  console.log(theQualifiedCandidates);
   //   userIndex.map((userIndex) => {
   //     const userPrimary = userIndex.primarySkills;
   //     jobIndex.map((jobIndex) => {
@@ -10741,3 +10807,13 @@ function percentage(userIndex, jobIndex, autoMatch) {
   //   });
 }
 percentage(userIndex.value, jobIndex.value, autoMatch.value);
+
+// jobId: "746546850",
+//       candidateId: "596890354",
+//       primarySkills: ["java"],
+//       secondarySkills: [],
+//       skillSet: [],
+// loaction : [],
+// firstName: "xanvier",
+// lastName: "xanmen",
+// updatedDate: "2021-12-17T10:46:25.668Z",
